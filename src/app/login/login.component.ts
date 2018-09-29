@@ -11,7 +11,7 @@ import { AccountService } from '../services';
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
-    Email : any = "doc@mail.com"
+    Email : any = "admin@isithebe.co.za"
     Password : any ="pass"
     msgs: Message[] = [];
 
