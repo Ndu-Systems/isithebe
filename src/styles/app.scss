@@ -10,3 +10,16 @@
         display: none !important;
     }
 }
+.bg-dark {
+    background-color: #353B48 !important;
+}
+
+/*Google fonts here*/
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+/*Variables*/
+$Abel: 'Abel', sans-serif;
+body {
+    font-family: $Abel;
+    font-weight: normal;
+  }
