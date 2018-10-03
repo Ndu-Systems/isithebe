@@ -1,4 +1,10 @@
 .bg-dark {
   background-color: #353B48 !important;
 }
+
+@media only screen and (max-width: 768px) {
+  #title {
+    display: none;
+  }
+}
 /*# sourceMappingURL=nav-bar.component.css.map */
