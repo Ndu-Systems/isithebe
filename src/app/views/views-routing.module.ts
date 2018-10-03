@@ -8,6 +8,7 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
             { path: 'dashboard', loadChildren: '../layout/dashboard/dashboard.module#DashboardModule' },
+            { path: 'clients', loadChildren: './clients/clients.module#ClientsModule' },
             { path: 'user', loadChildren: './user/user.module#UserModule' }
 
         ]
