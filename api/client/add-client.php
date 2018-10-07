@@ -32,9 +32,11 @@ if (isset($data->Email)) {
         die(json_encode('USER_EXIST'));
     }
     
-    $result = $conn->prepare("INSERT INTO users( UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId ) 
-                                                VALUES (UUID(),?, ?,?,?,?,?,?,?,?,?,?,?,now(),?,now(),?)");
+    $result = $conn->prepare("INSERT INTO users( FirstName, Surname,UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId ) 
+                                                VALUES (?,?,UUID(),?, ?,?,?,?,?,?,?,?,?,?,?,now(),?,now(),?)");
     if ($result->execute(array(
+        $FirstName,
+        $Surname,
         $Email,
         $Password,
         $ContactNumbers,
