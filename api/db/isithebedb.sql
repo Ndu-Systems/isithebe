@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 09:48 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Oct 07, 2018 at 05:40 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,55 +31,58 @@ SET time_zone = "+00:00";
 CREATE TABLE `benefits` (
   `BenefitId` varchar(225) NOT NULL,
   `Description` varchar(225) NOT NULL,
+  `Amount` decimal(10,0) NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `policy`
+-- Table structure for table `policies`
 --
 
-CREATE TABLE `policy` (
+CREATE TABLE `policies` (
+  `PolicyId` varchar(225) NOT NULL,
+  `Description` varchar(217) NOT NULL,
+  `Amount` decimal(10,0) NOT NULL,
+  `CreateUserId` int(11) NOT NULL,
+  `CreateDate` datetime NOT NULL,
+  `ModifyUserId` int(11) NOT NULL,
+  `ModifyDate` datetime NOT NULL,
+  `StatusId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policybenefits`
+--
+
+CREATE TABLE `policybenefits` (
+  `PolicyBenefitId` varchar(225) NOT NULL,
+  `PolicyId` varchar(225) NOT NULL,
+  `BenefitId` varchar(224) NOT NULL,
+  `CreateUserId` int(11) NOT NULL,
+  `CreateDate` datetime NOT NULL,
+  `ModifyUserId` int(11) NOT NULL,
+  `ModifyDate` datetime NOT NULL,
+  `StatusId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policyholder`
+--
+
+CREATE TABLE `policyholder` (
+  `PolicyHolderId` varchar(225) NOT NULL,
   `PolicyId` varchar(225) NOT NULL,
   `UserId` varchar(225) NOT NULL,
   `PolicyTypeId` varchar(225) NOT NULL,
   `PolicyName` varchar(225) NOT NULL,
   `SoldDate` datetime NOT NULL,
   `PremiumAmount` decimal(10,0) NOT NULL,
-  `CreateUserId` int(11) NOT NULL,
-  `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
-  `ModifyDate` datetime NOT NULL,
-  `StatusId` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `policytypes`
---
-
-CREATE TABLE `policytypes` (
-  `PolicyTypeId` varchar(225) NOT NULL,
-  `Description` varchar(217) NOT NULL,
-  `CreateUserId` int(11) NOT NULL,
-  `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
-  `ModifyDate` datetime NOT NULL,
-  `StatusId` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `policytypesbenefits`
---
-
-CREATE TABLE `policytypesbenefits` (
-  `PolicyTypeBenefitId` varchar(225) NOT NULL,
-  `PolicyTypeId` varchar(225) NOT NULL,
-  `BenefitId` varchar(224) NOT NULL,
   `CreateUserId` int(11) NOT NULL,
   `CreateDate` datetime NOT NULL,
   `ModifyUserId` int(11) NOT NULL,
@@ -110,8 +113,6 @@ CREATE TABLE `statuses` (
 --
 
 CREATE TABLE `users` (
-  `FirstName` varchar(50) NOT NULL,
-  `Surname` varchar(50) NOT NULL,
   `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `Email` varchar(255) NOT NULL,
   `Password` varchar(225) NOT NULL,
@@ -135,10 +136,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('Ndumiso', 'Mthembu', '7c8b7f7e-c6dd-11e8-8215-80fa5b45280e', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '9206106562689', 'client', 'na', 1, '2018-10-03 09:25:21', 1, '2018-10-03 09:25:21', 1),
-('John', 'Doe', 'a5045f27-c6de-11e8-8215-80fa5b45280e', 'queries@ndu-systems.net2', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '222222', 'client', 'na', 1, '2018-10-03 09:33:38', 1, '2018-10-03 09:33:38', 1),
-('Admin', 'Admin', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1);
+INSERT INTO `users` (`UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
+('c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1);
 
 --
 -- Indexes for dumped tables
@@ -152,25 +152,25 @@ ALTER TABLE `benefits`
   ADD KEY `BenefitsIndex` (`BenefitId`) USING HASH;
 
 --
--- Indexes for table `policy`
+-- Indexes for table `policies`
 --
-ALTER TABLE `policy`
+ALTER TABLE `policies`
   ADD PRIMARY KEY (`PolicyId`),
   ADD UNIQUE KEY `PolicyIndex` (`PolicyId`) USING HASH;
 
 --
--- Indexes for table `policytypes`
+-- Indexes for table `policybenefits`
 --
-ALTER TABLE `policytypes`
-  ADD PRIMARY KEY (`PolicyTypeId`),
-  ADD UNIQUE KEY `PolicyTypesIndex` (`PolicyTypeId`) USING HASH;
+ALTER TABLE `policybenefits`
+  ADD PRIMARY KEY (`PolicyBenefitId`),
+  ADD UNIQUE KEY `PolicyBenefitsIndex` (`PolicyBenefitId`) USING HASH;
 
 --
--- Indexes for table `policytypesbenefits`
+-- Indexes for table `policyholder`
 --
-ALTER TABLE `policytypesbenefits`
-  ADD PRIMARY KEY (`PolicyTypeBenefitId`),
-  ADD UNIQUE KEY `PolicyTypesBenefitsIndex` (`PolicyTypeBenefitId`) USING HASH;
+ALTER TABLE `policyholder`
+  ADD PRIMARY KEY (`PolicyHolderId`),
+  ADD UNIQUE KEY `PolicyHolderIndex` (`PolicyHolderId`) USING HASH;
 
 --
 -- Indexes for table `statuses`
