@@ -1,24 +1,30 @@
 <p-growl [(value)]="msgs"></p-growl>
-<div class="login-page" [@routerTransition]>
-    <div class="row justify-content-md-center">
-        <div class="col-md-4">
-            <img src="assets/images/logo.png" width="150px" class="user-avatar" />
-            <h1>Dok-Comm.io</h1>
-            <h3><small>patient management system</small></h3>
-            <form>
-                <div class="form-content">
-                    <div class="form-group">
-                        <input type="text"  [(ngModel)]="Email" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg" id="Email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg" id="Password" placeholder="Password">
+<div class="overlay"></div>
+<div class="login" [@routerTransition]>
+    <div class="container">
+        <h1 class="center">Sign in to your account <small><span class="fa fa-user"></span></small></h1>
+        <div class=" w3l-login-form">
+            <form action="#" method="POST">
+                <div class=" w3l-form-group">
+                    <label>Username:</label>
+                    <div class="group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" [(ngModel)]="Email" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Username" required="required">
                     </div>
                 </div>
-                <a class="btn rounded-btn"  (click)="onLoggedin()"> Log in </a>
-                &nbsp;
-                <!-- <a class="btn rounded-btn" [routerLink]="['/signup']">Register</a> -->
+                <div class=" w3l-form-group">
+                    <label>Password:</label>
+                    <div class="group">
+                        <i class="fa fa-unlock"></i>
+                        <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Password" required="required">
+                    </div>
+                </div>
+                <!-- <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div> -->
+                <button type="submit" (click)="onLoggedin()">Login</button>
             </form>
+            <p class=" w3l-register-p">Go Back - <a routerLink="/home" class="register"> Home</a></p>
         </div>
     </div>
 </div>

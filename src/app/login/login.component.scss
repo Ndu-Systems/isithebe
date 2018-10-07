@@ -93,3 +93,94 @@ $topnav-background-color: #222;
         border: 2px solid #fff;
     }
 }
+
+.login{
+
+    margin: 0;
+    padding: 0;
+    background: url(assets/images/family4.jpg) no-repeat 0px 0px;
+    min-height: 100vh;
+    background-size: cover;
+    h1 {
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        padding: 50px 0;
+
+        .fa{
+            font-size: 50px;
+        }
+    }
+
+    .fa {
+        color:#192a56;
+        font-weight: 900;
+        font-size: 20px;
+        padding: 0 10px;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+    }
+    .w3l-login-form {
+        background: rgba(0, 0, 0, 0.4117647058823529);
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 3em;
+        border-radius: 10px;
+        box-sizing: border-box;
+        .w3l-form-group {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #d2d2d2;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .group {
+            display: flex;
+            padding: 15px 5px;
+            background-color: #ffffff;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            border: none;
+            box-sizing: border-box;
+            background: transparent;
+            color: #000;
+        }
+        button {
+            background: #192a56;       
+            color: #ffffff;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            padding: 12px 60px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 6px;
+        }
+        p.w3l-register-p {
+            color: #eee;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 2em;
+        }
+    }
+
+}
+
+
