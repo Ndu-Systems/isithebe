@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 05:40 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Oct 07, 2018 at 08:00 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -113,6 +113,8 @@ CREATE TABLE `statuses` (
 --
 
 CREATE TABLE `users` (
+  `FirstName` varchar(150) NOT NULL,
+  `Surname` varchar(150) NOT NULL,
   `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `Email` varchar(255) NOT NULL,
   `Password` varchar(225) NOT NULL,
@@ -136,9 +138,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
-('c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1);
+INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('Freedom', 'Khanyile', '35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
+('Admin', 'Admin', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1),
+('Ndu', 'Systems', 'd695c741-ca5a-11e8-9ca7-80fa5b45280e', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', 1, '2018-10-07 20:00:09', 1, '2018-10-07 20:00:09', 1);
 
 --
 -- Indexes for dumped tables
