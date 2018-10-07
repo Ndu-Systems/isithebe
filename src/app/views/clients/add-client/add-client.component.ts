@@ -4,11 +4,14 @@ import { Router } from "@angular/router";
 import { ClientService } from "../../../services/client/client.service";
 import { IfStmt } from "@angular/compiler";
 import { USER_EXIST } from "../../../shared/config";
+import { routerTransition } from "../../../router.animations";
 
 @Component({
     selector: "app-add-client",
     templateUrl: "./add-client.component.html",
-    styleUrls: ["./add-client.component.scss"]
+    styleUrls: ["./add-client.component.scss"],
+    animations: [routerTransition()]
+
 })
 export class AddClientComponent implements OnInit {
     FirstName: string;
