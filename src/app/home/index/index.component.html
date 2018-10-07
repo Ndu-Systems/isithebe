@@ -1,108 +1,111 @@
-<!--Section: Features v.3-->
-<section class="pt-0">
-    <!--Carousel Wrapper-->
-    <mdb-carousel [isControls]="true" class="carousel" [animation]="'fade'">
-        <div class="view">
-            <picture>
-                <img srcset="../../../assets/images/family4.jpg" alt="responsive image" class="d-block img-fluid">
-                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-            </picture>
-        </div>
-        <div class="carousel-caption">
-            <div class="col-md-6 col-sm-12">
-                <h3 class="h3-responsive">Call Me Back!!</h3>
+<!-- Masthead -->
+<header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Be a part of the family, we will call you back</h1>
+            </div>
+            <div class="col-md-12 col-lg-8 col-xl-7 mx-auto">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="form-group col-md-5">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Your Full Name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-phone"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="contactnumber" name="contactnumber"
+                                    placeholder="Enter Your Cellphone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="input-group">
+                                <button type="submit" class="btn btn-primary">Call Me Back!</button>
+                            </div>
+                        </div>
 
-                <!-- Default form contact -->
-                <form class="text-center border border-light p-5" [formGroup]="contactForm">
-
-
-                    <!-- Name -->
-                    <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInputDirective
-                        class="form-control mb-4" placeholder="Name">
-
-                    <!-- Email -->
-                    <input type="text" formControlName="contactFormCellPhone" id="defaultContactFormCellPhone"
-                        mdbInputDirective class="form-control mb-4" placeholder="cellpone">
-
-                    <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-                        mdbWavesEffect type="submit">Send</button>
-
+                    </div>
                 </form>
-                <!-- Default form contact -->
             </div>
         </div>
-    </mdb-carousel>
-    <!--/.Carousel Wrapper-->
-</section>
-<section class="pt-2">
-    <!--Section heading-->
-    <h2 class="h1 font-weight-bold text-center mb-5 pt-4">Why is going <u>Online</u> great?</h2>
-    <!--Section description-->
-    <p class="px-5 mb-5 pb-3 lead dark-text text-center">
-        We have been able to reach more people and passing
-        the word of mouth on various internet platforms
-        Having the ability to tell your story over the
-        internet is the in thing IT just makes sense.</p>
-
-    <!--Grid row-->
-    <div class="row pt-2">
-
-        <!--Grid column-->
-        <div class="col-lg-5 text-center text-lg-left">
-            <img src="assets/img/phone.png" alt="" class="img-fluid mx-auto img-border-b z-depth-0">
-        </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-7">
-            <!--Grid row-->
-            <div class="row pb-3">
-                <div class="col-2 col-md-1">
-                    <i class="fa fa-at fa-lg dark-text"></i>
-                </div>
-                <div class="col-10">
-                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Get to Extend Your Reach</h5>
-                    <p class="dark-text text-left">
-                        Ongoing success rests on your capability to constantly bring in new clients.
-                        Reaching thousands of people by using traditional marketing methods is very
-                        expensive and unreliable. Going online means you can reach more people than
-                        you ever imagined while paying less for the exposure – and you can even
-                        track results
-                    </p>
-                </div>
-            </div>
-            <!--Grid row-->
-            <!--Grid row-->
-            <div class="row pb-3">
-                <div class="col-2 col-md-1">
-                    <i class="fa fa-bullhorn fa-lg dark-text"></i>
-                </div>
-                <div class="col-10">
-                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Get More Referrals</h5>
-                    <p class="dark-text text-left">The internet has a magic instrument called links,
-                        that can be shared by anyone – with everyone. When people want to recommend
-                        your business to a friend,sharing a link is so much easier than writing down
-                        an address on paper.</p>
-                </div>
-            </div>
-            <!--Grid row-->
-
-            <!--Grid row-->
-            <div class="row pb-3">
-                <div class="col-2 col-md-1">
-                    <i class="fa fa-comments fa-lg dark-text"></i>
-                </div>
-                <div class="col-10">
-                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Get to Be Social</h5>
-                    <p class="dark-text text-left">Once you start establishing an online presence,
-                        you get to utilize one of the most powerful platforms for business
-                        promotion available today: social networks.</p>
-                </div>
-            </div>
-            <!--Grid row-->
-        </div>
-        <!--Grid column-->
-
     </div>
-    <!--Grid row-->
+</header>
 
+<!-- Icons Grid -->
+<section class="features-icons text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <i class="fa fa-desktop m-auto fa-4x"></i>
+                    </div>
+                    <h3>Ease Of Access</h3>
+                    <p class="lead mb-0">Access your policy information anywhere any time, over the internet of things.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <i class="fa fa-address-card m-auto fa-4x"></i>
+                    </div>
+                    <h3>Personalised Products</h3>
+                    <p class="lead mb-0">Enjoy a wide range of products which are tailored to your personal
+                        preferences.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex">
+                        <i class="fa fa-eye m-auto fa-4x"></i>
+                    </div>
+                    <h3>Secured Data</h3>
+                    <p class="lead mb-0">We have implemented the lates technology in data protection. Your policy for
+                        your eyes only!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Showcases -->
+<section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-lg-4 text-white showcase-img" style="background-image: url('assets/images/family1.jpg');"></div>
+            <div class="col-lg-8 showcase-text">
+                <h2>Welcome to Isithebe Burial Society</h2>
+                <p class="lead mb-0">In the unfortunate, but certain event of death, your family should not have to worry about the money for the funeral.</p>
+                <p class="lead mb-0">Why do you need funeral cover? Because at 1Life we know you shouldn’t have to worry about spending your hard-earned savings or borrowing money to bury your family members.</p>
+                <p class="lead mb-0">Get the cover your family needs today with no medicals and no paperwork required!</p>
+            </div>
+        </div>
+        <!-- <div class="row no-gutters">
+            <div class="overlay"></div>
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/images/family4.jpg');"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Fully Responsive Design</h2>
+                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look
+                    great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+            </div>
+        </div> -->
+        <!-- <div class="row no-gutters">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/images/family4.jpg');"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>Updated For Bootstrap 4</h2>
+                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way
+                    in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap
+                    4!</p>
+            </div>
+        </div> -->
+    </div>
 </section>
