@@ -14,7 +14,7 @@ import { AccountService } from '../../../services/account';
 export class ChangePasswordComponent implements OnInit {
 
   user$ : Observable<any>
-  userId : number
+  userId : any
   OldPassword : any
   NewPassword : any
   ConfirmPassword : any 
@@ -27,8 +27,8 @@ export class ChangePasswordComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userId = parseInt(this.route.snapshot.paramMap.get("id"));
-    this.user$ = this.selectService.select(`user WHERE  UserId = ${this.userId}`);
+    this.userId = (this.route.snapshot.paramMap.get("id"));
+    this.user$ = this.selectService.select(`users WHERE  UserId = '${this.userId}'`);
   }
   showSuccess() {
     this.msgs = [];

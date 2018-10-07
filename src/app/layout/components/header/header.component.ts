@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
-        debugger
         this.user = JSON.parse(localStorage.getItem('currentUser'))
         if(!this.user.username)
             this.user.username = "doctor" 
