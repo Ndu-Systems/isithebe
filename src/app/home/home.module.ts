@@ -9,13 +9,12 @@ import { HomeComponent } from './home.component';
 import { HomeRouting } from './home.routing';
 import { PageHeaderModule, PrimeNg } from '../shared';
 import { NavBarComponent } from './nav-bar';
-import { IndexComponent } from './index/index.component';
-  
+   
 
 @NgModule({
     imports: [CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
         ReactiveFormsModule, PageHeaderModule, HomeRouting, MDBBootstrapModule.forRoot()],
-    declarations: [HomeComponent, NavBarComponent,IndexComponent],
+    declarations: [HomeComponent, NavBarComponent],
     schemas: [ NO_ERRORS_SCHEMA ],
     exports: [...PrimeNg],
     providers: [ ]
