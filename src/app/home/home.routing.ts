@@ -9,6 +9,8 @@ const routes: Routes = [
     children: [
         { path: '', redirectTo: 'index', pathMatch: 'prefix' },
         { path: 'index', loadChildren : './index/index.module#IndexModule'},
+        { path: 'our-policies', loadChildren : './our-policies/our-policies-module#OurPoliciesModule'},
+
     ]}
 ];
 
