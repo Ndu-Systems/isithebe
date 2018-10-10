@@ -34,4 +34,26 @@
   
   .back {
     transform: rotateY(180deg);
+    mdb-card-body {
+      height: 660px;
+      background-color: #353B48;       
+    }
+     
   }
+
+  .btn{
+    width: 339px;
+    border: 0.5rem;
+    border-width: 0.5rem;
+  }
+  mdb-card-footer{
+    background-color: #353B48;
+  }
+  mdb-card-text .list-group {
+    color: #353B48;
+    }
+
+    .jumbotron{
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #ffffff;
+    }

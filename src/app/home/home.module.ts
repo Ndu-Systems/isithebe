@@ -10,13 +10,13 @@ import { HomeRouting } from './home.routing';
 import { PageHeaderModule, PrimeNg } from '../shared';
 import { NavBarComponent } from './nav-bar';
    
-
+import { WavesModule } from 'angular-bootstrap-md'
 @NgModule({
-    imports: [CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
+    imports: [CommonModule, FormsModule,WavesModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
         ReactiveFormsModule, PageHeaderModule, HomeRouting, MDBBootstrapModule.forRoot()],
     declarations: [HomeComponent, NavBarComponent],
     schemas: [ NO_ERRORS_SCHEMA ],
-    exports: [...PrimeNg],
+    exports: [...PrimeNg,WavesModule],
     providers: [ ]
 })
 
