@@ -10,6 +10,7 @@ const routes: Routes = [
         { path: '', redirectTo: 'index', pathMatch: 'prefix' },
         { path: 'index', loadChildren : './index/index.module#IndexModule'},
         { path: 'our-policies', loadChildren : './our-policies/our-policies-module#OurPoliciesModule'},
+        { path: 'our-services', loadChildren : './our-services/our-services-module#OurServicesModule'},
 
     ]}
 ];
