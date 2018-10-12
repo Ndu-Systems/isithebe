@@ -96,7 +96,7 @@ $topnav-background-color: #222;
     
 }
 
-.login{
+.register-page{
 
     position: relative;
     width: 100%;
@@ -141,7 +141,7 @@ $topnav-background-color: #222;
     }
     .w3l-login-form {
         background: rgba(0, 0, 0, 0.4117647058823529);
-        max-width: 500px;
+        max-width: 650px;
         margin: 0 auto;
         padding: 3em;
         border-radius: 10px;
@@ -166,11 +166,11 @@ $topnav-background-color: #222;
             background-color: #ffffff;
         }
 
-        input[type="text"], input[type="password"] {
+        input {
             width: 100%;
             border: none;
             box-sizing: border-box;
-            background: transparent;
+            background: #ffffff;
             color: #000;
         }
         button {
