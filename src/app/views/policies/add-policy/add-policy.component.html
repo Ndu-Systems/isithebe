@@ -1,3 +1,58 @@
-<p>
-  add-policy works!
-</p>
+
+<div [@routerTransition]>
+    <app-page-header [heading]="'Add Policy'" [icon]="'fa-user-plus'"></app-page-header>
+    <p-growl [(value)]="msgs"></p-growl>
+    <div class="row">
+      <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="card mb-3">
+          <div class="card-header">
+          </div>
+          <div class="card-body table-responsive">
+            <div class="col-lg-10 offset-1">
+              <form role="form">           
+                
+                <fieldset class="form-group">
+                  <div class="row">
+                    <label class="col-md-2"> Description:</label>
+                    <div class="input-group mb-3 col-md-6 ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <li class="fa fa-user"></li>
+                        </span>
+                      </div>
+                      <input type="text" [(ngModel)]="Description" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Description"
+                        aria-label="Description" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </fieldset>
+  
+                <!-- Surname -->
+                <fieldset class="form-group">
+                  <div class="row">
+                    <label class="col-md-2">Amount:</label>
+                    <div class="input-group mb-3 col-md-6 ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <li class="fa fa-user"></li>
+                        </span>
+                      </div>
+                      <input type="text" [(ngModel)]="Amount" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Amount"
+                        aria-label="Amount" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </fieldset>
+           
+                <div class="justify-content-center">
+                  <a  class="btn rounded-btn" (click)="add()">Add Policy</a> &nbsp;
+                  <a  class="btn rounded-btn" [routerLink]="['/clients']">Abort</a>
+                </div>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>
