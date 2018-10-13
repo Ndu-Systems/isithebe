@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   { path:'', component:ListPoliciesComponent },
-  { path:'add-policy', component:AddPolicyComponent },
+  { path:'add', component:AddPolicyComponent },
 ];
 export const declarations =[PoliciesComponent,ListPoliciesComponent,AddPolicyComponent]
 @NgModule({
