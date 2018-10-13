@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p-growl [(value)]=\"msgs\"></p-growl>\r\n\r\n<div class=\"register-page\" [@routerTransition]>\r\n    <div class=\"container\">\r\n       <h1 class=\"center\">Online Registration<small><span class=\"fa fa-edit\"></span></small></h1>\r\n      \r\n       <div class=\"panel panel-default w3l-login-form\">   \r\n           <div class=\"panel-body\">\r\n            <form role=\"form\">\r\n              <div class=\"row\">\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"text\" name=\"first_name\" id=\"first_name\" class=\"form-control input-sm\" placeholder=\"First Name\">\r\n                  </div>\r\n                </div>\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"text\" name=\"last_name\" id=\"last_name\" class=\"form-control input-sm\" placeholder=\"Last Name\">\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-group\">\r\n                <input type=\"email\" name=\"email\" id=\"email\" class=\"form-control input-sm\" placeholder=\"Email Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                  <input type=\"text\" name=\"cellphone\" id=\"cellphone\" class=\"form-control input-sm\" placeholder=\"Cellphone Number\">\r\n              </div>\r\n\r\n              <div class=\"row\">\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"date\" name=\"dob\" id=\"dob\" class=\"form-control input-sm\" placeholder=\"Date Of Birth\">\r\n                   </div>\r\n                </div>\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"text\" name=\"gender\" id=\"gender\" class=\"form-control input-sm\" placeholder=\"State your gender\">\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              \r\n              <input type=\"submit\" value=\"Apply\" class=\"btn btn-success btn-block\">\r\n            \r\n            </form>\r\n            <p class=\" w3l-register-p\">Go Back - <a routerLink=\"/home\" class=\"register\"> Home</a></p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n   </div>\r\n"
+module.exports = "<p-growl [(value)]=\"msgs\"></p-growl>\r\n\r\n<div class=\"register-page\" [@routerTransition]>\r\n    <div class=\"container\">\r\n       <h1 class=\"center\">Online Registration<small><span class=\"fa fa-edit\"></span></small></h1>\r\n      \r\n       <div class=\"panel panel-default w3l-login-form\">   \r\n           <div class=\"panel-body\">\r\n            <form role=\"form\">\r\n              <div class=\"row\">\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"text\" name=\"first_name\"  [(ngModel)]=\"FirstName\" [ngModelOptions]=\"{standalone: true}\"  id=\"first_name\" class=\"form-control input-sm\" placeholder=\"First Name\">\r\n                  </div>\r\n                </div>\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"text\" name=\"last_name\" id=\"last_name\"  [(ngModel)]=\"Surname\" [ngModelOptions]=\"{standalone: true}\"  class=\"form-control input-sm\" placeholder=\"Last Name\">\r\n                  </div>\r\n                </div>\r\n              </div>  \r\n              <div class=\"form-group\">\r\n                <input type=\"email\" name=\"email\" [(ngModel)]=\"Email\" [ngModelOptions]=\"{standalone: true}\"  id=\"email\" class=\"form-control input-sm\" placeholder=\"Email Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                  <input type=\"text\" name=\"cellphone\" id=\"cellphone\"  [(ngModel)]=\"Cellphone\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control input-sm\" placeholder=\"Cellphone Number\">\r\n              </div>\r\n\r\n              <div class=\"row\">\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">\r\n                  <div class=\"form-group\">\r\n                    <input type=\"date\" name=\"dob\" id=\"dob\"  class=\"form-control input-sm\" [(ngModel)]=\"IDNumber\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Date Of Birth\">\r\n                   </div>\r\n                </div>\r\n                <div class=\"col-xs-6 col-sm-6 col-md-6\">                   \r\n                </div>\r\n              </div>\r\n              \r\n              <input type=\"submit\" value=\"Apply\" (click)=\"apply()\" class=\"btn btn-success btn-block\">\r\n            \r\n            </form>\r\n            <p class=\" w3l-register-p\">Go Back - <a routerLink=\"/home\" class=\"register\"> Home</a></p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n   </div>\r\n"
 
 /***/ }),
 
@@ -34,6 +34,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OnlineRegistrationComponent", function() { return OnlineRegistrationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _router_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../router.animations */ "./src/app/router.animations.ts");
+/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/config */ "./src/app/shared/config.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_client_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/client/client.service */ "./src/app/services/client/client.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,10 +48,103 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var OnlineRegistrationComponent = /** @class */ (function () {
-    function OnlineRegistrationComponent() {
+    function OnlineRegistrationComponent(router, patientService) {
+        this.router = router;
+        this.patientService = patientService;
+        this.msgs = [];
     }
-    OnlineRegistrationComponent.prototype.ngOnInit = function () {
+    OnlineRegistrationComponent.prototype.ngOnInit = function () { };
+    OnlineRegistrationComponent.prototype.showSuccess = function () {
+        this.msgs = [];
+        this.msgs.push({
+            severity: "success",
+            summary: "Success Message",
+            detail: "Client Added Successfully"
+        });
+    };
+    OnlineRegistrationComponent.prototype.showError = function (msg) {
+        this.msgs = [];
+        this.msgs.push({
+            severity: "warn",
+            summary: "Validation Message",
+            detail: "" + msg
+        });
+    };
+    OnlineRegistrationComponent.prototype.add = function () {
+        var _this = this;
+        this.msg = undefined;
+        if (this.Email == undefined || this.Email === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.FirstName === undefined || this.FirstName === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.Surname === undefined || this.Surname === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.IDNumber === undefined || this.IDNumber === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.Cellphone === undefined || this.Cellphone === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.AddressLine1 === undefined || this.AddressLine1 === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.AddressLine2 === undefined || this.AddressLine2 === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.AddressLine3 === undefined || this.AddressLine3 === "") {
+            this.AddressLine3 = " ";
+        }
+        if (this.City === undefined || this.City === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (this.PostCode === undefined || this.PostCode === "") {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        var data = {
+            FirstName: this.FirstName,
+            Surname: this.Surname,
+            IDNumber: this.IDNumber,
+            Email: this.Email,
+            Cellphone: this.Cellphone,
+            AddressLine1: this.AddressLine1,
+            AddressLine2: this.AddressLine2,
+            AddressLine3: this.AddressLine3,
+            City: this.City,
+            PostCode: this.PostCode
+            // GlobalKey: this.GlobalKey ,
+            // CreateUserId: this.CreateUserId,
+            // CreateDate: this.CreateDate ,
+            // ModifyUserId: this.ModifyUserId,
+            // ModifyDate: this.ModifyDate,
+            // StatusId: this.StatusId;
+        };
+        this.patientService.addClient(data).subscribe(function (response) {
+            if (response === 1) {
+                _this.showSuccess();
+                setTimeout(function () {
+                    _this.router.navigate(["/clients"]);
+                }, 2000);
+            }
+            if (response === _shared_config__WEBPACK_IMPORTED_MODULE_2__["USER_EXIST"]) {
+                _this.showError("Client alreay exists");
+            }
+        });
     };
     OnlineRegistrationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -57,7 +153,8 @@ var OnlineRegistrationComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./online-registration.component.scss */ "./src/app/online-registration/online-registration.component.scss")],
             animations: [Object(_router_animations__WEBPACK_IMPORTED_MODULE_1__["routerTransition"])()]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _services_client_client_service__WEBPACK_IMPORTED_MODULE_4__["ClientService"]])
     ], OnlineRegistrationComponent);
     return OnlineRegistrationComponent;
 }());
