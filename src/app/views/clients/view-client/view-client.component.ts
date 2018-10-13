@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-client.component.scss']
 })
 export class ViewClientComponent implements OnInit {
+userId:string;
+  constructor(private route:ActivatedRoute) { 
 
-  constructor() { }
+    this.userId = this.route.params.id
+    alert(this.userId)
+  }
 
   ngOnInit() {
   }
