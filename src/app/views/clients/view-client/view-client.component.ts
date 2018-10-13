@@ -10,8 +10,8 @@ export class ViewClientComponent implements OnInit {
 userId:string;
   constructor(private route:ActivatedRoute) { 
 
-    this.userId = this.route.params.id
-    alert(this.userId)
+    // this.userId = this.route.params.id
+    // alert(this.userId)
   }
 
   ngOnInit() {
