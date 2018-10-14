@@ -26,6 +26,6 @@ export class ViewClientsComponent implements OnInit {
     this.patients$ = this.selectService.select("users WHERE  Role = 'client' ORDER BY CreateDate DESC ");
   }
   view(client){ 
-    this.route.navigate(['/clients/view', client.UserId]);
+    this.route.navigate([`/clients/view`, client.UserId]);
   }
 }
