@@ -9,19 +9,19 @@ $data = json_decode(file_get_contents("php://input"));
 $rows = array();
 
 //Active Patients
-$result = $conn->prepare("SELECT * FROM patient WHERE StatusId = ?");
-$result->execute(array(1));
+$result = $conn->prepare("SELECT * FROM users WHERE Role =? AND StatusId = ?");
+$result->execute(array("client",1));
 $counts = new Counts();
-$counts->key ="patient";
+$counts->key ="clients";
 $counts->value =$result->rowCount();
 $rows[]= $counts;
 
 
 //Active Appointments
-$result = $conn->prepare("SELECT * FROM appointment WHERE StatusId = ?");
+$result = $conn->prepare("SELECT * FROM policies WHERE StatusId = ?");
 $result->execute(array(1));
 $counts = new Counts();
-$counts->key ="appointment";
+$counts->key ="policies";
 $counts->value =$result->rowCount();
 $rows[]= $counts;
 
