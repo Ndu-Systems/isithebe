@@ -1,4 +1,4 @@
-export const IS_LOCAL = false;
+export const IS_LOCAL = true;
 let api = 'http://www.isithebe.co.za/api';
 let web = 'http://www.isithebe.co.za';
 if (IS_LOCAL) {

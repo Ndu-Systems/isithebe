@@ -13,6 +13,7 @@ const routes: Routes = [
             { path: 'user', loadChildren: './user/user.module#UserModule' },
             { path: 'policies', loadChildren: './policies/policies.module#PoliciesModule' },
             { path: 'benefits', loadChildren: './benefits/benefits.module#BenefitsModule' },
+            { path: 'callbacks', loadChildren: './callbacks/callbacks.module#CallbacksModule' },
 
         ]
     }
