@@ -13,6 +13,8 @@ import { ACTIVE_POLICY_CODE } from '../../../shared/config';
 })
 export class ListPoliciesComponent implements OnInit {
 policies$:Observable<any>=this.selectService.select(`policies`);
+searchText:string;
+p:any;
   constructor(private selectService:SelectService) { }
 
   ngOnInit() {

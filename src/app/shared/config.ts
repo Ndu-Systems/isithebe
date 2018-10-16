@@ -1,6 +1,6 @@
-export const IS_LOCAL = true;
-let api = 'http://dokio.ndu-systems.net/api';
-let web = 'http://dokio.ndu-systems.net';
+export const IS_LOCAL = false;
+let api = 'http://www.isithebe.co.za/api';
+let web = 'http://www.isithebe.co.za';
 if (IS_LOCAL) {
     api = 'http://localhost:8080/isithebe/api';
     web = 'http://localhost:4200';
