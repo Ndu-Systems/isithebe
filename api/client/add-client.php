@@ -54,7 +54,7 @@ if (isset($data->Email)) {
     ))) {
         echo 1;
     } else {
-        echo json_encode("error while trying create patient, please try again");
+        echo json_encode("error while trying create client, please try again");
     }
     
     

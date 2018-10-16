@@ -27,10 +27,10 @@ $rows[]= $counts;
 
 
 //Awaiting Approval Appointments
-$result = $conn->prepare("SELECT * FROM appointment WHERE StatusId = ?");
-$result->execute(array(5));
+$result = $conn->prepare("SELECT * FROM callbacks WHERE StatusId = ?");
+$result->execute(array(1));
 $counts = new Counts();
-$counts->key ="awaiting-appointment";
+$counts->key ="callbacks";
 $counts->value =$result->rowCount();
 $rows[]= $counts;
 
