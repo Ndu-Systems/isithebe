@@ -26,7 +26,7 @@ export class OnlineRegistrationComponent implements OnInit {
   msg: string;
   constructor(
       private router: Router,
-      private patientService: ClientService
+      private clientService: ClientService
   ) {}
 
   ngOnInit() {}
@@ -35,7 +35,7 @@ export class OnlineRegistrationComponent implements OnInit {
       this.msgs.push({
           severity: "success",
           summary: "Success Message",
-          detail: "Client Added Successfully"
+          detail: "Registration Submitted Successfully"
       });
   }
   showError(msg) {
@@ -46,7 +46,7 @@ export class OnlineRegistrationComponent implements OnInit {
           detail: `${msg}`
       });
   }
-  add() {
+  apply() {
       this.msg = undefined;
       if (this.Email == undefined || this.Email === "") {
           this.showError("Please fill in Required Fields");
@@ -60,33 +60,33 @@ export class OnlineRegistrationComponent implements OnInit {
           this.showError("Please fill in Required Fields");
           return false;
       }
-      if (this.IDNumber === undefined || this.IDNumber === "") {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }
+      // if (this.IDNumber === undefined || this.IDNumber === "") {
+      //     this.showError("Please fill in Required Fields");
+      //     return false;
+      // }
       if (this.Cellphone === undefined || this.Cellphone === "") {
           this.showError("Please fill in Required Fields");
           return false;
       }
-      if (this.AddressLine1 === undefined || this.AddressLine1 === "") {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }
-      if (this.AddressLine2 === undefined || this.AddressLine2 === "") {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }
-      if (this.AddressLine3 === undefined || this.AddressLine3 === "") {
-          this.AddressLine3 = " ";
-      }
-      if (this.City === undefined || this.City === "") {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }
-      if (this.PostCode === undefined || this.PostCode === "") {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }
+      // if (this.AddressLine1 === undefined || this.AddressLine1 === "") {
+      //     this.showError("Please fill in Required Fields");
+      //     return false;
+      // }
+      // if (this.AddressLine2 === undefined || this.AddressLine2 === "") {
+      //     this.showError("Please fill in Required Fields");
+      //     return false;
+      // }
+      // if (this.AddressLine3 === undefined || this.AddressLine3 === "") {
+      //     this.AddressLine3 = " ";
+      // }
+      // if (this.City === undefined || this.City === "") {
+      //     this.showError("Please fill in Required Fields");
+      //     return false;
+      // }
+      // if (this.PostCode === undefined || this.PostCode === "") {
+      //     this.showError("Please fill in Required Fields");
+      //     return false;
+      // }
 
       let data = {
           FirstName: this.FirstName,
@@ -94,11 +94,11 @@ export class OnlineRegistrationComponent implements OnInit {
           IDNumber: this.IDNumber,
           Email: this.Email,
           Cellphone: this.Cellphone,
-          AddressLine1: this.AddressLine1,
-          AddressLine2: this.AddressLine2,
-          AddressLine3: this.AddressLine3,
-          City: this.City,
-          PostCode: this.PostCode
+          AddressLine1: 'incomplete',
+          AddressLine2: 'incomplete', 
+          AddressLine3: 'incomplete',
+          City: 'incomplete',
+          PostCode: 'incomplete',
           // GlobalKey: this.GlobalKey ,
           // CreateUserId: this.CreateUserId,
           // CreateDate: this.CreateDate ,
@@ -106,15 +106,16 @@ export class OnlineRegistrationComponent implements OnInit {
           // ModifyDate: this.ModifyDate,
           // StatusId: this.StatusId;
       };
-      this.patientService.addClient(data).subscribe(response => {
+      debugger
+      this.clientService.addClient(data).subscribe(response => {
           if (response === 1) {
               this.showSuccess();
               setTimeout(() => {
-                  this.router.navigate(["/clients"]);
+                  this.router.navigate(["/home"]);
               }, 2000);
           }
           if (response === USER_EXIST) {
-              this.showError("Client alreay exists");
+              this.showError("This user already Exists Please login...");
           }
       });
   }
