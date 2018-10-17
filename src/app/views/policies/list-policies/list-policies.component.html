@@ -34,7 +34,7 @@
                 <td>{{item.Amount}}</td>
                 <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
                 <td>{{item.CreateDate}}</td>
-                <td><a class="btn rounded-btn" [routerLink]="['/policies/view']" (click)="view(item)" >View</a></td>
+                <td><button class="btn rounded-btn" (click)="view(item)" >View</button></td>
               </tr>
             </tbody>
           </table>

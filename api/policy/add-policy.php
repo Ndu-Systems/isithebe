@@ -9,7 +9,6 @@ if (isset($data->Description)) {
     $Description          = $data->Description;
     $Amount      = $data->Amount;
     $CreateUserId        = $data->CreateUserId;
-
     $StatusId           = 1;
     
     $result = $conn->prepare("INSERT INTO policies( PolicyId, Description, Amount, CreateUserId, CreateDate,StatusId) 
