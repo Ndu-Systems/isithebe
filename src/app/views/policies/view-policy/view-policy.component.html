@@ -41,12 +41,12 @@
                 <div class="col-md-6">
                   <a class="btn rounded-btn" [routerLink]="['/policies/add']">Add Benefit </a>
                 </div>
-                <div class="card-body table-responsive">
+                <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else nobefits">
                     <h2>
                         Benefits  
                     </h2>
                     
-                    <table class="table table-bordered" *ngIf="benefits$ | async as benefits; else nobefits">
+                    <table class="table table-bordered" *ngIf="benefits.length; else nobefits">
                         <thead>
                             <tr>
                                 <th>Amount </th>
@@ -64,15 +64,24 @@
                             </tr>
                         </tbody>
                     </table>
+                    <ng-template #nobefits>
+                        <div>
+                        
+                          <div class="alert alert-warning">
+                           No Benefits for this plan
+                          </div>
+                        </div>
+                      </ng-template>
                 </div>
-                <ng-template #nobefits>
-                  <div>
-                  
-                    <div class="alert alert-warning">
-                     No Benefits for this plan
+               
+                <ng-template #loadingBenefits>
+                    <div>
+                    
+                     <h1>
+                       Loading benefits...
+                     </h1>
                     </div>
-                  </div>
-                </ng-template>
+                  </ng-template>
             </div>
 
         </div>

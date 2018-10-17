@@ -80,12 +80,12 @@
               <div class="col-md-6">
                 <a class="btn rounded-btn" [routerLink]="['/policies/add']">Add Policy </a>
               </div>
-              <div class="card-body table-responsive">
+              <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
                   <h2>
                     Policies  
                   </h2>
                   
-                  <table class="table table-bordered" *ngIf="policies$ | async as policies; else nobefits">
+                  <table class="table table-bordered" *ngIf="policies.length; else nobefits">
                       <thead>
                           <tr>
                               <th>Amount </th>
@@ -96,22 +96,31 @@
                       </thead>
                       <tbody>
                           <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                              <td>{{item.Amount |currency:'R':true}}</td>
+                              <td>{{item.PremiumAmount |currency:'R':true}}</td>
                               <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
                               <td>{{item.CreateDate| date:'mediumDate'}}</td>
                               <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td>
                           </tr>
                       </tbody>
                   </table>
+                  <ng-template #nobefits>
+                    <div>
+                    
+                      <div class="alert alert-warning">
+                       No Policy found for {{client.FirstName}}
+                      </div>
+                    </div>
+                  </ng-template>
               </div>
-              <ng-template #nobefits>
+              <ng-template #loadingBenefits>
                 <div>
                 
-                  <div class="alert alert-warning">
-                   No Benefits for this plan
-                  </div>
+                 <h1>
+                   Loading policy...
+                 </h1>
                 </div>
               </ng-template>
+            
           </div>
 
       </div>
