@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'add', component:AddClientComponent
   },{
-    path: 'view/:id', component:ViewClientComponent
+    path: 'view', component:ViewClientComponent
   },
   {
     path: 'edit/:id', component:EditClientComponent

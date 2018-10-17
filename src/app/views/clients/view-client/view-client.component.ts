@@ -1,20 +1,36 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { routerTransition } from '../../../router.animations';
+import { User } from '../../../models/user/User';
+import { SelectService } from '../../../shared';
+import { SELECTED_CLIENT } from '../../../shared/config';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view-client',
   templateUrl: './view-client.component.html',
-  styleUrls: ['./view-client.component.scss']
+  styleUrls: ['./view-client.component.scss'],
+  animations: [routerTransition()]
+
 })
 export class ViewClientComponent implements OnInit {
-userId:string;
-  constructor(private route:ActivatedRoute) { 
+client:User;
+policies$:Observable<Array<any>>;
+  constructor(
+    private router:Router,
+    private selectService : SelectService
+    ) { 
+      let client = localStorage.getItem(SELECTED_CLIENT);
 
-    // this.userId = this.route.params.id
-    // alert(this.userId)
+      if(!client) this.router.navigate(['clients']);
+
+      this.client = JSON.parse(client);
+
   }
 
   ngOnInit() {
+    console.log(this.client);
+    this.policies$ = this.selectService.select(`policyholder WHERE UserId = '${this.client.UserId}'`);
   }
 
 }

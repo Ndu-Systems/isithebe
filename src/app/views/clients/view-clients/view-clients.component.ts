@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import { SelectService } from '../../../shared';
 import { Router } from '@angular/router';
 import { routerTransition } from '../../../router.animations';
+import { User } from '../../../models/user/User';
+import { SELECTED_CLIENT } from '../../../shared/config';
 
 @Component({
   selector: 'app-view-clients',
@@ -25,7 +27,8 @@ export class ViewClientsComponent implements OnInit {
   ngOnInit() {
     this.patients$ = this.selectService.select("users WHERE  Role = 'client' ORDER BY CreateDate DESC ");
   }
-  view(client){ 
-    this.route.navigate([`/clients/view`, client.UserId]);
+  view(client:User){ 
+    localStorage.setItem(SELECTED_CLIENT,JSON.stringify(client));
+    this.route.navigate([`/clients/view`]);
   }
 }
