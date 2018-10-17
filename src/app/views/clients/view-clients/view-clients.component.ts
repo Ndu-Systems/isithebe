@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { routerTransition } from '../../../router.animations';
 import { User } from '../../../models/user/User';
 import { SELECTED_CLIENT } from '../../../shared/config';
+import { MenuItem } from '../../../models/header/MenuItem';
 
 @Component({
   selector: 'app-view-clients',
@@ -18,7 +19,7 @@ export class ViewClientsComponent implements OnInit {
   patients$ : Observable<any>;  
   searchText:string;
   p : any
-
+menus: Array<MenuItem>;
   constructor(
     private selectService : SelectService ,
     private route : Router
@@ -26,6 +27,10 @@ export class ViewClientsComponent implements OnInit {
 
   ngOnInit() {
     this.patients$ = this.selectService.select("users WHERE  Role = 'client' ORDER BY CreateDate DESC ");
+
+    this.menus = [
+      {name:'Dashboard',url:'/dashboard'}
+    ];
   }
   view(client:User){ 
     localStorage.setItem(SELECTED_CLIENT,JSON.stringify(client));

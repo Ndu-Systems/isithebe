@@ -5,6 +5,7 @@ import { ClientService } from "../../../services/client/client.service";
 import { IfStmt } from "@angular/compiler";
 import { USER_EXIST } from "../../../shared/config";
 import { routerTransition } from "../../../router.animations";
+import { MenuItem } from "../../../models/header/MenuItem";
 
 @Component({
     selector: "app-add-client",
@@ -26,12 +27,18 @@ export class AddClientComponent implements OnInit {
     PostCode: string;
     msgs: Message[] = [];
     msg: string;
+    menus: MenuItem[];
     constructor(
         private router: Router,
         private patientService: ClientService
     ) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.menus = [
+            {name:'Dashboard',url:'/dashboard'},
+            {name:'Clients',url:'/clients'},
+          ];
+    }
     showSuccess() {
         this.msgs = [];
         this.msgs.push({
@@ -101,12 +108,7 @@ export class AddClientComponent implements OnInit {
             AddressLine3: this.AddressLine3,
             City: this.City,
             PostCode: this.PostCode
-            // GlobalKey: this.GlobalKey ,
-            // CreateUserId: this.CreateUserId,
-            // CreateDate: this.CreateDate ,
-            // ModifyUserId: this.ModifyUserId,
-            // ModifyDate: this.ModifyDate,
-            // StatusId: this.StatusId;
+            
         };
         this.patientService.addClient(data).subscribe(response => {
             if (response === 1) {

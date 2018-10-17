@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../../router.animations';
 import { Message } from 'primeng/api';
 import { Router } from '@angular/router';
+import { MenuItem } from '../../../models/header/MenuItem';
 
 @Component({
   selector: 'app-add-policy',
@@ -18,12 +19,18 @@ export class AddPolicyComponent implements OnInit {
   CreateUserId:number =1;
   msgs: Message[] = [];
   msg: string;
+  menus:Array<MenuItem>;
   constructor(
       private router: Router,
       private policyService: PolicyService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.menus = [
+        {name:'Dashboard',url:'/dashboard'},
+        {name:'Policies',url:'/policies',icon:'file'},
+      ];
+  }
   showSuccess() {
       this.msgs = [];
       this.msgs.push({

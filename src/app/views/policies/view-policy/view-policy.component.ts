@@ -5,6 +5,7 @@ import { SELECTED_POLICY } from "../../../shared/config";
 import { Router } from "@angular/router";
 import { SelectService } from "../../../shared";
 import { routerTransition } from "../../../router.animations";
+import { MenuItem } from "../../../models/header/MenuItem";
 
 @Component({
     selector: "app-view-policy",
@@ -15,6 +16,7 @@ import { routerTransition } from "../../../router.animations";
 export class ViewPolicyComponent implements OnInit {
     policy: Policy;
     benefits$: Observable<any>;
+    menus:Array<MenuItem>;
     constructor(private router: Router, private selectService: SelectService) {
         let policy = localStorage.getItem(SELECTED_POLICY);
 
@@ -24,12 +26,16 @@ export class ViewPolicyComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.policy);
         this.benefits$ = this.selectService.select(
             `policybenefits right join  benefits on policybenefits.BenefitId = benefits.BenefitId where PolicyId = '${
                 this.policy.PolicyId
             }'`
         );
+
+        this.menus = [
+            {name:'Dashboard',url:'/dashboard'},
+            {name:'Policies',url:'/policies',icon:'file'},
+          ];
     }
     viewBenefit(item){
       alert('Benefit details under contruction');
