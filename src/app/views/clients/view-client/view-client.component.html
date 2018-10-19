@@ -78,7 +78,7 @@
 
               </div>
               <div class="col-md-6">
-                <a class="btn rounded-btn" [routerLink]="['/policies/add']">Add Policy </a>
+                <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
               </div>
               <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
                   <h2>

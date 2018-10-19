@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { API_URL } from '../../shared/config';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { IPolicyholder } from '../../models/policyholder/policyholder';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,11 @@ export class ClientService {
 
   updateClient(data): Observable<any> {
     return this.http.post<any>(`${this.url}/client/edit-client.php`, data);
+  }
+
+  // policy holder
+  addPolicyHolder(data:IPolicyholder): Observable<any> {
+    return this.http.post<any>(`${this.url}/client/add-policyholder.php`, data);
   }
 
 }

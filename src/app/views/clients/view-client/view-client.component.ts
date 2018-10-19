@@ -39,5 +39,7 @@ menus:Array<MenuItem>;
       {name:'Clients',url:'/clients'},
     ];
   }
-
+addPolicyHolder(){
+this.router.navigate(['clients/add-policyholder']);
+}
 }
