@@ -166,6 +166,10 @@ var ClientService = /** @class */ (function () {
     ClientService.prototype.updateClient = function (data) {
         return this.http.post(this.url + "/client/edit-client.php", data);
     };
+    // policy holder
+    ClientService.prototype.addPolicyHolder = function (data) {
+        return this.http.post(this.url + "/client/add-policyholder.php", data);
+    };
     ClientService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'

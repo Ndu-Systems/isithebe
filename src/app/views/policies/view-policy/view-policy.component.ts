@@ -40,4 +40,7 @@ export class ViewPolicyComponent implements OnInit {
     viewBenefit(item){
       alert('Benefit details under contruction');
     }
+    addBefefits(){
+        this.router.navigate(['policies/add-benefits'])
+    }
 }

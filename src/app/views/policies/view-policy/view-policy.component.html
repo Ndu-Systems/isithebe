@@ -1,12 +1,11 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="'Policy Plan - Details'" [icon]="'fa-users'"></app-page-header>
-    Policies  <app-page-header [heading]="policy.Description" [icon]="'fa'" [menus]="menus"></app-page-header>
+   <app-page-header [heading]="policy.Description" [icon]="'fa'" [menus]="menus"></app-page-header>
 
     <div class="row">
         <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="card mb-3">
                 <div class="card-header">
-
+                        {{policy.Description}} Details
                 </div>
                 <div class="card-body table-responsive">
                     <table class="table table-bordered" *ngIf="policy">
@@ -41,7 +40,7 @@
 
                 </div>
                 <div class="col-md-6">
-                  <a class="btn rounded-btn" [routerLink]="['/policies/add']">Add Benefit </a>
+                  <a class="btn rounded-btn" (click)="addBefefits()">Add Benefit </a>
                 </div>
                 <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else nobefits">
                     <h2>

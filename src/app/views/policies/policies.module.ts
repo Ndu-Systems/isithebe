@@ -5,6 +5,7 @@ import { PageHeaderModule, PrimeNg } from '../../shared';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   imports: [
@@ -12,6 +13,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule, PageHeaderModule,
 
   ],
-  declarations: [...declarations]
+  declarations: [...declarations],
+  providers:[ConfirmationService]
+
 })
 export class PoliciesModule { }

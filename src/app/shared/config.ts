@@ -10,6 +10,7 @@ export const   API_URL = api;
 export const  WEB_HOST = web;
 export const  USER_EXIST = 'USER_EXIST';
 export const  POLICY_HOLDER_EXIST = 'POLICY_HOLDER_EXIST';
+export const  POLICY_BENEFIT_HOLDER_EXIST = 'POLICY_BENEFIT_HOLDER_EXIST';
 export const  ACTIVE_POLICY_CODE = 1;
 export const  SELECTED_POLICY = "selectedPolicyFromPolicyPage";
 export const  SELECTED_CLIENT = "selectedClientFromClientPage";
