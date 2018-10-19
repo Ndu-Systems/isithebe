@@ -16,7 +16,7 @@ export class AddPolicyComponent implements OnInit {
 
   Amount: number;
   Description: string;
-  CreateUserId:number =1;
+  CreateUserId:number = 1;
   msgs: Message[] = [];
   msg: string;
   menus:Array<MenuItem>;
