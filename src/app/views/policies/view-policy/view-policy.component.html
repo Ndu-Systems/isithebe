@@ -39,13 +39,25 @@
                     </table>
 
                 </div>
-                <div class="col-md-6">
-                  <a class="btn rounded-btn" (click)="addBefefits()">Add Benefit </a>
-                </div>
+             
+                <div class="card-header">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <a class="btn rounded-btn" (click)="addBefefits()">Add benefit </a>
+                          </div>
+                          <div class="input-group mb-3 col-md-6">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">
+                                <li class="fa fa-search"></li>
+                              </span>
+                            </div>
+                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
+                              aria-label="Search" aria-describedby="basic-addon1">
+                          </div>
+                        </div>
+                      </div>
                 <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else nobefits">
-                    <h2>
-                        Benefits  
-                    </h2>
+                 
                     
                     <table class="table table-bordered" *ngIf="benefits.length; else nobefits">
                         <thead>

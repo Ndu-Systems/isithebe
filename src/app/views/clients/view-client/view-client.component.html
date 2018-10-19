@@ -4,7 +4,9 @@
       <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="card mb-3">
               <div class="card-header">
-
+                
+                            {{client.FirstName}}'s personal details
+                       
               </div>
               <div class="card-body table-responsive">
                   <table class="table table-bordered" *ngIf="client">
@@ -77,14 +79,27 @@
                   </table>
 
               </div>
-              <div class="col-md-6">
-                <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
-              </div>
+            <h2>
+                {{client.FirstName}} policies
+            </h2>
+              <div class="card-header">
+                    <div class="row">
+                            <div class="col-md-6">
+                                    <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
+                                  </div>
+                      <div class="input-group mb-3 col-md-6">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">
+                            <li class="fa fa-search"></li>
+                          </span>
+                        </div>
+                        <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
+                          aria-label="Search" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
               <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
-                  <h2>
-                    Policies  
-                  </h2>
-                  
+                 
                   <table class="table table-bordered" *ngIf="policies.length; else nobefits">
                       <thead>
                           <tr>

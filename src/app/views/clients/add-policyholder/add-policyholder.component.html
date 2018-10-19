@@ -6,9 +6,23 @@
 
     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
       <div class="card mb-3">
+        
         <div class="card-header">
-          Select Policy for {{client.FirstName}}
-        </div>
+            <div class="row">
+              <div class="col-md-6">
+                  Select Policy for {{client.FirstName}}
+              </div>
+              <div class="input-group mb-3 col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <li class="fa fa-search"></li>
+                  </span>
+                </div>
+                <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
+                  aria-label="Search" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
         <div class="card-body table-responsive">
           <div class="col-lg-10 offset-1">
            
