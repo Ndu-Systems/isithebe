@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2018 at 04:51 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Oct 19, 2018 at 12:10 PM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,31 @@ CREATE TABLE `benefits` (
 
 INSERT INTO `benefits` (`BenefitId`, `Description`, `Amount`, `StatusId`) VALUES
 ('1fb649d7-d210-11e8-a250-80fa5b45280e', 'More to eat', '50', 1),
-('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', 1);
+('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', 1),
+('31d261d1-d360-11e8-9616-f48e38e878a3', 'R200 Airtime', '20', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `callbacks`
+--
+
+CREATE TABLE `callbacks` (
+  `CallBackId` varchar(225) NOT NULL,
+  `Name` varchar(225) NOT NULL,
+  `Cellphone` varchar(225) NOT NULL,
+  `UserId` varchar(225) NOT NULL,
+  `CallDate` datetime NOT NULL,
+  `IsCalled` tinyint(1) NOT NULL,
+  `StatusId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `callbacks`
+--
+
+INSERT INTO `callbacks` (`CallBackId`, `Name`, `Cellphone`, `UserId`, `CallDate`, `IsCalled`, `StatusId`) VALUES
+('f6649df2-d386-11e8-abf6-f48e38e878a3', 'freedom khanyile', '0746858064', ' ', '2018-10-19 12:08:44', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -185,6 +209,12 @@ INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `Con
 ALTER TABLE `benefits`
   ADD PRIMARY KEY (`BenefitId`),
   ADD KEY `BenefitsIndex` (`BenefitId`) USING HASH;
+
+--
+-- Indexes for table `callbacks`
+--
+ALTER TABLE `callbacks`
+  ADD PRIMARY KEY (`CallBackId`);
 
 --
 -- Indexes for table `policies`

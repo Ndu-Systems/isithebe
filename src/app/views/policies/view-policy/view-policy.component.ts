@@ -17,6 +17,9 @@ export class ViewPolicyComponent implements OnInit {
     policy: Policy;
     benefits$: Observable<any>;
     menus:Array<MenuItem>;
+    nobefits: any;
+    searchText: string;
+    p:any;
     constructor(private router: Router, private selectService: SelectService) {
         let policy = localStorage.getItem(SELECTED_POLICY);
 

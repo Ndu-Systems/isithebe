@@ -18,6 +18,8 @@ export class ViewClientComponent implements OnInit {
 client:User;
 policies$:Observable<Array<any>>;
 menus:Array<MenuItem>;
+searchText: string;
+p:any;
   constructor(
     private router:Router,
     private selectService : SelectService

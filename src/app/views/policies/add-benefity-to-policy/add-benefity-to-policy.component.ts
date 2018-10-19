@@ -23,6 +23,9 @@ export class AddBenefityToPolicyComponent implements OnInit {
   benefits$:Observable<Array<any>>;
   msgs: Message[] = [];
   msg: string;
+  searchText: string;
+  p: any;
+  loadingBenefits:any;
   constructor(
     private router:Router,
     private selectService : SelectService,
