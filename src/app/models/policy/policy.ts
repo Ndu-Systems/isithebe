@@ -7,6 +7,9 @@ export interface Policy {
     ModifyUserId: string;
     ModifyDate: string;
     StatusId: string;
+
+    totalAmpount?: any; // total amount
+
 }
 export interface IPolicyBenefit {
 PolicyBenefitId?: string ; 

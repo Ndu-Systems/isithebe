@@ -1,144 +1,142 @@
 <div [@routerTransition]>
-        <app-page-header [heading]="client.FirstName" [icon]="'fa-user'" [menus]="menus"></app-page-header>
-        <div class="row">
-      <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="card mb-3">
-              <div class="card-header">
-                
-                            {{client.FirstName}}'s personal details
-                       
-              </div>
-              <div class="card-body table-responsive">
-                  <table class="table table-bordered" *ngIf="client">
-
-                      <tbody>
-                          <tr>
-                              <td>
-                                  <b>Name</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.FirstName}}
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>Surname</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.Surname}}
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>ContactNumbers</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.ContactNumbers}}
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>Email</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.Email}}
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>Address</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.AddressLine1}} <br>  
-                                  {{client.AddressLine2}} <br>  
-                                  {{client.City}} <br>  
-                                  {{client.PostCode}} <br>  
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>CreateDate</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.CreateDate}}  
-                                
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <b>ID Number</b>
-                              </td>
-                              <td class="bold">
-                                  {{client.IDNumber}}  
-                                
-                              </td>
-                          </tr>
-                         
-                        
-                      </tbody>
-                  </table>
-
-              </div>
-            <h2>
-                {{client.FirstName}} policies
-            </h2>
-              <div class="card-header">
-                    <div class="row">
-                            <div class="col-md-6">
-                                    <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
-                                  </div>
-                      <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1">
-                            <li class="fa fa-search"></li>
-                          </span>
-                        </div>
-                        <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
-                          aria-label="Search" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-              <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
-                 
-                  <table class="table table-bordered" *ngIf="policies.length; else nobefits">
-                      <thead>
-                          <tr>
-                              <th>Amount </th>
-                              <th>Policy Name</th>
-                              <th>CreateDate</th>
-
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                              <td>{{item.PremiumAmount |currency:'R':true}}</td>
-                              <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
-                              <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                              <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <ng-template #nobefits>
-                    <div>
-                    
-                      <div class="alert alert-warning">
-                       No Policy found for {{client.FirstName}}
-                      </div>
-                    </div>
-                  </ng-template>
-              </div>
-              <ng-template #loadingBenefits>
-                <div>
-                
-                 <h1>
-                   Loading policy...
-                 </h1>
+    <app-page-header [heading]="client.FirstName" [icon]="'fa-user'" [menus]="menus"></app-page-header>
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="card mb-3">
+                <div class="card-header">
+                    {{client.FirstName}}'s personal details
                 </div>
-              </ng-template>
-            
-          </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-bordered" *ngIf="client">
 
-      </div>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <b>Name</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.FirstName}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Surname</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.Surname}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>ContactNumbers</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.ContactNumbers}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Email</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.Email}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Address</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.AddressLine1}} <br>
+                                    {{client.AddressLine2}} <br>
+                                    {{client.City}} <br>
+                                    {{client.PostCode}} <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>CreateDate</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.CreateDate}}
 
-  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>ID Number</b>
+                                </td>
+                                <td class="bold">
+                                    {{client.IDNumber}}
+
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <h2>
+                    {{client.FirstName}} policies
+                </h2>
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
+                        </div>
+                        <div class="input-group mb-3 col-md-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control"
+                                placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
+
+                    <table class="table table-bordered" *ngIf="policies.length; else nobefits">
+                        <thead>
+                            <tr>
+                                <th>Amount </th>
+                                <th>Policy Name</th>
+                                <th>CreateDate</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                                <td>{{item.PremiumAmount |currency:'R':true}}</td>
+                                <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
+                                <td>{{item.CreateDate| date:'mediumDate'}}</td>
+                                <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ng-template #nobefits>
+                        <div>
+
+                            <div class="alert alert-warning">
+                                No Policy found for {{client.FirstName}}
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+                <ng-template #loadingBenefits>
+                    <div>
+
+                        <h1>
+                            Loading policy...
+                        </h1>
+                    </div>
+                </ng-template>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>

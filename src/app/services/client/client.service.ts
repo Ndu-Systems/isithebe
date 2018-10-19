@@ -24,4 +24,8 @@ export class ClientService {
     return this.http.post<any>(`${this.url}/client/add-policyholder.php`, data);
   }
 
+  getPolicies():Observable<any>{
+    return this.http.get<any>(`${this.url}/client/get-policies.php`);
+}
+
 }

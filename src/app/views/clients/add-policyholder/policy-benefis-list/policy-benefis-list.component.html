@@ -1,0 +1,14 @@
+<table *ngIf="benefits.length; else nobefits">
+  <tr *ngFor="let item of benefits">
+      <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
+      <td>{{item.Amount |currency:'R':true}}</td>
+  </tr>
+</table>
+<ng-template #nobefits>
+    <div>
+
+        <div class="alert alert-warning">
+            No Befits
+        </div>
+    </div>
+</ng-template>

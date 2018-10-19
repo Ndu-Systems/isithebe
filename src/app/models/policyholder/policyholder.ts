@@ -11,4 +11,5 @@ export interface IPolicyholder{
     ModifyUserId?:number;
     ModifyDate?:Date;
     StatusId:number;
+
 }

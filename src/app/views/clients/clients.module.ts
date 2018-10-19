@@ -1,3 +1,4 @@
+import { PolicyBenefisListComponent } from './add-policyholder/policy-benefis-list/policy-benefis-list.component';
 import { AddPolicyholderComponent } from './add-policyholder/add-policyholder.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { ViewClientsComponent } from './view-clients/view-clients.component';
@@ -37,7 +38,7 @@ const routes: Routes = [
         ReactiveFormsModule
   ],
   exports: [RouterModule,...PrimeNg],
-  declarations: [ViewClientsComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent],
+  declarations: [ViewClientsComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent],
   providers:[ConfirmationService]
 })
 export class ClientsModule { }

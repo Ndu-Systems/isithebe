@@ -38,7 +38,7 @@ export class AddPolicyholderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.policies$ = this.selectService.select(`policies WHERE StatusId = 1`);
+    this.policies$ = this.clientService.getPolicies();
 
     this.menus = [
       {name:'Dashboard',url:'/dashboard'},
@@ -55,7 +55,7 @@ export class AddPolicyholderComponent implements OnInit {
           UserId:this.client.UserId,
           PolicyTypeId:1,
           PolicyName:policy.Description,
-          PremiumAmount:Number(policy.Amount),
+          PremiumAmount:Number(policy.totalAmpount),
           CreateUserId:1,
           StatusId:1
         }
