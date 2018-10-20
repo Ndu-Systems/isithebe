@@ -11,11 +11,12 @@ if (isset($data->Description)) {
     $CreateUserId        = $data->CreateUserId;
     $StatusId           = 1;
     
-    $result = $conn->prepare("INSERT INTO policies( PolicyId, Description, Amount, CreateUserId, CreateDate,StatusId) 
-                                                VALUES (UUID(),?,?,?,now(),?)");
+    $result = $conn->prepare("INSERT INTO policies( PolicyId, Description, Amount, CreateUserId, CreateDate,ModifyUserId,ModifyDate,StatusId) 
+                                                VALUES (UUID(),?,?,?,now(),?,now(),?)");
     if ($result->execute(array(
         $Description,
         $Amount,
+        $CreateUserId,
         $CreateUserId,
         $StatusId
     ))) {

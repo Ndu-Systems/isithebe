@@ -27,7 +27,7 @@
                 <th>Amount </th>
                 <th>Description</th>
                 <th>CreateDate</th>
-                
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -35,7 +35,8 @@
                 <td>{{item.Amount}}</td>
                 <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
                 <td>{{item.CreateDate}}</td>
-                <td><button class="btn rounded-btn" (click)="view(item)" >View</button></td>
+                <td><button class="btn rounded-btn" (click)="view(item)" >View</button>
+                    &nbsp;<button class="btn rounded-btn" (click)="edit(item)" >Edit</button></td>
               </tr>
             </tbody>
           </table>

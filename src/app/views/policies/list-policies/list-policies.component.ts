@@ -32,4 +32,7 @@ menus:Array<MenuItem>;
     localStorage.setItem(SELECTED_POLICY,JSON.stringify(item))
     this.router.navigate([`policies/view`])
   }
+  edit(policy:Policy){
+    this.router.navigate(['/policies/edit', policy.PolicyId]);
+  }
 }
