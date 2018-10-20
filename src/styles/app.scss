@@ -50,4 +50,10 @@ html, body {
     border: 2px solid rgb(4, 3, 77);
     outline: none;
 }
+.input-group-text {
+    height: 38px;
 
+    .fa {
+        color:#192a56;
+    }
+}

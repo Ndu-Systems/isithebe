@@ -36,4 +36,8 @@ menus: Array<MenuItem>;
     localStorage.setItem(SELECTED_CLIENT,JSON.stringify(client));
     this.route.navigate([`/clients/view`]);
   }
+
+  edit(client:User){
+    this.route.navigate(['/clients/edit', client.UserId]);
+  }
 }
