@@ -1,5 +1,5 @@
 <div [@routerTransition]>
-  Policies  <app-page-header [heading]="'Benefits'" [icon]="'fa-cubes'" [menus]="menus"></app-page-header>
+ <app-page-header [heading]="'Benefits'" [icon]="'fa-cubes'" [menus]="menus"></app-page-header>
 
 <div class="row">
   <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -33,7 +33,7 @@
             <tr *ngFor="let item of benefits | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
               <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
               <td>{{item.Amount}}</td>              
-              <td><button class="btn rounded-btn" (click)="view(item)" >View</button></td>
+              <td><button class="btn rounded-btn" (click)="edit(item)" >Edit</button></td>
             </tr>
           </tbody>
         </table>

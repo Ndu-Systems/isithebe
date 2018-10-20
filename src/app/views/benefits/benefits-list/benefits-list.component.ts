@@ -26,5 +26,9 @@ export class BenefitsListComponent implements OnInit {
       {name:'Dashboard',url:'/dashboard'},
     ];
   }
+
+  edit(benefit:Benefit){
+    this.router.navigate(['/benefits/edit', benefit.BenefitId]);
+  }
   
 }

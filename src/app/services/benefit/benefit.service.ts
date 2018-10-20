@@ -14,6 +14,9 @@ export class BenefitService {
   public addBenefit(data): Observable<any> {
     return this.httpClient.post<any>(`${this.url}/benefit/add.php`, data);
   }
+  public editBenefit(data): Observable<any> {
+    return this.httpClient.post<any>(`${this.url}/benefit/edit.php`, data);
+  }
   
 
 }
