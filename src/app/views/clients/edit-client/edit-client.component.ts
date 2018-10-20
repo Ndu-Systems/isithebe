@@ -40,7 +40,7 @@ export class EditClientComponent implements OnInit {
     this.msgs.push({
       severity: "success",
       summary: "Success Message",
-      detail: "Client Added Successfully"
+      detail: "Client Updated Successfully"
     });
   }
   showError(msg) {

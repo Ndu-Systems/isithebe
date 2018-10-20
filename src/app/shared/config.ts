@@ -6,7 +6,7 @@ if (IS_LOCAL) {
     web = 'http://localhost:4200';
 }
 
-export const   API_URL = api;
+export const  API_URL = api;
 export const  WEB_HOST = web;
 export const  USER_EXIST = 'USER_EXIST';
 export const  USER_NOT_FOUND = 'USER_NOT_FOUND';

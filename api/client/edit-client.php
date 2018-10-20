@@ -8,7 +8,7 @@ $data = json_decode(file_get_contents("php://input"));
 if (isset($data->Email) )
 {  
     $Email          = $data->Email;
-    $UserId          = $data->UserId;
+    $UserId         = $data->UserId;
     $FirstName      = $data->FirstName;
     $Surname        = $data->Surname;
     $City           = $data->City;
@@ -47,7 +47,7 @@ if (isset($data->Email) )
                 Benefactor=?,                           
                 ModifyUserId=?,
                 ModifyDate= Now(),
-                StatusId=?,
+                StatusId=?
                 WHERE UserId = ?
                 "); 
 				if($result->execute(array(
