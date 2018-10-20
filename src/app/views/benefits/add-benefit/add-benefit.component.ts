@@ -3,11 +3,13 @@ import { Message } from 'primeng/api';
 import { MenuItem } from '../../../models';
 import { Router } from '@angular/router';
 import { BenefitService } from '../../../services/benefit';
+import { routerTransition } from '../../../router.animations';
 
 @Component({
   selector: 'app-add-benefit',
   templateUrl: './add-benefit.component.html',
-  styleUrls: ['./add-benefit.component.scss']
+  styleUrls: ['./add-benefit.component.scss'],
+  animations: [routerTransition()]
 })
 export class AddBenefitComponent implements OnInit {
 
@@ -16,7 +18,7 @@ export class AddBenefitComponent implements OnInit {
   msgs: Message[] = [];
   msg: string;
   menus: Array<MenuItem>;
-
+  currentUser;
   constructor(
     private router: Router,
     private benefitService: BenefitService
@@ -27,6 +29,7 @@ export class AddBenefitComponent implements OnInit {
       { name: 'Dashboard', url: '/dashboard' },
       { name: 'Benefits', url: '/benefits', icon: 'cubes' },
     ];
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
   showSuccess() {
@@ -59,7 +62,8 @@ export class AddBenefitComponent implements OnInit {
 
     let data = {
       Description: this.Description,
-      Amount: this.Amount
+      Amount: this.Amount,
+      CreateUserId: this.currentUser.userid
     };
 
     this.benefitService.addBenefit(data)

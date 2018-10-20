@@ -9,6 +9,7 @@ if (isset($data->Description) )
 {  
     $Description        = $data->Description;
     $BenefitId           = $data->BenefitId;
+    $ModifyUserId         = $data->ModifyUserId;
     $Amount             = $data->Amount;     
     $StatusId           = $data->StatusId;   
 
@@ -20,13 +21,16 @@ if (isset($data->Description) )
                     UPDATE benefits SET
                     Description=?,
                     Amount=?,                     
-                    StatusId=?
+                    StatusId=?,
+                    ModifyUserId=?,
+                    ModifyDate=now()
                     WHERE BenefitId =?
                 "); 
 				if($result->execute(array(
                     $Description,
                     $Amount,
                     $StatusId,
+                    $ModifyUserId,
                     $BenefitId
                 ))){
 					echo 1;

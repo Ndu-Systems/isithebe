@@ -19,6 +19,7 @@ export class EditPolicyComponent implements OnInit {
   policyId: string;
   policy$: Observable<Policy>;
   msgs: Message[] = [];
+  currentUser;
   constructor(
     private selectService: SelectService,
     private route: ActivatedRoute,
@@ -33,6 +34,7 @@ export class EditPolicyComponent implements OnInit {
     ];
     this.policyId = this.route.snapshot.paramMap.get("id");
     this.policy$ = this.selectService.select(`policies WHERE PolicyId = '${this.policyId}'`);
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
   showSuccess() {
@@ -68,7 +70,7 @@ export class EditPolicyComponent implements OnInit {
         Description: policy.Description,
         Amount: policy.Amount,
         PolicyId: policy.PolicyId,
-        ModifyUserId: 1,
+        ModifyUserId: this.currentUser.userid,
         StatusId:policy.StatusId
       };
 

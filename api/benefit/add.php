@@ -8,13 +8,16 @@ $data = json_decode(file_get_contents("php://input"));
 if (isset($data->Description)) {
     $Description = $data->Description;
     $Amount= $data->Amount;
+    $CreateUserId = $data->CreateUserId;
     $StatusId= 1;   
     
-    $result = $conn->prepare("INSERT INTO benefits(BenefitId, Description, Amount, StatusId) 
-    VALUES (UUID(), ?, ?, ?)");
+    $result = $conn->prepare("INSERT INTO benefits(BenefitId, Description, Amount, CreatUserId, CreateDate, ModifyUserId, ModifyDate, StatusId) 
+    VALUES (uuid(),?,?,?,now(),?,now(),?)");
     if ($result->execute(array( 
         $Description,
         $Amount,
+        $CreateUserId,
+        $CreateUserId,
         $StatusId        
      ))) {
         echo 1;

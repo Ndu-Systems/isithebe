@@ -19,6 +19,7 @@ export class EditBenefitComponent implements OnInit {
   menus: MenuItem[];
   msgs: Message[] = [];
   msg: string;
+  currentUser;
   constructor(
     private selectService: SelectService,
     private route: ActivatedRoute,
@@ -33,6 +34,7 @@ export class EditBenefitComponent implements OnInit {
     ];
     this.benefitId = this.route.snapshot.paramMap.get("id");
     this.benefit$ = this.selectService.select(`benefits WHERE BenefitId = '${this.benefitId}'`);
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
   showSuccess() {
     this.msgs = [];
@@ -65,7 +67,8 @@ export class EditBenefitComponent implements OnInit {
       let data = {
         Description: benefit.Description,
         Amount: benefit.Amount,
-        BenefitId: benefit.BenefitId,      
+        BenefitId: benefit.BenefitId,
+        ModifyUserId: this.currentUser.userid,      
         StatusId:benefit.StatusId
       };
 

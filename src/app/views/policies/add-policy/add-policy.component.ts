@@ -20,6 +20,7 @@ export class AddPolicyComponent implements OnInit {
   msgs: Message[] = [];
   msg: string;
   menus:Array<MenuItem>;
+  currentUser;
   constructor(
       private router: Router,
       private policyService: PolicyService
@@ -30,6 +31,7 @@ export class AddPolicyComponent implements OnInit {
         {name:'Dashboard',url:'/dashboard'},
         {name:'Policies',url:'/policies',icon:'file'},
       ];
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
   showSuccess() {
       this.msgs = [];
@@ -62,7 +64,7 @@ export class AddPolicyComponent implements OnInit {
       let data = {
         Description: this.Description,
           Amount: this.Amount,
-          CreateUserId:this.CreateUserId
+          CreateUserId:this.currentUser.userid
       };
       this.policyService.addPolicy(data).subscribe(response => {
           if (response === 1) {

@@ -16,8 +16,8 @@ if (isset($data->Email)) {
     $AddressLine3   = $data->AddressLine3;
     $City           = $data->City;
     $PostCode       = $data->PostCode;
-    $CreateUserId   = 1;
-    $ModifyUserId   = 1;
+    $CreateUserId   = $data->CreateUserId;
+    $ModifyUserId   = $data->CreateUserId;
     $StatusId       = 1;
     $Role           = 'client';
     $Password       = 'Password';

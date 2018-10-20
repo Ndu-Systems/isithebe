@@ -28,6 +28,7 @@ export class AddClientComponent implements OnInit {
     msgs: Message[] = [];
     msg: string;
     menus: MenuItem[];
+    currentUser;
     constructor(
         private router: Router,
         private patientService: ClientService
@@ -38,6 +39,7 @@ export class AddClientComponent implements OnInit {
             {name:'Dashboard',url:'/dashboard'},
             {name:'Clients',url:'/clients'},
           ];
+          this.currentUser = JSON.parse(localStorage.getItem('currentUser'));          
     }
     showSuccess() {
         this.msgs = [];
@@ -107,7 +109,8 @@ export class AddClientComponent implements OnInit {
             AddressLine2: this.AddressLine2,
             AddressLine3: this.AddressLine3,
             City: this.City,
-            PostCode: this.PostCode
+            PostCode: this.PostCode,
+            CreateUserId: this.currentUser.userid
             
         };
         this.patientService.addClient(data).subscribe(response => {

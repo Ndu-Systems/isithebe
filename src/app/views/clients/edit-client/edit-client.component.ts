@@ -20,6 +20,7 @@ export class EditClientComponent implements OnInit {
   clientId: string;
   menus: MenuItem[];
   msg: string;
+  currentUser;
   constructor(
     private selectService: SelectService,
     private route: ActivatedRoute,
@@ -34,6 +35,7 @@ export class EditClientComponent implements OnInit {
     ];
     this.clientId = this.route.snapshot.paramMap.get("id");
     this.client$ = this.selectService.select(`users WHERE UserId = '${this.clientId}'`)
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
   showSuccess() {
     this.msgs = [];
@@ -105,7 +107,7 @@ export class EditClientComponent implements OnInit {
       City: client.City,
       PostCode: client.PostCode,
       CreateUserId: client.CreateUserId,
-      ModifyUserId: client.CreateUserId,
+      ModifyUserId: this.currentUser.userid,
       CreateDate: client.CreateDate,
       StatusId: client.StatusId,
       Role: client.Role,
