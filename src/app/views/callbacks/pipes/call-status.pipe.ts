@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS } from '../../../shared/config';
 
 @Pipe({
   name: 'callstatus'
@@ -11,8 +12,8 @@ export class CallStatusPipe implements PipeTransform {
     diff++;
 
     if(!diff) return "none"
-    if(diff < 16) return "orange"
-    if(diff >=16) return "red"
+    if(diff < CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS) return "orange"
+    if(diff >=CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS) return "red"
     
   }
    date_diff_indays(date1, date2) :number{

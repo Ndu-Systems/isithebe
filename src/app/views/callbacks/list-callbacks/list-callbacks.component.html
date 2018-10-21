@@ -49,6 +49,10 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div>
+                      <span class="call-status orange"></span>  Call requested less that {{numberOfDays}} days ago. <br>
+                      <span class="call-status red"></span>   Call requested more that {{numberOfDays}} days ago. <br>
+                    </div>
                     <div class="justify-content-center">
                         <pagination-controls (pageChange)="p = $event"></pagination-controls>
                     </div>

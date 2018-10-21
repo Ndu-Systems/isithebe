@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../../router.animations';
 import { SelectService } from '../../../shared';
 import { MenuItem } from '../../../models/header/MenuItem';
+import { CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS } from '../../../shared/config';
 
 @Component({
   selector: 'app-list-callbacks',
@@ -14,6 +15,7 @@ export class ListCallbacksComponent implements OnInit {
   p;
   callbacks$;
   menus:Array<MenuItem>;
+  numberOfDays:number = CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS;
 
   constructor(private selectService : SelectService) { 
     this.callbacks$ = this.selectService.select("callbacks where StatusId = 1")
