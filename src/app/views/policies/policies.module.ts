@@ -14,7 +14,8 @@ import { ConfirmationService } from 'primeng/api';
 
   ],
   declarations: [...declarations],
-  providers:[ConfirmationService]
+  providers:[ConfirmationService],
+  
 
 })
 export class PoliciesModule { }

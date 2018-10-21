@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2018 at 12:10 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: Oct 21, 2018 at 08:06 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,6 +32,10 @@ CREATE TABLE `benefits` (
   `BenefitId` varchar(225) NOT NULL,
   `Description` varchar(225) NOT NULL,
   `Amount` decimal(10,0) NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
+  `CreateDate` datetime NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
+  `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,10 +43,10 @@ CREATE TABLE `benefits` (
 -- Dumping data for table `benefits`
 --
 
-INSERT INTO `benefits` (`BenefitId`, `Description`, `Amount`, `StatusId`) VALUES
-('1fb649d7-d210-11e8-a250-80fa5b45280e', 'More to eat', '50', 1),
-('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', 1),
-('31d261d1-d360-11e8-9616-f48e38e878a3', 'R200 Airtime', '20', 1);
+INSERT INTO `benefits` (`BenefitId`, `Description`, `Amount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('1fb649d7-d210-11e8-a250-80fa5b45280e', 'More to eat', '50', '', '0000-00-00 00:00:00', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-21 20:05:38', 1),
+('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 1),
+('31d261d1-d360-11e8-9616-f48e38e878a3', 'R200 Airtime', '20', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +93,7 @@ CREATE TABLE `policies` (
 --
 
 INSERT INTO `policies` (`PolicyId`, `Description`, `Amount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'Basic Cover Level 2', '32', 1, '2018-10-13 22:41:32', 0, '0000-00-00 00:00:00', 1),
+('5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'Basic Cover Level 2', '32', 1, '2018-10-13 22:41:32', 0, '2018-10-21 20:02:06', 1),
 ('665b2d03-cf28-11e8-929a-80fa5b45280e', 'seqwe', '3213', 1, '2018-10-13 22:41:45', 0, '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
@@ -194,7 +198,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
 ('Ndumiso', 'Mthembu', '1036279e-cd79-11e8-870a-80fa5b45280e', 'queries@ndu-systems.net222', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '63492634962394', 'client', 'na', 1, '2018-10-11 19:14:08', 1, '2018-10-11 19:14:08', 1),
-('Ndu', 'Systems', '31008929-d20c-11e8-a250-80fa5b45280e', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '2121', 'client', 'na', 1, '2018-10-17 14:57:12', 1, '2018-10-17 14:57:12', 1),
+('Ndu', 'Systems', '31008929-d20c-11e8-a250-80fa5b45280e', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '2121', 'client', 'na', 1, '2018-10-17 14:57:12', 0, '2018-10-21 20:02:13', 1),
 ('Freedom', 'Khanyile', '35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
 ('Admin', 'Admin', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1),
 ('Ndu', 'Systems', 'd695c741-ca5a-11e8-9ca7-80fa5b45280e', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', 1, '2018-10-07 20:00:09', 1, '2018-10-07 20:00:09', 1);

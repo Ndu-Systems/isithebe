@@ -15,4 +15,5 @@ export const  POLICY_BENEFIT_HOLDER_EXIST = 'POLICY_BENEFIT_HOLDER_EXIST';
 export const  ACTIVE_POLICY_CODE = 1;
 export const  SELECTED_POLICY = "selectedPolicyFromPolicyPage";
 export const  SELECTED_CLIENT = "selectedClientFromClientPage";
+export const  CURRENT_LOGGED_IN_USER = "currentUser";
 
