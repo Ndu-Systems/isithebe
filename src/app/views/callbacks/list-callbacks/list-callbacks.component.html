@@ -1,54 +1,61 @@
 <div [@routerTransition]>
-  Policies  <app-page-header [heading]="'Call-Backs'" [icon]="'fa-phone'" [menus]="menus"></app-page-header>
+    Policies <app-page-header [heading]="'Call-Backs'" [icon]="'fa-phone'" [menus]="menus"></app-page-header>
 
-  <div class="row">
-    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-      <div class="card mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-md-6">
-              <!-- <a class="btn rounded-btn" [routerLink]="['/clients/add']">Add Client </a> -->
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <a class="btn rounded-btn" [routerLink]="['/clients/add']">Add Client </a> -->
+                        </div>
+                        <div class="input-group mb-3 col-md-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control"
+                                placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-bordered" *ngIf="callbacks$ | async as callbacks">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Cell phone</th>
+                                <th>Call Date</th>
+                                <th>Last Called By</th>
+
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of callbacks | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+
+                                <td>
+                                    <span class="call-status {{item.CallDate|callstatus}}">
+                                        
+                                    </span>
+                                    {{item.Name}}
+                                </td>
+                                <td>{{item.Cellphone}}</td>
+                                <td>{{item.CallDate}}</td>
+                                <td>{{item.UserId}}</td>
+
+                                <td><a class="btn rounded-btn" [routerLink]="" (click)="closeCall(item)">Close Call</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="justify-content-center">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
             </div>
-            <div class="input-group mb-3 col-md-6">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <li class="fa fa-search"></li>
-                </span>
-              </div>
-              <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
-                aria-label="Search" aria-describedby="basic-addon1">
-            </div>
-          </div>
+
         </div>
-        <div class="card-body table-responsive">
-          <table class="table table-bordered" *ngIf="callbacks$ | async as callbacks">
-            <thead>
-              <tr>
-                 <th>Name</th>
-                <th>Cellphone</th>
-                <th>Last Called By</th>
-                 
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of callbacks | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                
-                <td>{{item.Name}}</td>
-                <td>{{item.Cellphone}}</td>
-                <td>{{item.UserId}}</td>
-                
-                <td><a class="btn rounded-btn" [routerLink]="" (click)="closeCall(item)" >Close Call</a></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="justify-content-center">
-            <pagination-controls (pageChange)="p = $event"></pagination-controls>
-          </div>
-        </div>
-      </div>
 
     </div>
-
-  </div>
 </div>

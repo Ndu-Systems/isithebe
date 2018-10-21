@@ -7,6 +7,7 @@ import { PageHeaderModule, PrimeNg } from '../../shared';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CallStatusPipe } from './pipes/call-status.pipe';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule
   ],
   exports: [...PrimeNg],
-  declarations: [CallbacksComponent, ListCallbacksComponent]
+  declarations: [CallbacksComponent, ListCallbacksComponent,CallStatusPipe]
 })
 export class CallbacksModule { }
