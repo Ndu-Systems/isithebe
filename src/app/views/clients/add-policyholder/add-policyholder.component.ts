@@ -3,7 +3,7 @@ import { Policy } from './../../../models/policy/policy';
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../../router.animations';
 import { MenuItem } from '../../../models/header/MenuItem';
-import { SELECTED_CLIENT, POLICY_HOLDER_EXIST } from '../../../shared/config';
+import { SELECTED_CLIENT, POLICY_HOLDER_EXIST, CURRENT_LOGGED_IN_USER } from '../../../shared/config';
 import { Router } from '@angular/router';
 import { SelectService } from '../../../shared';
 import { User } from '../../../models/user/User';
@@ -27,6 +27,7 @@ export class AddPolicyholderComponent implements OnInit {
   searchText: string;
   p:any;
   loadingBenefits:any;
+  loggedinUser:any;
   constructor(
     private router:Router,
     private selectService : SelectService,
@@ -37,7 +38,12 @@ export class AddPolicyholderComponent implements OnInit {
 
       if(!client) this.router.navigate(['clients']);
 
-      this.client = JSON.parse(client);
+      this.client = JSON.parse(client);  
+
+      // user 
+      let currentUser = localStorage.getItem(CURRENT_LOGGED_IN_USER);
+      if(!currentUser) this.router.navigate(['login']);
+      this.loggedinUser =JSON.parse(currentUser);
    }
 
   ngOnInit() {
@@ -59,7 +65,7 @@ export class AddPolicyholderComponent implements OnInit {
           PolicyTypeId:1,
           PolicyName:policy.Description,
           PremiumAmount:Number(policy.totalAmpount),
-          CreateUserId:1,
+          CreateUserId:this.loggedinUser.userid,
           StatusId:1
         }
      

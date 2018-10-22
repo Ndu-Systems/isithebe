@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="card-body table-responsive">
-          <table class="table table-bordered" *ngIf="policies$ | async as policies">
+          <table class="table table-bordered" *ngIf="policies$ | async as policies; else loading">
             <thead>
               <tr>
                 <th>Amount </th>
@@ -40,6 +40,9 @@
               </tr>
             </tbody>
           </table>
+          <ng-template #loading>
+            <app-spinner></app-spinner>
+          </ng-template>
           <div class="justify-content-center">
             <pagination-controls (pageChange)="p = $event"></pagination-controls>
           </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2018 at 08:06 PM
+-- Generation Time: Oct 22, 2018 at 05:50 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -81,9 +81,9 @@ CREATE TABLE `policies` (
   `PolicyId` varchar(225) NOT NULL,
   `Description` varchar(217) NOT NULL,
   `Amount` decimal(10,0) NOT NULL,
-  `CreateUserId` int(11) NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
   `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
   `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -93,8 +93,8 @@ CREATE TABLE `policies` (
 --
 
 INSERT INTO `policies` (`PolicyId`, `Description`, `Amount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'Basic Cover Level 2', '32', 1, '2018-10-13 22:41:32', 0, '2018-10-21 20:02:06', 1),
-('665b2d03-cf28-11e8-929a-80fa5b45280e', 'seqwe', '3213', 1, '2018-10-13 22:41:45', 0, '0000-00-00 00:00:00', 1);
+('5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'Basic Cover Level 2', '32', '1', '2018-10-13 22:41:32', '0', '2018-10-21 20:02:06', 1),
+('665b2d03-cf28-11e8-929a-80fa5b45280e', 'seqwe', '3213', '1', '2018-10-13 22:41:45', '0', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -106,9 +106,9 @@ CREATE TABLE `policybenefits` (
   `PolicyBenefitId` varchar(225) NOT NULL,
   `PolicyId` varchar(225) NOT NULL,
   `BenefitId` varchar(224) NOT NULL,
-  `CreateUserId` int(11) NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
   `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
   `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -118,7 +118,10 @@ CREATE TABLE `policybenefits` (
 --
 
 INSERT INTO `policybenefits` (`PolicyBenefitId`, `PolicyId`, `BenefitId`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('5e9a81ef-cf28-11e8-929a-80fa5b45241e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1fb649d7-d210-11e8-a250-80fa5b45280e', 1, '2018-10-17 00:00:00', 1, '2018-10-17 00:00:00', 1);
+('5e9a81ef-cf28-11e8-929a-80fa5b45241e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1fb649d7-d210-11e8-a250-80fa5b45280e', '1', '2018-10-17 00:00:00', '1', '2018-10-17 00:00:00', 1),
+('7236ad79-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1fb649d7-d210-11e8-a250-80fa5b45280e', '1', '2018-10-22 17:30:29', '0', '0000-00-00 00:00:00', 1),
+('a35d92fa-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1fb764eb-d210-11e8-a250-80fa5b45280e', '0', '2018-10-22 17:31:51', '0', '0000-00-00 00:00:00', 1),
+('a7d53c69-d5c0-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '31d261d1-d360-11e8-9616-f48e38e878a3', '1', '2018-10-22 08:06:28', '0', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -134,9 +137,9 @@ CREATE TABLE `policyholder` (
   `PolicyName` varchar(225) NOT NULL,
   `SoldDate` datetime NOT NULL,
   `PremiumAmount` decimal(10,0) NOT NULL,
-  `CreateUserId` int(11) NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
   `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
   `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -146,7 +149,10 @@ CREATE TABLE `policyholder` (
 --
 
 INSERT INTO `policyholder` (`PolicyHolderId`, `PolicyId`, `UserId`, `PolicyTypeId`, `PolicyName`, `SoldDate`, `PremiumAmount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('5e9a81ef-cf28-11e8-929a-80fa5b42w34', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b452888', 'Basic Polocy Level 2', '2018-10-17 00:00:00', '250', 1, '2018-10-17 00:00:00', 1, '2018-10-17 00:00:00', 1);
+('572c5794-d60e-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'e0c1f43a-d534-11e8-b21f-0050569f1ec7', '1', 'Basic Cover Level 2', '2018-10-22 17:22:34', '102', '0', '2018-10-22 17:22:34', '0', '0000-00-00 00:00:00', 1),
+('5e9a81ef-cf28-11e8-929a-80fa5b42w34', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b452888', 'Basic Polocy Level 2', '2018-10-17 00:00:00', '250', '1', '2018-10-17 00:00:00', '1', '2018-10-17 00:00:00', 1),
+('5f94d361-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b45280e', '1', 'seqwe', '2018-10-22 17:29:57', '3213', '0', '2018-10-22 17:29:57', '0', '0000-00-00 00:00:00', 1),
+('9c5f1b60-d5c0-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '31008929-d20c-11e8-a250-80fa5b45280e', '1', 'Basic Cover Level 2', '2018-10-22 08:06:09', '82', '1', '2018-10-22 08:06:09', '0', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 

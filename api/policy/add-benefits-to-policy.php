@@ -20,13 +20,14 @@ if (isset($data->PolicyId)) {
         die(json_encode('POLICY_BENEFIT_HOLDER_EXIST'));
     }
     
-    $result = $conn->prepare("INSERT INTO policybenefits(PolicyBenefitId, PolicyId, BenefitId, CreateUserId, CreateDate, StatusId) 
-                                                VALUES (UUID(),?,?,?,now(),?)");
+    $result = $conn->prepare("INSERT INTO policybenefits(PolicyBenefitId, PolicyId, BenefitId, CreateUserId, CreateDate, StatusId,ModifyUserId,ModifyDate) 
+                                                VALUES (UUID(),?,?,?,now(),?,?,now())");
     if ($result->execute(array(
         $PolicyId,
         $BenefitId,
         $CreateUserId,
-        $StatusId
+        $StatusId,
+        $CreateUserId
         
     ))) {
         echo 1;

@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive">
-                    <table class="table table-bordered" *ngIf="callbacks$ | async as callbacks">
+                    <table class="table table-bordered" *ngIf="callbacks$ | async as callbacks; else loading">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -49,6 +49,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <ng-template #loading>
+                        <app-spinner></app-spinner>
+                      </ng-template>
                     <div>
                       <span class="call-status orange"></span>  Call requested less that {{numberOfDays}} days ago. <br>
                       <span class="call-status red"></span>   Call requested more that {{numberOfDays}} days ago. <br>
