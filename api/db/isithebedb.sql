@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
 -- Generation Time: Oct 23, 2018 at 04:10 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
-=======
--- Generation Time: Oct 22, 2018 at 05:50 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
->>>>>>> 67e48560f67864c3e9b3be1ae25a98f6b583ebb0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
