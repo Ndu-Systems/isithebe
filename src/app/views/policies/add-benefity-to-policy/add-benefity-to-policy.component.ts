@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { Message, ConfirmationService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { SelectService } from '../../../shared';
-import { SELECTED_POLICY, POLICY_BENEFIT_HOLDER_EXIST } from '../../../shared/config';
+import { SELECTED_POLICY, POLICY_BENEFIT_HOLDER_EXIST, CURRENT_LOGGED_IN_USER } from '../../../shared/config';
 
 @Component({
   selector: 'app-add-benefity-to-policy',
@@ -26,6 +26,7 @@ export class AddBenefityToPolicyComponent implements OnInit {
   searchText: string;
   p: any;
   loadingBenefits:any;
+  loggedinUser: any;
   constructor(
     private router:Router,
     private selectService : SelectService,
@@ -37,6 +38,10 @@ export class AddBenefityToPolicyComponent implements OnInit {
       if(!policy) this.router.navigate(['clients']);
 
       this.policy = JSON.parse(policy);
+        // user 
+        let currentUser = localStorage.getItem(CURRENT_LOGGED_IN_USER);
+        if(!currentUser) this.router.navigate(['login']);
+        this.loggedinUser =JSON.parse(currentUser);
    }
 
   ngOnInit() {
@@ -55,7 +60,7 @@ export class AddBenefityToPolicyComponent implements OnInit {
         let data: IPolicyBenefit ={
           PolicyId: this.policy.PolicyId ,
           BenefitId:benefit.BenefitId,
-          CreateUserId:'1',
+          CreateUserId:this.loggedinUser.userid,
           StatusId:1
         }
      

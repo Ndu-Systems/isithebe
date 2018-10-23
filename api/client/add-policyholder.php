@@ -22,14 +22,15 @@ if (isset($data->UserId)) {
         die(json_encode('POLICY_HOLDER_EXIST'));
     }
     
-    $result = $conn->prepare("INSERT INTO policyholder(PolicyHolderId,PolicyId, UserId, PolicyTypeId, PolicyName, SoldDate, PremiumAmount, CreateUserId, CreateDate, StatusId) 
-                                                VALUES (UUID(),?,?,?,?,now(),?,?,now(),?)");
+    $result = $conn->prepare("INSERT INTO policyholder(PolicyHolderId, PolicyId, UserId, PolicyTypeId, PolicyName, SoldDate, PremiumAmount, CreateUserId, CreateDate, ModifyUserId, ModifyDate, StatusId)   
+                            VALUES (uuid(),?,?,?,?,now(),?,?,now(),?,now(),?)");
     if ($result->execute(array(
         $PolicyId,
         $UserId,
         $PolicyTypeId,
         $PolicyName,
         $PremiumAmount,
+        $CreateUserId,
         $CreateUserId,
         $StatusId
         

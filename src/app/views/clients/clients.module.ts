@@ -5,7 +5,7 @@ import { ViewClientsComponent } from './view-clients/view-clients.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { PageHeaderModule, PrimeNg } from '../../shared';
+import { PageHeaderModule, PrimeNg, SpinnerModule } from '../../shared';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -32,6 +32,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    SpinnerModule,
     RouterModule.forChild(routes),
     PageHeaderModule,
     CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,

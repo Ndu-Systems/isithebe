@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="card-body table-responsive">
-          <table class="table table-bordered" *ngIf="patients$ | async as patients">
+          <table class="table table-bordered" *ngIf="patients$ | async as patients; else loading">
             <thead>
               <tr>                
                 <th>First Name</th>
@@ -44,6 +44,10 @@
               </tr>
             </tbody>
           </table>
+
+          <ng-template #loading>
+            <app-spinner></app-spinner>
+          </ng-template>
           <div class="justify-content-center">
             <pagination-controls (pageChange)="p = $event"></pagination-controls>
           </div>

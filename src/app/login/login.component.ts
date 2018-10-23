@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { Message } from 'primeng/api';
 import { AccountService } from '../services';
+import { CURRENT_LOGGED_IN_USER } from '../shared/config';
 
 @Component({
     selector: 'app-login',
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
             if(user.Email!== undefined){
               this.showSuccess();
               setTimeout(() => {            
-                localStorage.setItem('currentUser',JSON.stringify({username:user.Email,userid:user.UserId}));    
+                localStorage.setItem(CURRENT_LOGGED_IN_USER,JSON.stringify({username:user.Email,userid:user.UserId}));    
                 this.router.navigate(['/dashboard']);
             
               }, 2000);                           
