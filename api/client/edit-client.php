@@ -44,7 +44,9 @@ if (isset($data->Email) )
                 PostCode=?,
                 IDNumber=?,
                 Role=?,
-                Benefactor=?,                           
+                Benefactor=?,
+                CreateUserId=?,
+                CreateDate=?,                             
                 ModifyUserId=?,
                 ModifyDate= Now(),
                 StatusId=?
@@ -63,8 +65,10 @@ if (isset($data->Email) )
                 $PostCode,
                 $IDNumber,
                 $Role,
-                $Benefactor,              
-                $ModifyUserId,      
+                $Benefactor,
+                $CreateUserId,
+                $CreateDate,       
+                $ModifyUserId,   
                 $StatusId,
                 $UserId))){
 					echo 1;

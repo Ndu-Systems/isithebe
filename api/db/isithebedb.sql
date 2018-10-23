@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2018 at 08:06 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Oct 23, 2018 at 04:10 PM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -171,9 +171,9 @@ CREATE TABLE `statuses` (
 --
 
 CREATE TABLE `users` (
+  `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `FirstName` varchar(150) NOT NULL,
   `Surname` varchar(150) NOT NULL,
-  `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `Email` varchar(255) NOT NULL,
   `Password` varchar(225) NOT NULL,
   `ContactNumbers` varchar(15) DEFAULT NULL,
@@ -185,9 +185,9 @@ CREATE TABLE `users` (
   `IDNumber` varchar(14) NOT NULL,
   `Role` varchar(15) DEFAULT NULL,
   `Benefactor` varchar(15) DEFAULT NULL,
-  `CreateUserId` int(11) NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
   `CreateDate` datetime NOT NULL,
-  `ModifyUserId` int(11) NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
   `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -196,12 +196,12 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('Ndumiso', 'Mthembu', '1036279e-cd79-11e8-870a-80fa5b45280e', 'queries@ndu-systems.net222', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '63492634962394', 'client', 'na', 1, '2018-10-11 19:14:08', 1, '2018-10-11 19:14:08', 1),
-('Ndu', 'Systems', '31008929-d20c-11e8-a250-80fa5b45280e', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '2121', 'client', 'na', 1, '2018-10-17 14:57:12', 0, '2018-10-21 20:02:13', 1),
-('Freedom', 'Khanyile', '35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
-('Admin', 'Admin', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1),
-('Ndu', 'Systems', 'd695c741-ca5a-11e8-9ca7-80fa5b45280e', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', 1, '2018-10-07 20:00:09', 1, '2018-10-07 20:00:09', 1);
+INSERT INTO `users` (`UserId`, `FirstName`, `Surname`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('1036279e-cd79-11e8-870a-80fa5b45280e', 'Ndumiso', 'Mthembu', 'queries@ndu-systems.net222', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '63492634962394', 'client', 'na', '1', '2018-10-11 19:14:08', '1', '2018-10-11 19:14:08', 1),
+('31008929-d20c-11e8-a250-80fa5b45280e', 'Ndu', 'Systems', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' News 2nd', 'johannesburg', '2001', '2121', 'client', 'na', '1', '2018-10-17 14:57:12', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-23 16:06:54', 1),
+('35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'Freedom', 'Khanyile', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', '1', '2018-10-07 16:56:45', '1', '2018-10-07 16:56:45', 1),
+('c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'Admin', 'Admin', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', '1', '2018-09-29 14:25:13', '1', '2018-09-29 14:25:13', 1),
+('d695c741-ca5a-11e8-9ca7-80fa5b45280e', 'Ndu', 'Systems', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', '1', '2018-10-07 20:00:09', '1', '2018-10-07 20:00:09', 1);
 
 --
 -- Indexes for dumped tables
