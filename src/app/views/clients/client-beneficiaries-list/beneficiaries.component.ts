@@ -10,11 +10,10 @@ import { User } from '../../../models';
 export class BeneficiariesComponent implements OnInit {
 @Input() beneficiaries:Array<any>;
 @Input() client:User;
+searchText: string;
   constructor(private router:Router) { }
 
   ngOnInit() {
   }
-addBeneficiary(){
-  this.router.navigate(['clients/add-client-beneficiary']);
-}
+
 }

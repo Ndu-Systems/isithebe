@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2018 at 04:10 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: Oct 25, 2018 at 06:31 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `isithebedb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beneficiary`
+--
+
+CREATE TABLE `beneficiary` (
+  `beneficiaryId` varchar(225) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `surname` varchar(100) NOT NULL,
+  `idnumber` int(25) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `createdate` datetime NOT NULL,
+  `ModifyUserId` varchar(225) NOT NULL,
+  `ModifyDate` datetime NOT NULL,
+  `CreateUserId` varchar(225) NOT NULL,
+  `UserId` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `beneficiary`
+--
+
+INSERT INTO `beneficiary` (`beneficiaryId`, `name`, `surname`, `idnumber`, `type`, `createdate`, `ModifyUserId`, `ModifyDate`, `CreateUserId`, `UserId`) VALUES
+('33763756-d873-11e8-9361-80fa5b45280e', 'Sizwe', 'Mzumbu', 2147483647, 'Clild', '2018-10-25 18:29:53', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-25 18:29:53', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '31008929-d20c-11e8-a250-80fa5b45280e'),
+('93cd3445-d86f-11e8-9361-80fa5b45280e', 'sAS', 'SAsA', 2147483647, 'Spouse', '2018-10-25 18:03:56', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-25 18:03:56', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '31008929-d20c-11e8-a250-80fa5b45280e');
 
 -- --------------------------------------------------------
 
@@ -44,9 +71,9 @@ CREATE TABLE `benefits` (
 --
 
 INSERT INTO `benefits` (`BenefitId`, `Description`, `Amount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('1fb649d7-d210-11e8-a250-80fa5b45280e', 'More to eat', '50', '', '0000-00-00 00:00:00', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-21 20:05:38', 1),
-('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 1),
-('31d261d1-d360-11e8-9616-f48e38e878a3', 'R200 Airtime', '20', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 1);
+('1fb649d7-d210-11e8-a250-80fa5b45280e', 'More to eat', '50', '', '2018-10-03 00:00:00', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-21 20:05:38', 1),
+('1fb764eb-d210-11e8-a250-80fa5b45280e', 'Transport', '45', '', '2018-10-10 00:00:00', '', '0000-00-00 00:00:00', 1),
+('31d261d1-d360-11e8-9616-f48e38e878a3', 'R200 Airtime', '20', '', '2018-10-10 00:00:00', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-22 23:58:32', 1);
 
 -- --------------------------------------------------------
 
@@ -120,6 +147,7 @@ CREATE TABLE `policybenefits` (
 INSERT INTO `policybenefits` (`PolicyBenefitId`, `PolicyId`, `BenefitId`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
 ('5e9a81ef-cf28-11e8-929a-80fa5b45241e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1fb649d7-d210-11e8-a250-80fa5b45280e', '1', '2018-10-17 00:00:00', '1', '2018-10-17 00:00:00', 1),
 ('7236ad79-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1fb649d7-d210-11e8-a250-80fa5b45280e', '1', '2018-10-22 17:30:29', '0', '0000-00-00 00:00:00', 1),
+('94c21312-d64a-11e8-b4e3-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1fb764eb-d210-11e8-a250-80fa5b45280e', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-23 00:34:04', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-23 00:34:04', 1),
 ('a35d92fa-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1fb764eb-d210-11e8-a250-80fa5b45280e', '0', '2018-10-22 17:31:51', '0', '0000-00-00 00:00:00', 1),
 ('a7d53c69-d5c0-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '31d261d1-d360-11e8-9616-f48e38e878a3', '1', '2018-10-22 08:06:28', '0', '0000-00-00 00:00:00', 1);
 
@@ -149,9 +177,11 @@ CREATE TABLE `policyholder` (
 --
 
 INSERT INTO `policyholder` (`PolicyHolderId`, `PolicyId`, `UserId`, `PolicyTypeId`, `PolicyName`, `SoldDate`, `PremiumAmount`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('1940f480-d615-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '35b478ff-ca41-11e8-9f20-f8cab80bdf00', '1', 'Basic Cover Level 2', '2018-10-22 18:10:56', '102', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-22 18:10:56', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-22 18:10:56', 1),
 ('572c5794-d60e-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'e0c1f43a-d534-11e8-b21f-0050569f1ec7', '1', 'Basic Cover Level 2', '2018-10-22 17:22:34', '102', '0', '2018-10-22 17:22:34', '0', '0000-00-00 00:00:00', 1),
 ('5e9a81ef-cf28-11e8-929a-80fa5b42w34', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b452888', 'Basic Polocy Level 2', '2018-10-17 00:00:00', '250', '1', '2018-10-17 00:00:00', '1', '2018-10-17 00:00:00', 1),
 ('5f94d361-d60f-11e8-8990-80fa5b45280e', '665b2d03-cf28-11e8-929a-80fa5b45280e', '1036279e-cd79-11e8-870a-80fa5b45280e', '1', 'seqwe', '2018-10-22 17:29:57', '3213', '0', '2018-10-22 17:29:57', '0', '0000-00-00 00:00:00', 1),
+('99dfc9a7-d612-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', 'd695c741-ca5a-11e8-9ca7-80fa5b45280e', '1', 'Basic Cover Level 2', '2018-10-22 17:53:04', '102', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-22 17:53:04', '', '0000-00-00 00:00:00', 1),
 ('9c5f1b60-d5c0-11e8-8990-80fa5b45280e', '5e9a81ef-cf28-11e8-929a-80fa5b45280e', '31008929-d20c-11e8-a250-80fa5b45280e', '1', 'Basic Cover Level 2', '2018-10-22 08:06:09', '82', '1', '2018-10-22 08:06:09', '0', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
@@ -177,9 +207,9 @@ CREATE TABLE `statuses` (
 --
 
 CREATE TABLE `users` (
-  `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `FirstName` varchar(150) NOT NULL,
   `Surname` varchar(150) NOT NULL,
+  `UserId` varchar(225) NOT NULL COMMENT 'Guid Field',
   `Email` varchar(255) NOT NULL,
   `Password` varchar(225) NOT NULL,
   `ContactNumbers` varchar(15) DEFAULT NULL,
@@ -191,9 +221,9 @@ CREATE TABLE `users` (
   `IDNumber` varchar(14) NOT NULL,
   `Role` varchar(15) DEFAULT NULL,
   `Benefactor` varchar(15) DEFAULT NULL,
-  `CreateUserId` varchar(225) NOT NULL,
+  `CreateUserId` int(11) NOT NULL,
   `CreateDate` datetime NOT NULL,
-  `ModifyUserId` varchar(225) NOT NULL,
+  `ModifyUserId` int(11) NOT NULL,
   `ModifyDate` datetime NOT NULL,
   `StatusId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -202,16 +232,22 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserId`, `FirstName`, `Surname`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
-('1036279e-cd79-11e8-870a-80fa5b45280e', 'Ndumiso', 'Mthembu', 'queries@ndu-systems.net222', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '63492634962394', 'client', 'na', '1', '2018-10-11 19:14:08', '1', '2018-10-11 19:14:08', 1),
-('31008929-d20c-11e8-a250-80fa5b45280e', 'Ndu', 'Systems', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' News 2nd', 'johannesburg', '2001', '2121', 'client', 'na', '1', '2018-10-17 14:57:12', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', '2018-10-23 16:06:54', 1),
-('35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'Freedom', 'Khanyile', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', '1', '2018-10-07 16:56:45', '1', '2018-10-07 16:56:45', 1),
-('c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'Admin', 'Admin', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', '1', '2018-09-29 14:25:13', '1', '2018-09-29 14:25:13', 1),
-('d695c741-ca5a-11e8-9ca7-80fa5b45280e', 'Ndu', 'Systems', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', '1', '2018-10-07 20:00:09', '1', '2018-10-07 20:00:09', 1);
+INSERT INTO `users` (`FirstName`, `Surname`, `UserId`, `Email`, `Password`, `ContactNumbers`, `AddressLine1`, `AddressLine2`, `AddressLine3`, `City`, `PostCode`, `IDNumber`, `Role`, `Benefactor`, `CreateUserId`, `CreateDate`, `ModifyUserId`, `ModifyDate`, `StatusId`) VALUES
+('Ndumiso', 'Mthembu', '1036279e-cd79-11e8-870a-80fa5b45280e', 'queries@ndu-systems.net222', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '63492634962394', 'client', 'na', 1, '2018-10-11 19:14:08', 1, '2018-10-11 19:14:08', 1),
+('Ndu', 'Systems', '31008929-d20c-11e8-a250-80fa5b45280e', 'queries@ndu-systems.net2121', 'Password', '+27658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '2121', 'client', 'na', 1, '2018-10-17 14:57:12', 0, '2018-10-21 20:02:13', 1),
+('Freedom', 'Khanyile', '35b478ff-ca41-11e8-9f20-f8cab80bdf00', 'freedom.khanyile@ndu-systems.net', 'Password', '044558548', '56 Jacaranda Lane', '33356', '554', 'Randburg', '2194', '927558558785', 'client', 'na', 1, '2018-10-07 16:56:45', 1, '2018-10-07 16:56:45', 1),
+('Admin', 'Admin', 'c25cc7c1-c3e2-11e8-909e-f8cab80bdf00', 'admin@isithebe.co.za', 'pass', '075858585', 'Durban', 'Durban', 'Durban', 'Durban', '3001', '805805805858', 'Admin', 'n/a', 1, '2018-09-29 14:25:13', 1, '2018-09-29 14:25:13', 1),
+('Ndu', 'Systems', 'd695c741-ca5a-11e8-9ca7-80fa5b45280e', 'queries@ndu-systems.net', 'Password', '0658143509', 'G36 Eyethu House 270 Marshall St', 'G36 Eyethu House 270 Marshall St', ' ', 'johannesburg', '2001', '232432', 'client', 'na', 1, '2018-10-07 20:00:09', 1, '2018-10-07 20:00:09', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `beneficiary`
+--
+ALTER TABLE `beneficiary`
+  ADD PRIMARY KEY (`beneficiaryId`);
 
 --
 -- Indexes for table `benefits`

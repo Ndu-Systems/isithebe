@@ -1,7 +1,7 @@
 <div [@routerTransition]>
     <app-page-header [heading]="client.FirstName" [icon]="'fa-user'" [menus]="menus"></app-page-header>
     <div class="row">
-        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12" *ngIf="clientObject$ | async as clientObject">
             <div class="card mb-3">
                 <div class="card-header">
                     {{client.FirstName}}'s personal details
@@ -96,9 +96,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
+                <div class="card-body table-responsive">
 
-                    <table class="table table-bordered" *ngIf="policies.length; else nobefits">
+                    <table class="table table-bordered" *ngIf="clientObject[0].Policies.length; else nobefits">
                         <thead>
                             <tr>
                                 <th>Amount </th>
@@ -108,7 +108,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                            <tr *ngFor="let item of clientObject[0].Policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
                                 <td>{{item.PremiumAmount |currency:'R':true}}</td>
                                 <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
                                 <td>{{item.CreateDate| date:'mediumDate'}}</td>
@@ -126,12 +126,15 @@
                     </ng-template>
                 </div>
                 <ng-template #loadingBenefits>
-                        <app-spinner></app-spinner>
+                    <app-spinner></app-spinner>
                 </ng-template>
-<div *ngIf="beneficiaries$|async as beneficiaries">
-        <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
+                <div class="col-md-6">
+                        <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a>
+                    </div>
+                <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
+                    <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
 
-</div>
+                </div>
 
             </div>
 

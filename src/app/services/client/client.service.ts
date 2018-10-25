@@ -31,4 +31,8 @@ export class ClientService {
     return this.http.get<any>(`${this.url}/client/get-policies.php`);
 }
 
+  getPoliciesAndBens(UserId:string):Observable<any>{
+    return this.http.get<any>(`${this.url}/client/get-policies-and-beneficiaries.php?UserId=${UserId}`);
+}
+
 }
