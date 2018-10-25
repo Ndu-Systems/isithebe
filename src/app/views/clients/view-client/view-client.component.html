@@ -112,7 +112,7 @@
                                 <td>{{item.PremiumAmount |currency:'R':true}}</td>
                                 <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
                                 <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                                <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td>
+                                <!-- <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td> -->
                             </tr>
                         </tbody>
                     </table>
@@ -128,6 +128,10 @@
                 <ng-template #loadingBenefits>
                         <app-spinner></app-spinner>
                 </ng-template>
+<div *ngIf="beneficiaries$|async as beneficiaries">
+        <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
+
+</div>
 
             </div>
 

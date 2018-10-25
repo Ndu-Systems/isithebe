@@ -1,3 +1,4 @@
+import { AddClientBenefitiaryComponent } from './add-client-benefitiary/add-client-benefitiary.component';
 import { PolicyBenefisListComponent } from './add-policyholder/policy-benefis-list/policy-benefis-list.component';
 import { AddPolicyholderComponent } from './add-policyholder/add-policyholder.component';
 import { AddClientComponent } from './add-client/add-client.component';
@@ -12,6 +13,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ViewClientComponent } from './view-client/view-client.component';
 import { EditClientComponent } from './edit-client/edit-client.component';
 import { ConfirmationService } from 'primeng/api';
+import { BeneficiariesComponent } from './client-beneficiaries-list/beneficiaries.component';
 const routes: Routes = [
   {
       path: '',
@@ -24,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'add-policyholder', component:AddPolicyholderComponent
+  },
+  {
+    path: 'add-client-beneficiary', component:AddClientBenefitiaryComponent
   },
   {
     path: 'edit/:id', component:EditClientComponent
@@ -39,7 +44,7 @@ const routes: Routes = [
         ReactiveFormsModule
   ],
   exports: [RouterModule,...PrimeNg],
-  declarations: [ViewClientsComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent],
+  declarations: [ViewClientsComponent,BeneficiariesComponent,AddClientBenefitiaryComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent],
   providers:[ConfirmationService]
 })
 export class ClientsModule { }

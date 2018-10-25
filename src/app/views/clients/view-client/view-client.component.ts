@@ -17,6 +17,7 @@ import { MenuItem } from '../../../models/header/MenuItem';
 export class ViewClientComponent implements OnInit {
 client:User;
 policies$:Observable<Array<any>>;
+beneficiaries$:Observable<Array<any>>;
 menus:Array<MenuItem>;
 searchText: string;
 p:any;
@@ -35,6 +36,7 @@ p:any;
   ngOnInit() {
     console.log(this.client);
     this.policies$ = this.selectService.select(`policyholder WHERE UserId = '${this.client.UserId}'`);
+    this.beneficiaries$ = this.selectService.select(`beneficiary where UserId = '${this.client.UserId}'`);
 
     this.menus = [
       {name:'Dashboard',url:'/dashboard'},
