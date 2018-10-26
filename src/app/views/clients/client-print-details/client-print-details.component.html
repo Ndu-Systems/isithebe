@@ -1,0 +1,70 @@
+<div class="container">
+  <div id="content" #content>
+    <div class="row">
+      <div class="alert alert-success text-center col-md-12">
+          <strong>Print Policy Details for {{client.FirstName}} {{client.Surname}}&nbsp;&nbsp;<span><i class="fas fa-file-pdf fa-2x"></i></span></strong>
+      </div>     
+    </div>
+  </div>
+  <div id="contentToConvert" class="container">
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-body p-0">
+                      <div class="row p-5">
+                          <div class="col-md-6">
+                              <img src="assets/images/logoPDF.PNG">
+                          </div>
+  
+                          <div class="col-md-6 text-right">
+                              <p class="font-weight-bold mb-1">Isithebe burial society</p>
+                              <p class="text-muted">Date: {{today | date}}</p>
+                          </div>
+                      </div>
+  
+                      <hr class="my-5">
+  
+                      <div class="row p-5">
+                          <div class="col-md-6">
+                              <p class="font-weight-bold mb-4">Policy Holder Details</p>
+                              <p class="mb-1"><b>Full-Name </b>: {{client.FirstName}} {{client.Surname}}</p>
+                              <p class="mb-1"><b>ID Number </b>:{{client.IDNumber}}</p>
+                              <p class="mb-1"><b>Inception Date</b>: {{today | date}}</p>
+                              <p class="mb-1"><b>Contact No</b>: {{client.ContactNumbers}}</p>
+                              <p class="mb-1"><b>Address </b>: {{client.AddressLine1}}, {{client.AddressLine2}}, {{client.AddressLine3}},{{client.City}},{{client.PostCode}}</p>
+                          </div>
+  
+                          <div class="col-md-6 text-right">
+                              <p class="font-weight-bold mb-4">Policy Details</p>
+                              <p class="mb-1"><b>Description </b>: Isithebe Funeral Cover</p>
+                              <p class="mb-1"><b>Premium </b>:140 p/m</p>
+                              
+                          </div>
+                      </div>  
+                      <div class="row p-5">
+                          <div class="col-md-12">                              
+                              <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries>
+                          </div>
+                      </div>
+  
+                      <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                          <div class="py-3 px-5 text-right">
+                              <div class="mb-2">Underwritten by</div>
+                              <div class="h4 font-weight-light"><a href="" target="_blank"> Isithebe burial society</a></div>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank" href="https://ndu-systems.net">https://ndu-systems.net</a></div>
+  
+  </div>
+  </div>
+    <div>
+      <input type="button" class="btn btn-primary" value="PRINT" (click)="captureScreen()"/>
+    </div>
+</div>

@@ -14,6 +14,7 @@ import { ViewClientComponent } from './view-client/view-client.component';
 import { EditClientComponent } from './edit-client/edit-client.component';
 import { ConfirmationService } from 'primeng/api';
 import { BeneficiariesComponent } from './client-beneficiaries-list/beneficiaries.component';
+import { ClientPrintDetailsComponent } from './client-print-details';
 const routes: Routes = [
   {
       path: '',
@@ -32,6 +33,9 @@ const routes: Routes = [
   },
   {
     path: 'edit/:id', component:EditClientComponent
+  },
+  {
+    path:'print-details', component:ClientPrintDetailsComponent
   }
 ];
 @NgModule({
@@ -44,7 +48,7 @@ const routes: Routes = [
         ReactiveFormsModule
   ],
   exports: [RouterModule,...PrimeNg],
-  declarations: [ViewClientsComponent,BeneficiariesComponent,AddClientBenefitiaryComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent],
+  declarations: [ViewClientsComponent,BeneficiariesComponent,AddClientBenefitiaryComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent,ClientPrintDetailsComponent],
   providers:[ConfirmationService]
 })
 export class ClientsModule { }
