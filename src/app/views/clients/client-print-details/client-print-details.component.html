@@ -43,9 +43,39 @@
                           </div>
                       </div>  
                       <div class="row p-5">
-                          <div class="col-md-12">                              
-                              <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries>
-                          </div>
+                          <div class="col-md-12">   
+                              <p class="font-weight-bold mb-4">Beneficiaries</p>                           
+                              <!-- <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries> -->
+                              <div class="card-body table-responsive" >
+
+                                    <table class="table table-bordered" *ngIf="beneficiaries.length; else nobefits">
+                                        <thead class="bg-dark text-white">
+                                            <tr>
+                                                <th>Name </th>
+                                                <th>Surname </th>
+                                                <th>ID Number</th>
+                                                <th>Type</th>                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of beneficiaries | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.surname}}</td>
+                                                <td>{{item.idnumber}}</td>
+                                                <td>{{item.type}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ng-template #nobefits>
+                                        <div>
+                          
+                                            <div class="alert alert-warning">
+                                                No Beneficiaries found for {{client.FirstName}}
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
                       </div>
   
                       <div class="d-flex flex-row-reverse bg-dark text-white p-4">
