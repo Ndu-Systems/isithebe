@@ -5,7 +5,7 @@ import { Benefit, MenuItem } from '../../../models';
 import { SelectService } from '../../../shared';
 import { ActivatedRoute, Router } from '@angular/router';
 import { routerTransition } from '../../../router.animations';
-import { Message } from 'primeng/api';
+import { Message, ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-benefit',
@@ -24,7 +24,9 @@ export class EditBenefitComponent implements OnInit {
     private selectService: SelectService,
     private route: ActivatedRoute,
     private router: Router,
-    private benefitService: BenefitService
+    private benefitService: BenefitService,
+    private confirmationService: ConfirmationService,
+
   ) { }
 
   ngOnInit() {
@@ -54,34 +56,41 @@ export class EditBenefitComponent implements OnInit {
   } 
 
   edit(benefit){
-    this.msg = undefined;
-      if (!benefit.Amount) {
-          this.showError("Please fill in Required Fields");
-          return false;
+
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to perform this action?',
+      accept: () => {
+        this.msg = undefined;
+        if (!benefit.Amount) {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }
+        if (!benefit.Description) {
+            this.showError("Please fill in Required Fields");
+            return false;
+        }      
+  
+        let data = {
+          Description: benefit.Description,
+          Amount: benefit.Amount,
+          BenefitId: benefit.BenefitId,
+          ModifyUserId: this.currentUser.userid,      
+          StatusId:benefit.StatusId
+        };
+  
+        this.benefitService.editBenefit(data).subscribe(response => {
+          if (response === 1) {
+              this.showSuccess();
+              setTimeout(() => {
+                  this.router.navigate(["/benefits"]);
+              }, 2000);
+          }
+          if (response === "500") {
+              this.showError("Policy alreay exists");
+          }
+      });
+        
       }
-      if (!benefit.Description) {
-          this.showError("Please fill in Required Fields");
-          return false;
-      }      
-
-      let data = {
-        Description: benefit.Description,
-        Amount: benefit.Amount,
-        BenefitId: benefit.BenefitId,
-        ModifyUserId: this.currentUser.userid,      
-        StatusId:benefit.StatusId
-      };
-
-      this.benefitService.editBenefit(data).subscribe(response => {
-        if (response === 1) {
-            this.showSuccess();
-            setTimeout(() => {
-                this.router.navigate(["/benefits"]);
-            }, 2000);
-        }
-        if (response === "500") {
-            this.showError("Policy alreay exists");
-        }
-    });
+  });
   }
 }

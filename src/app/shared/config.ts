@@ -12,7 +12,10 @@ export const  USER_EXIST = 'USER_EXIST';
 export const  USER_NOT_FOUND = 'USER_NOT_FOUND';
 export const  POLICY_HOLDER_EXIST = 'POLICY_HOLDER_EXIST';
 export const  POLICY_BENEFIT_HOLDER_EXIST = 'POLICY_BENEFIT_HOLDER_EXIST';
+export const  BENEFICIARY_HOLDER_EXIST = 'BENEFICIARY_HOLDER_EXIST';
 export const  ACTIVE_POLICY_CODE = 1;
 export const  SELECTED_POLICY = "selectedPolicyFromPolicyPage";
 export const  SELECTED_CLIENT = "selectedClientFromClientPage";
+export const  CURRENT_LOGGED_IN_USER = "currentUser";
+export const  CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS:number = 3;
 

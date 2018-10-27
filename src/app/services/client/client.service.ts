@@ -23,9 +23,16 @@ export class ClientService {
   addPolicyHolder(data:IPolicyholder): Observable<any> {
     return this.http.post<any>(`${this.url}/client/add-policyholder.php`, data);
   }
+  addBeneficiary(data:any): Observable<any> {
+    return this.http.post<any>(`${this.url}/client/add-beneficiary.php`, data);
+  }
 
   getPolicies():Observable<any>{
     return this.http.get<any>(`${this.url}/client/get-policies.php`);
+}
+
+  getPoliciesAndBens(UserId:string):Observable<any>{
+    return this.http.get<any>(`${this.url}/client/get-policies-and-beneficiaries.php?UserId=${UserId}`);
 }
 
 }

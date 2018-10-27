@@ -1,12 +1,12 @@
 import { Observable } from 'rxjs';
 import { SelectService } from './../../../shared/services/select.service';
 import { Component, OnInit } from '@angular/core';
-import { Message } from 'primeng/api';
+import { Message, ConfirmationService } from 'primeng/api';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User, MenuItem } from '../../../models';
 import { routerTransition } from '../../../router.animations';
 import { ClientService } from '../../../services/client/client.service';
-import { USER_EXIST, USER_NOT_FOUND } from '../../../shared/config';
+import {USER_NOT_FOUND } from '../../../shared/config';
 
 @Component({
   selector: 'app-edit-client',
@@ -25,7 +25,9 @@ export class EditClientComponent implements OnInit {
     private selectService: SelectService,
     private route: ActivatedRoute,
     private router: Router,
-    private clientService: ClientService
+    private clientService: ClientService,
+    private confirmationService: ConfirmationService,
+
   ) { }
 
   ngOnInit() {
@@ -55,7 +57,10 @@ export class EditClientComponent implements OnInit {
   }
 
   edit(client) {
- 
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to perform this action?',
+      accept: () => {
+        
     this.msg = undefined;
 
     if (client.FirstName === undefined || client.FirstName === "") {
@@ -126,6 +131,9 @@ export class EditClientComponent implements OnInit {
           this.showError("Client Could does not exist");
       }
   });
+      }
+  });
+
   }
 
 }

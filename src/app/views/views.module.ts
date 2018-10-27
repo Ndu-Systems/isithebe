@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ViewsComponent } from './views.component'; 
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
  
  
 import { SidebarComponent } from '../layout/components/sidebar/sidebar.component';
@@ -14,6 +15,7 @@ import { ViewsRoutingModule } from '.';
     CommonModule, 
     ViewsRoutingModule,
     TranslateModule,
+    NgbModule.forRoot(),
     NgbDropdownModule.forRoot()
   ],
   declarations: [ViewsComponent, SidebarComponent, HeaderComponent ]

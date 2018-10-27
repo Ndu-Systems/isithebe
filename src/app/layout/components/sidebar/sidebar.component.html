@@ -1,7 +1,7 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
     <div class="list-group">
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+            <i class="fas fa-tachometer-alt"></i>&nbsp;
             <span>{{ 'Dashboard' | translate }}</span>
         </a>
         <a [routerLink]="['/clients']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -14,7 +14,7 @@
             <span>{{ 'Policy Plans' | translate }}</span>
         </a>
         <a [routerLink]="['/benefits']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-file"></i>&nbsp;
+            <i class="fa fa-fw fa-heart"></i>&nbsp;
             <span>{{ 'Benefits' | translate }}</span>
         </a>
         <a [routerLink]="['/callbacks']" [routerLinkActive]="['router-link-active']" class="list-group-item">

@@ -1,5 +1,5 @@
 <div [@routerTransition]>
- <app-page-header [heading]="'Benefits'" [icon]="'fa-cubes'" [menus]="menus"></app-page-header>
+ <app-page-header [heading]="'Benefits'" [icon]="'fa-heart'" [menus]="menus"></app-page-header>
 
 <div class="row">
   <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="card-body table-responsive">
-        <table class="table table-bordered" *ngIf=" benefits$ | async as benefits">
+        <table class="table table-bordered" *ngIf=" benefits$ | async as benefits; else loading">
           <thead>
             <tr>
               <th>Description</th>
@@ -37,6 +37,9 @@
             </tr>
           </tbody>
         </table>
+        <ng-template #loading>
+          <app-spinner></app-spinner>
+        </ng-template>
         <div class="justify-content-center">
           <pagination-controls (pageChange)="p = $event"></pagination-controls>
         </div>

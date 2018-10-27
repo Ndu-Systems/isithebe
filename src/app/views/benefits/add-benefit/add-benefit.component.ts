@@ -27,7 +27,7 @@ export class AddBenefitComponent implements OnInit {
   ngOnInit() {
     this.menus = [
       { name: 'Dashboard', url: '/dashboard' },
-      { name: 'Benefits', url: '/benefits', icon: 'cubes' },
+      { name: 'Benefits', url: '/benefits', icon: 'heart' },
     ];
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }

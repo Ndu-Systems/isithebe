@@ -1,7 +1,7 @@
 <div [@routerTransition]>
     <app-page-header [heading]="client.FirstName" [icon]="'fa-user'" [menus]="menus"></app-page-header>
     <div class="row">
-        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12" *ngIf="clientObject$ | async as clientObject">
             <div class="card mb-3">
                 <div class="card-header">
                     {{client.FirstName}}'s personal details
@@ -96,9 +96,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
+                <div class="card-body table-responsive">
 
-                    <table class="table table-bordered" *ngIf="policies.length; else nobefits">
+                    <table class="table table-bordered" *ngIf="clientObject[0].Policies.length; else nobefits">
                         <thead>
                             <tr>
                                 <th>Amount </th>
@@ -108,11 +108,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                            <tr *ngFor="let item of clientObject[0].Policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
                                 <td>{{item.PremiumAmount |currency:'R':true}}</td>
                                 <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
                                 <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                                <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td>
+                                <!-- <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td> -->
                             </tr>
                         </tbody>
                     </table>
@@ -126,16 +126,51 @@
                     </ng-template>
                 </div>
                 <ng-template #loadingBenefits>
-                    <div>
-
-                        <h1>
-                            Loading policy...
-                        </h1>
-                    </div>
+                    <app-spinner></app-spinner>
                 </ng-template>
+                <div class="col-md-6">
+                    <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a>
+                </div>
+                <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
+                    <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries>
+                </div>
 
             </div>
 
+            <div class="row" id="print">
+                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn rounded-btn" (click)="open(content)">Print Details </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ng-template #content let-c="close" let-d="dismiss">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Print Client Details</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <app-client-print-details [beneficiaries]="clientObject[0].Beneficiaries" [client]="client"  [policies]="clientObject[0].Policies" ></app-client-print-details>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                            </div>
+                </ng-template>
+
+                    <!-- <button class="btn btn-lg btn-outline-primary" >Launch demo modal</button> -->
+
+                    <hr>
+
+                    <pre>{{closeResult}}</pre>
+                </div>
+            </div>
         </div>
 
     </div>

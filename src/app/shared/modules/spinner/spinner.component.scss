@@ -1,0 +1,28 @@
+@keyframes ui-progress-spinner-color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}
+
+.spinner-container{
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    left: 0;
+    top:0;
+    text-align: center;
+    padding-top: 20em;
+}
