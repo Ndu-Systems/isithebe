@@ -11,12 +11,12 @@ if (isset($data->Email) ){
     $ModifyUserId = $data->UserId;
 
    
-   $result = $conn->prepare("SELECT * FROM user WHERE Email = ?"); 
+   $result = $conn->prepare("SELECT * FROM users WHERE Email = ?"); 
    $result->execute(array($Email));
    if ($result->rowCount() == 1) {
    
    $result = $conn->prepare("
-   UPDATE user 
+   UPDATE users 
    SET Password = ?,
    ModifyUserId = ?,
    ModifyDate = now()
