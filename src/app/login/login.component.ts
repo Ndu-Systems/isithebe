@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { Message } from 'primeng/api';
 import { AccountService } from '../services';
-import { CURRENT_LOGGED_IN_USER } from '../shared/config';
+import { CURRENT_LOGGED_IN_USER, loadScreen, stopLoadingScreen } from '../shared/config';
 
 @Component({
     selector: 'app-login',
@@ -33,9 +33,11 @@ export class LoginComponent implements OnInit {
     }
 
     onLoggedin() {
+      loadScreen();
         this.accountService.loginUser(this.Email,this.Password)
         .subscribe((response) =>{
-          let user = response;                 
+          let user = response;   
+          stopLoadingScreen();             
             if(user.Email!== undefined){
               this.showSuccess();
               setTimeout(() => {            

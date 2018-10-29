@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { Message, ConfirmationService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { SelectService } from '../../../shared';
-import { SELECTED_POLICY, POLICY_BENEFIT_HOLDER_EXIST, CURRENT_LOGGED_IN_USER } from '../../../shared/config';
+import { SELECTED_POLICY, POLICY_BENEFIT_HOLDER_EXIST, CURRENT_LOGGED_IN_USER, loadScreen, stopLoadingScreen } from '../../../shared/config';
 
 @Component({
   selector: 'app-add-benefity-to-policy',
@@ -63,9 +63,10 @@ export class AddBenefityToPolicyComponent implements OnInit {
           CreateUserId:this.loggedinUser.userid,
           StatusId:1
         }
-     
+     loadScreen();
         this.policyService.addBenefitToApolicy(data)
         .subscribe(response=>{
+          stopLoadingScreen();
           if (response === 1) {
             this.showSuccess();
             setTimeout(() => {

@@ -3,7 +3,7 @@ import { Message } from "primeng/api";
 import { Router } from "@angular/router";
 import { ClientService } from "../../../services/client/client.service";
 import { IfStmt } from "@angular/compiler";
-import { USER_EXIST } from "../../../shared/config";
+import { USER_EXIST, loadScreen, stopLoadingScreen } from "../../../shared/config";
 import { routerTransition } from "../../../router.animations";
 import { MenuItem } from "../../../models/header/MenuItem";
 
@@ -113,7 +113,9 @@ export class AddClientComponent implements OnInit {
             CreateUserId: this.currentUser.userid
             
         };
+        loadScreen();
         this.patientService.addClient(data).subscribe(response => {
+            stopLoadingScreen();
             if (response === 1) {
                 this.showSuccess();
                 setTimeout(() => {

@@ -5,7 +5,7 @@ import { Message, ConfirmationService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { SelectService } from '../../../shared';
 import { ClientService } from '../../../services/client/client.service';
-import { SELECTED_CLIENT, CURRENT_LOGGED_IN_USER, POLICY_HOLDER_EXIST } from '../../../shared/config';
+import { SELECTED_CLIENT, CURRENT_LOGGED_IN_USER, POLICY_HOLDER_EXIST, loadScreen, stopLoadingScreen } from '../../../shared/config';
 import { routerTransition } from '../../../router.animations';
 
 @Component({
@@ -78,9 +78,10 @@ this.getTypes();
           UserId:this.client.UserId,
 
         }
-     
+     loadScreen();
         this.clientService.addBeneficiary(data)
         .subscribe(response=>{
+          stopLoadingScreen();
           if (response === 1) {
             this.showSuccess();
             setTimeout(() => {

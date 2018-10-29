@@ -4,6 +4,7 @@ import { routerTransition } from '../../../router.animations';
 import { Message } from 'primeng/api';
 import { Router } from '@angular/router';
 import { MenuItem } from '../../../models/header/MenuItem';
+import { loadScreen, stopLoadingScreen } from '../../../shared/config';
 
 @Component({
   selector: 'app-add-policy',
@@ -66,7 +67,9 @@ export class AddPolicyComponent implements OnInit {
           Amount: this.Amount,
           CreateUserId:this.currentUser.userid
       };
+      loadScreen();
       this.policyService.addPolicy(data).subscribe(response => {
+          stopLoadingScreen();
           if (response === 1) {
               this.showSuccess();
               setTimeout(() => {

@@ -4,6 +4,7 @@ import { MenuItem } from '../../../models';
 import { Router } from '@angular/router';
 import { BenefitService } from '../../../services/benefit';
 import { routerTransition } from '../../../router.animations';
+import { loadScreen, stopLoadingScreen } from '../../../shared/config';
 
 @Component({
   selector: 'app-add-benefit',
@@ -65,9 +66,10 @@ export class AddBenefitComponent implements OnInit {
       Amount: this.Amount,
       CreateUserId: this.currentUser.userid
     };
-
+loadScreen();
     this.benefitService.addBenefit(data)
       .subscribe(response => {
+        stopLoadingScreen();
         if (response == 1) {
           this.showSuccess();
           setTimeout(() => {

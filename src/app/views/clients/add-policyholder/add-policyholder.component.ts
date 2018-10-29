@@ -3,7 +3,7 @@ import { Policy } from './../../../models/policy/policy';
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../../router.animations';
 import { MenuItem } from '../../../models/header/MenuItem';
-import { SELECTED_CLIENT, POLICY_HOLDER_EXIST, CURRENT_LOGGED_IN_USER } from '../../../shared/config';
+import { SELECTED_CLIENT, POLICY_HOLDER_EXIST, CURRENT_LOGGED_IN_USER, loadScreen, stopLoadingScreen } from '../../../shared/config';
 import { Router } from '@angular/router';
 import { SelectService } from '../../../shared';
 import { User } from '../../../models/user/User';
@@ -68,9 +68,10 @@ export class AddPolicyholderComponent implements OnInit {
           CreateUserId:this.loggedinUser.userid,
           StatusId:1
         }
-     
+     loadScreen();
         this.clientService.addPolicyHolder(data)
         .subscribe(response=>{
+          stopLoadingScreen();
           if (response === 1) {
             this.showSuccess();
             setTimeout(() => {
