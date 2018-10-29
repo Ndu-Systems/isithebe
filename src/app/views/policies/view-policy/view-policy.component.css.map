@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "view-policy.component.scss"
+    ],
+    "names": [],
+    "file": "view-policy.component.css"
+}

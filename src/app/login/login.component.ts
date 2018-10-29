@@ -49,4 +49,9 @@ export class LoginComponent implements OnInit {
           }
         }); 
     }
+
+    onForgotPassoword(){
+      localStorage.setItem("forgotEmail",this.Email);
+      this.router.navigate(['login/enter-email']);
+    }
 }

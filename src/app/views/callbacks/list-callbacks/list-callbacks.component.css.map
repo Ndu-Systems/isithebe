@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACZ,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,IAAI;CAUf;;AAfD,AAMA,YANY,CAMZ,IAAI,CAAA;EACA,UAAU,EAAE,OAAO;CAEtB;;AATD,AAUA,YAVY,CAUZ,OAAO,CAAA;EACH,UAAU,EAAE,OAAO;CAEtB",
+    "sources": [
+        "list-callbacks.component.scss"
+    ],
+    "names": [],
+    "file": "list-callbacks.component.css"
+}

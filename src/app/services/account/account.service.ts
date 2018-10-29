@@ -15,4 +15,8 @@ export class AccountService {
   public changePassword(data): Observable<any> {
     return this.httpClient.post<any>(`${this.url}/account/PasswordReset.php`, data);
   }
+
+  forgotPassword(email:string):Observable<any>{
+    return this.httpClient.get<any>(`${this.url}/account/ForgotEmail.php?Email=${email}`);
+}
 }

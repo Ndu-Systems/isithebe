@@ -1,4 +1,4 @@
-export const IS_LOCAL = false;
+export const IS_LOCAL = true;
 let api = 'http://www.isithebe.co.za/api';
 let web = 'http://www.isithebe.co.za';
 if (IS_LOCAL) {
@@ -18,4 +18,5 @@ export const  SELECTED_POLICY = "selectedPolicyFromPolicyPage";
 export const  SELECTED_CLIENT = "selectedClientFromClientPage";
 export const  CURRENT_LOGGED_IN_USER = "currentUser";
 export const  CALL_ME_BACK_CRITACAL_NUMBER_OF_DAYS:number = 3;
+export const EMAIL_SERVER = "http://www.isithebe.co.za/api/email.php"
 

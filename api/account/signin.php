@@ -9,8 +9,8 @@ $data = json_decode(file_get_contents("php://input"));
   $Password= $_GET['Password'];
   $rows = array();
 
-  $result = $conn->prepare("SELECT * FROM users WHERE Email = ?");
-  $result->execute(array($Email));
+  $result = $conn->prepare("SELECT * FROM users WHERE Email = ? AND Password=?");
+  $result->execute(array($Email,$Password));
   $user = $result->fetch(PDO::FETCH_ASSOC);
 
   if($user)

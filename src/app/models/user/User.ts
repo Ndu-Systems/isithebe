@@ -12,6 +12,7 @@ export interface User {
     PostCode: string;
     IDNumber: string;
     Role: string;
+    Token: string;
     Benefactor: string;
     CreateUserId: string;
     CreateDate: string;

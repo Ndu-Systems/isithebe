@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=view-client.component.css.map */
+.bold {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  #print {
+    display: none;
+  }
+}
+/*# sourceMappingURL=view-client.component.css.map */

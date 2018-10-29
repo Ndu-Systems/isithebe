@@ -24,6 +24,7 @@ if (isset($data->Email)) {
     $Benefactor     = 'na';
     $IDNumber       =  $data->IDNumber;
     
+    
     $check = $conn->prepare("SELECT * FROM users WHERE Email = ?");
     $check->execute(array(
         $Email

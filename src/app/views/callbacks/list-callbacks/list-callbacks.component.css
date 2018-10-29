@@ -1,0 +1,16 @@
+.call-status {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.call-status .red {
+  background: #c0392b;
+}
+
+.call-status .orange {
+  background: #e67e22;
+}
+/*# sourceMappingURL=list-callbacks.component.css.map */

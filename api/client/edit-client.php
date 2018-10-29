@@ -24,7 +24,8 @@ if (isset($data->Email) )
     $Role           = $data->Role;
     $Password       = $data->Password;
     $Benefactor     = $data->Benefactor;
-    $IDNumber       =  $data->IDNumber;  
+    $IDNumber       =  $data->IDNumber; 
+    $Token          = $data->Token; 
 
 	$result = $conn->prepare("SELECT * FROM users WHERE UserId = ?"); 
 	$result->execute(array($UserId));
@@ -44,6 +45,7 @@ if (isset($data->Email) )
                 PostCode=?,
                 IDNumber=?,
                 Role=?,
+                Token=?,
                 Benefactor=?,
                 CreateUserId=?,
                 CreateDate=?,                             
@@ -65,6 +67,7 @@ if (isset($data->Email) )
                 $PostCode,
                 $IDNumber,
                 $Role,
+                $Token,
                 $Benefactor,
                 $CreateUserId,
                 $CreateDate,       

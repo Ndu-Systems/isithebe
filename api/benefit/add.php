@@ -11,8 +11,8 @@ if (isset($data->Description)) {
     $CreateUserId = $data->CreateUserId;
     $StatusId= 1;   
     
-    $result = $conn->prepare("INSERT INTO benefits(BenefitId, Description, Amount, CreateUserId, CreateDate, ModifyUserId, ModifyDate, StatusId) 
-    VALUES (uuid(),?,?,?,now(),?,now(),?)");
+    $result = $conn->prepare("INSERT INTO benefits(BenefitId, Description, Amount, CreatUserId, CreateDate, ModifyUserId, ModifyDate, StatusId)
+    VALUES (uuid(),?,?,?,Now(),?,Now(),?)");
     if ($result->execute(array( 
         $Description,
         $Amount,

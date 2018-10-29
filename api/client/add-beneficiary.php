@@ -14,7 +14,7 @@ if (isset($data->UserId)) {
     $ModifyUserId = $data->ModifyUserId;
     $CreateUserId = $data->CreateUserId;
     $UserId  = $data->UserId;
-    
+    $StatusId = 1;
     
     $check = $conn->prepare("SELECT * FROM beneficiary WHERE idnumber = ? AND UserId =?");
     $check->execute(array(
@@ -23,10 +23,8 @@ if (isset($data->UserId)) {
     if ($check->rowCount() > 0) {
         die(json_encode('BENEFICIARY_HOLDER_EXIST'));
     }
-    //echo $sql ="INSERT INTO beneficiary(beneficiaryId,createdate,ModifyDate,name,surname,idnumber,type,ModifyUserId,CreateUserId ,UserId)   
-   // VALUES (uuid(),now(),now(),'$name','$surname',$idnumber,'$type','$ModifyUserId','$CreateUserId','$UserId'";
-    $result = $conn->prepare("INSERT INTO beneficiary(beneficiaryId,createdate,ModifyDate,name,surname,idnumber,type,ModifyUserId,CreateUserId ,UserId)   
-                            VALUES (uuid(),now(),now(),?,?,?,?,?,?,?)");
+     $result = $conn->prepare("INSERT INTO beneficiary(beneficiaryId, name, surname, idnumber, type, createdate, ModifyUserId, ModifyDate, CreateUserId, UserId, StatusId) 
+                            VALUES (uuid(),?,?,?,?,Now(),?,Now(),?,?,?)");
     if ($result->execute(array(
         $name,
         $surname,
@@ -34,7 +32,8 @@ if (isset($data->UserId)) {
         $type,
         $ModifyUserId,
         $CreateUserId,
-        $UserId
+        $UserId,
+        $StatusId
     ))) {
         echo 1;
     } else {

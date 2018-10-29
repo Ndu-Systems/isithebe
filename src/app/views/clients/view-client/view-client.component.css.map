@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,WAAW,EAAE,IAAI;CACpB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,MAAM,CAAA;IACF,OAAO,EAAE,IAAI;GAChB",
     "sources": [
         "view-client.component.scss"
     ],

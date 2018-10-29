@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "add-policyholder.component.scss"
+    ],
+    "names": [],
+    "file": "add-policyholder.component.css"
+}

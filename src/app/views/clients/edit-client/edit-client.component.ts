@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User, MenuItem } from '../../../models';
 import { routerTransition } from '../../../router.animations';
 import { ClientService } from '../../../services/client/client.service';
-import {USER_NOT_FOUND } from '../../../shared/config';
+import { USER_NOT_FOUND } from '../../../shared/config';
 
 @Component({
   selector: 'app-edit-client',
@@ -60,79 +60,79 @@ export class EditClientComponent implements OnInit {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to perform this action?',
       accept: () => {
-        
-    this.msg = undefined;
 
-    if (client.FirstName === undefined || client.FirstName === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.Surname === undefined || client.Surname === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.IDNumber === undefined || client.IDNumber === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.ContactNumbers === undefined || client.ContactNumbers === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.AddressLine1 === undefined || client.AddressLine1 === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.AddressLine2 === undefined || client.AddressLine2 === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.AddressLine3 === undefined || client.AddressLine3 === "") {
-      client.AddressLine3 = " ";
-    }
-    if (client.City === undefined || client.City === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
-    if (client.PostCode === undefined || client.PostCode === "") {
-      this.showError("Please fill in Required Fields");
-      return false;
-    }
+        this.msg = undefined;
 
-    let data = {
-      UserId: client.UserId,
-      FirstName: client.FirstName,
-      Surname: client.Surname,
-      IDNumber: client.IDNumber,
-      Email: client.Email,
-      Cellphone: client.ContactNumbers,
-      AddressLine1: client.AddressLine1,
-      AddressLine2: client.AddressLine2,
-      AddressLine3: client.AddressLine3,
-      City: client.City,
-      PostCode: client.PostCode,
-      CreateUserId: client.CreateUserId,
-      ModifyUserId: this.currentUser.userid,
-      CreateDate: client.CreateDate,
-      StatusId: client.StatusId,
-      Role: client.Role,
-      Password: client.Password,
-      Benefactor: client.Benefactor
-    };
+        if (client.FirstName === undefined || client.FirstName === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.Surname === undefined || client.Surname === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.IDNumber === undefined || client.IDNumber === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.ContactNumbers === undefined || client.ContactNumbers === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.AddressLine1 === undefined || client.AddressLine1 === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.AddressLine2 === undefined || client.AddressLine2 === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.AddressLine3 === undefined || client.AddressLine3 === "") {
+          client.AddressLine3 = " ";
+        }
+        if (client.City === undefined || client.City === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
+        if (client.PostCode === undefined || client.PostCode === "") {
+          this.showError("Please fill in Required Fields");
+          return false;
+        }
 
-    this.clientService.updateClient(data).subscribe(response => {
-      if (response === 1) {
-          this.showSuccess();
-          setTimeout(() => {
+        let data = {
+          UserId: client.UserId,
+          FirstName: client.FirstName,
+          Surname: client.Surname,
+          IDNumber: client.IDNumber,
+          Email: client.Email,
+          Cellphone: client.ContactNumbers,
+          AddressLine1: client.AddressLine1,
+          AddressLine2: client.AddressLine2,
+          AddressLine3: client.AddressLine3,
+          City: client.City,
+          PostCode: client.PostCode,
+          CreateUserId: client.CreateUserId,
+          ModifyUserId: this.currentUser.userid,
+          CreateDate: client.CreateDate,
+          StatusId: client.StatusId,
+          Role: client.Role,
+          Password: client.Password,
+          Benefactor: client.Benefactor
+        };
+
+        this.clientService.updateClient(data).subscribe(response => {
+          if (response === 1) {
+            this.showSuccess();
+            setTimeout(() => {
               this.router.navigate(["/clients"]);
-          }, 2000);
+            }, 2000);
+          }
+          if (response === USER_NOT_FOUND) {
+            this.showError("Client Could does not exist");
+          }
+        });
       }
-      if (response === USER_NOT_FOUND) {
-          this.showError("Client Could does not exist");
-      }
-  });
-      }
-  });
+    });
 
   }
 
