@@ -59,7 +59,7 @@
                 <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else loading">
                  
                     
-                    <table class="table table-bordered" *ngIf="benefits.length; else nobefits">
+                    <table class="table table-bordered" *ngIf="benefits?.length; else nobefits">
                         <thead>
                             <tr>
                                 <th>Amount </th>

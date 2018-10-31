@@ -10,7 +10,7 @@
         </div>
         <div class="card-body table-responsive">
           <div class="col-lg-10 offset-1">
-            <form role="form" *ngIf="client$ | async as client">           
+            <form role="form" *ngIf="client$ | async as client; else loading">           
               
               <fieldset class="form-group">
                 <div class="row">
@@ -174,7 +174,9 @@
                 <a  class="btn rounded-btn" [routerLink]="['/clients']">Abort</a>
               </div>
             </form>
-
+            <ng-template #loading>
+                <app-spinner></app-spinner>
+              </ng-template>
           </div>
         </div>
       </div>

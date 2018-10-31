@@ -48,7 +48,7 @@
                               <!-- <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries> -->
                               <div class="card-body table-responsive" >
 
-                                    <table class="table table-bordered" *ngIf="beneficiaries.length; else nobefits">
+                                    <table class="table table-bordered" *ngIf="beneficiaries?.length; else nobefits">
                                         <thead class="bg-dark text-white">
                                             <tr>
                                                 <th>Name </th>

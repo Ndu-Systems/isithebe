@@ -1,56 +1,58 @@
 <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-  <h1>
-      Beneficiaries
-  </h1>
-  <div class="card mb-3">
   
-      <div class="card-header">
-          <div class="row">              
-              <div class="input-group mb-3 col-md-6">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">
-                          <li class="fa fa-search"></li>
-                      </span>
-                  </div>
-                  <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control"
-                      placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
-              </div>
-          </div>
-      </div>
-      <div class="card-body table-responsive" >
+    <div class="card mb-3">
 
-          <table class="table table-bordered" *ngIf="beneficiaries.length; else nobefits">
-              <thead>
-                  <tr>
-                      <th>Name </th>
-                      <th>Surname </th>
-                      <th>ID Number</th>
-                      <th>Type</th>
+        <div class="card-header">
+            <div class="row">
+                <div class="input-group mb-3 col-md-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <li class="fa fa-search"></li>
+                        </span>
+                    </div>
+                    <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control"
+                        placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+        <div class="card-body table-responsive">
 
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr *ngFor="let item of beneficiaries | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                      <td>{{item.name}}</td>
-                      <td>{{item.surname}}</td>
-                      <td>{{item.idnumber}}</td>
-                      <td>{{item.type}}</td>
-                  </tr>
-              </tbody>
-          </table>
-          <ng-template #nobefits>
-              <div>
+            <table class="table table-bordered" *ngIf="beneficiaries?.length; else nobefits">
+                <thead>
+                    <tr>
+                        <th>Name </th>
+                        <th>Surname </th>
+                        <th>ID Number</th>
+                        <th>Type</th>
+                        <th>Actions</th>
 
-                  <div class="alert alert-warning">
-                      No Beneficiaries found for {{client.FirstName}}
-                  </div>
-              </div>
-          </ng-template>
-      </div>
-      <ng-template #loadingBenefits>
-              <app-spinner></app-spinner>
-      </ng-template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of beneficiaries | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                        <td>{{item.name}}</td>
+                        <td>{{item.surname}}</td>
+                        <td>{{item.idnumber}}</td>
+                        <td>{{item.type}}</td>
+                        <td>
+                           <a class="btn rounded-btn" (click)="edit(item)">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #nobefits>
+                <div>
 
-  </div>
+                    <div class="alert alert-warning">
+                        No Beneficiaries found for {{client.FirstName}}
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+        <ng-template #loadingBenefits>
+            <app-spinner></app-spinner>
+        </ng-template>
+
+    </div>
 
 </div>

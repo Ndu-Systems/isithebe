@@ -1,4 +1,4 @@
-<table *ngIf="benefits.length; else nobefits">
+<table *ngIf="benefits?.length; else nobefits">
   <tr *ngFor="let item of benefits">
       <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
       <td>{{item.Amount |currency:'R':true}}</td>

@@ -26,7 +26,9 @@ export class ClientService {
   addBeneficiary(data:any): Observable<any> {
     return this.http.post<any>(`${this.url}/client/add-beneficiary.php`, data);
   }
-
+  updateBeneficiary(data): Observable<any> {
+    return this.http.post<any>(`${this.url}/client/edit-beneficiary.php`, data);
+  }
   getPolicies():Observable<any>{
     return this.http.get<any>(`${this.url}/client/get-policies.php`);
 }

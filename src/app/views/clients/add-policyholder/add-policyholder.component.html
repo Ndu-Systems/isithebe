@@ -29,7 +29,7 @@
             <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
                
                 
-                <table class="table table-bordered" *ngIf="policies.length; else nobefits">
+                <table class="table table-bordered" *ngIf="policies?.length; else nobefits">
                     <thead>
                         <tr>
                             <th>Description</th>

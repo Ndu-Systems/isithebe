@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
         this.checkURL();
     }
     checkURL() {
-        debugger
         if (!IS_LOCAL) {
           let baseUrlMain = (<any>this.location)._platformLocation.location.href;
           const BASE_URLMAIN_SECURE = "https://www.isithebe.co.za";

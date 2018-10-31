@@ -98,7 +98,7 @@
                 </div>
                 <div class="card-body table-responsive">
 
-                    <table class="table table-bordered" *ngIf="clientObject[0].Policies.length; else nobefits">
+                    <table class="table table-bordered" *ngIf="clientObject[0].Policies?.length; else nobefits">
                         <thead>
                             <tr>
                                 <th>Amount </th>
@@ -128,11 +128,17 @@
                 <ng-template #loadingBenefits>
                     <app-spinner></app-spinner>
                 </ng-template>
-                <div class="col-md-6">
-                    <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a>
+                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                    <h1>
+                        Beneficiaries
+                    </h1>
+                            <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a> <br> 
                 </div>
+                
+               
                 <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
-                    <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client" ></app-beneficiaries>
+                    <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
                 </div>
 
             </div>
@@ -150,19 +156,20 @@
                     </div>
 
                     <ng-template #content let-c="close" let-d="dismiss">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Print Client Details</h4>
-                                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <app-client-print-details [beneficiaries]="clientObject[0].Beneficiaries" [client]="client"  [policies]="clientObject[0].Policies" ></app-client-print-details>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-                            </div>
-                </ng-template>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Print Client Details</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <app-client-print-details [beneficiaries]="clientObject[0].Beneficiaries" [client]="client"
+                                [policies]="clientObject[0].Policies"></app-client-print-details>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                        </div>
+                    </ng-template>
 
                     <!-- <button class="btn btn-lg btn-outline-primary" >Launch demo modal</button> -->
 
