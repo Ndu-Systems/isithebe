@@ -1,6 +1,6 @@
 import * as $ from "jquery";
 
-export const IS_LOCAL = false;
+export const IS_LOCAL = true;
 let api = "https://www.isithebe.co.za/api";
 let web = "https://www.isithebe.co.za";
 if (IS_LOCAL) {

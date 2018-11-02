@@ -26,6 +26,7 @@ if (isset($data->Email) )
     $Benefactor     = $data->Benefactor;
     $IDNumber       =  $data->IDNumber; 
     $Token          = $data->Token; 
+    $JoiningDate    = $data->JoiningDate;
 
 	$result = $conn->prepare("SELECT * FROM users WHERE UserId = ?"); 
 	$result->execute(array($UserId));
@@ -44,6 +45,7 @@ if (isset($data->Email) )
                 City=?,
                 PostCode=?,
                 IDNumber=?,
+                JoiningDate=?,
                 Role=?,
                 Token=?,
                 Benefactor=?,
@@ -66,6 +68,7 @@ if (isset($data->Email) )
                 $City,
                 $PostCode,
                 $IDNumber,
+                $JoiningDate,
                 $Role,
                 $Token,
                 $Benefactor,

@@ -18,7 +18,7 @@ export class AddClientComponent implements OnInit {
     FirstName: string;
     Surname: string;
     IDNumber: string;
-    Email: string;
+    Email: string = "client@isithebe.co.za";
     Cellphone: string;
     AddressLine1: string;
     AddressLine2: string;
@@ -29,6 +29,7 @@ export class AddClientComponent implements OnInit {
     msg: string;
     menus: MenuItem[];
     currentUser;
+    JoiningDate;
     constructor(
         private router: Router,
         private patientService: ClientService
@@ -110,7 +111,8 @@ export class AddClientComponent implements OnInit {
             AddressLine3: this.AddressLine3,
             City: this.City,
             PostCode: this.PostCode,
-            CreateUserId: this.currentUser.userid
+            CreateUserId: this.currentUser.userid,
+            JoiningDate : this.JoiningDate
             
         };
         loadScreen();

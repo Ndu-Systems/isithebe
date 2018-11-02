@@ -117,7 +117,9 @@ export class EditClientComponent implements OnInit {
           StatusId: client.StatusId,
           Role: client.Role,
           Password: client.Password,
-          Benefactor: client.Benefactor
+          Benefactor: client.Benefactor,
+          Token: client.Token,
+          JoiningDate : client.JoiningDate
         };
 
         this.clientService.updateClient(data).subscribe(response => {

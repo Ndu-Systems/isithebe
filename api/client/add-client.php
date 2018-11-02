@@ -23,18 +23,19 @@ if (isset($data->Email)) {
     $Password       = 'Password';
     $Benefactor     = 'na';
     $IDNumber       =  $data->IDNumber;
+    $JoiningDate    =  $data->JoiningDate;
     
     
-    $check = $conn->prepare("SELECT * FROM users WHERE Email = ?");
-    $check->execute(array(
-        $Email
-    ));
-    if ($check->rowCount() > 0) {
-        die(json_encode('USER_EXIST'));
-    }
+    // $check = $conn->prepare("SELECT * FROM users WHERE Email = ?");
+    // $check->execute(array(
+    //     $Email
+    // ));
+    // if ($check->rowCount() > 0) {
+    //     die(json_encode('USER_EXIST'));
+    // }
     
-    $result = $conn->prepare("INSERT INTO users( FirstName, Surname,UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId ) 
-                                                VALUES (?,?,UUID(),?, ?,?,?,?,?,?,?,?,?,?,?,now(),?,now(),?)");
+    $result = $conn->prepare("INSERT INTO users( FirstName, Surname,UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,JoiningDate,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId ) 
+                                                VALUES (?,?,UUID(),?, ?,?,?,?,?,?,?,?,?,?,?,?,now(),?,now(),?)");
     if ($result->execute(array(
         $FirstName,
         $Surname,
@@ -47,6 +48,7 @@ if (isset($data->Email)) {
         $City,
         $PostCode,
         $IDNumber,
+        $JoiningDate,
         $Role,
         $Benefactor,
         $CreateUserId,

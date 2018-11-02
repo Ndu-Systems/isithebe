@@ -57,6 +57,22 @@
                 </div>
               </fieldset>
 
+              <!-- Joining Date -->
+              <fieldset class="form-group">
+                <div class="row">
+                  <label class="col-md-2">Joining Date:</label>
+                  <div class="input-group mb-3 col-md-6 ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                        <li class="fa fa-calendar"></li>
+                      </span>
+                    </div>
+                    <input type="date" [(ngModel)]="JoiningDate" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Joining Date"
+                      aria-label="JoiningDate" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </fieldset>
+
               <!-- Email -->
               <fieldset class="form-group">
                 <div class="row">

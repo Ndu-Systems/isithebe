@@ -30,7 +30,7 @@
                               <p class="font-weight-bold mb-4">Policy Holder Details</p>
                               <p class="mb-1"><b>Full-Name </b>: {{client.FirstName}} {{client.Surname}}</p>
                               <p class="mb-1"><b>ID Number </b>:{{client.IDNumber}}</p>
-                              <p class="mb-1"><b>Inception Date</b>: {{today | date}}</p>
+                              <p class="mb-1"><b>Joining Date</b>: {{client.JoiningDate}}</p>
                               <p class="mb-1"><b>Contact No</b>: {{client.ContactNumbers}}</p>
                               <p class="mb-1"><b>Address </b>: {{client.AddressLine1}}, {{client.AddressLine2}}, {{client.AddressLine3}},{{client.City}},{{client.PostCode}}</p>
                           </div>
@@ -53,7 +53,7 @@
                                             <tr>
                                                 <th>Name </th>
                                                 <th>Surname </th>
-                                                <th>ID Number</th>
+                                                <th>ID Number</th>                                            
                                                 <th>Type</th>                          
                                             </tr>
                                         </thead>
@@ -61,7 +61,7 @@
                                             <tr *ngFor="let item of beneficiaries | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
                                                 <td>{{item.name}}</td>
                                                 <td>{{item.surname}}</td>
-                                                <td>{{item.idnumber}}</td>
+                                                <td>{{item.idnumber}}</td>                                          
                                                 <td>{{item.type}}</td>
                                             </tr>
                                         </tbody>

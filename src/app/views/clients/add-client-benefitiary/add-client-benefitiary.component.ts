@@ -49,7 +49,7 @@ export class AddClientBenefitiaryComponent implements OnInit {
       this.loggedinUser =JSON.parse(currentUser);
    }
 getTypes(){
- this.typesLS = ['Spouse','Child','Other'];
+ this.typesLS = ['Spouse','Child','Grand-Child','Other'];
 }
   ngOnInit() {
     this.policies$ = this.clientService.getPolicies();
@@ -61,8 +61,9 @@ this.getTypes();
     ];
   }
   add(){
+    debugger
     if(!this.name || !this.surname || !this.idnumber){
-      this.showError('Please fill the form completly');
+      this.showError('Please fill the form completely');
       return false;
     }    this.confirmationService.confirm({
       message: 'Are you sure that you want to perform this action?',
