@@ -12,8 +12,10 @@ import { CURRENT_LOGGED_IN_USER, loadScreen, stopLoadingScreen } from '../shared
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
-    Email : any = "admin@isithebe.co.za"
-    Password : any ="pass"
+    // Email : any = "admin@isithebe.co.za"
+    // Password : any ="pass"
+    Email : any;
+    Password : any;
     msgs: Message[] = [];
 
     constructor( 
