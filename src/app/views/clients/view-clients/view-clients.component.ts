@@ -26,7 +26,7 @@ menus: Array<MenuItem>;
   ) { }
 
   ngOnInit() {
-    this.patients$ = this.selectService.select("users WHERE  Role = 'client' ORDER BY CreateDate DESC ");
+    this.patients$ = this.selectService.select("users WHERE  Role = 'client' AND StatusId = 1 ORDER BY CreateDate DESC ");
 
     this.menus = [
       {name:'Dashboard',url:'/dashboard'}
