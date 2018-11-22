@@ -41,12 +41,12 @@ export class EditClientComponent implements OnInit {
     this.client$ = this.selectService.select(`users WHERE UserId = '${this.clientId}'`)
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
-  showSuccess() {
+  showSuccess(msg) {
     this.msgs = [];
     this.msgs.push({
       severity: "success",
       summary: "Success Message",
-      detail: "Client Updated Successfully"
+      detail: `${msg}`
     });
   }
   showError(msg) {
@@ -73,8 +73,10 @@ export class EditClientComponent implements OnInit {
         this.archiveService.addArchive(data)
         .subscribe(response => {
           if(response == 1){
-            alert('Ok');
-            this.router.navigate(["/clients"]);
+            this.showSuccess("Client Archived Successfully");
+            setTimeout(() => {      
+              this.router.navigate(["/clients"]);   
+            }, 2000);            
           }
           else{
             alert(response);
@@ -160,7 +162,7 @@ export class EditClientComponent implements OnInit {
 
     this.clientService.updateClient(data).subscribe(response => {
       if (response === 1) {
-        this.showSuccess();
+        this.showSuccess("Client Updated Successfully");
         setTimeout(() => {         
         }, 2000);
       }
