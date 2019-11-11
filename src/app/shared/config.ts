@@ -1,10 +1,10 @@
 import * as $ from "jquery";
 
-export const IS_LOCAL = false;
+export const IS_LOCAL = true;
 let api = "https://www.isithebe.co.za/api";
 let web = "https://www.isithebe.co.za";
 if (IS_LOCAL) {
-    api = "http://localhost:8080/isithebe/api";
+    api = "http://localhost:8200/isithebe/api";
     web = "http://localhost:4200";
 }
 

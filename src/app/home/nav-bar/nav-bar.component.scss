@@ -1,8 +1,23 @@
 .bg-dark {
-    background-color: #353B48 !important;
+    background-color: #30336B !important;
+
 }
+
 @media only screen and (max-width: 768px) {
     #title {
         display: none;
+    }
+}
+
+a.logo {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+ul {
+    li {
+        a {
+            font-size: 15px;
+        }
     }
 }

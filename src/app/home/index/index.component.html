@@ -1,82 +1,48 @@
 <p-growl [(value)]="msgs"></p-growl>
 
-<div [@routerTransition]>
+<!-- <div [@routerTransition]> -->
+<div>
     <!-- Masthead -->
-    <header class="masthead text-white text-center">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Be a part of the family, we will call you back</h1>
-                </div>
-                <div class="col-md-12 col-lg-8 col-xl-7 mx-auto">
-                    <form>
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-5">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-user"></i></div>
-                                    </div>
-                                    <input type="text" class="form-control" [(ngModel)]="Name" [ngModelOptions]="{standalone: true}" id="fullname" name="fullname" placeholder="Enter Your Full Name"
-                                        required>
- 
-                                </div>
-                            </div>
-                            <div class="form-group col-md-5">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-phone"></i></div>
-                                    </div>
-                                    <input type="text" class="form-control" [(ngModel)]="Cellphone" [ngModelOptions]="{standalone: true}" id="contactnumber" name="contactnumber"
-                                        placeholder="Enter Your Cellphone Number" required>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <div class="input-group">
-                                    <button type="submit" (click)="logCallBack()" class="btn btn-primary">Call Me Back!</button>
-                                </div>
-                            </div>
+    <div class="masthead text-white text-center">
 
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
 
     <!-- Icons Grid -->
     <section class="features-icons text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="fa fa-desktop m-auto fa-4x"></i>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="assets/images/svg/devices.svg" alt="access image">
+                            <h1 class="card-title">ease of access</h1>
+                            <p class="card-text">
+                                Access your policy information anywhere any time, over the internet of things.
+                            </p>
                         </div>
-                        <h3>Ease Of Access</h3>
-                        <p class="lead mb-0">Access your policy information anywhere any time, over the internet of
-                            things.</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="fa fa-address-card m-auto fa-4x"></i>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="assets/images/svg/personalised.svg" alt="access image">
+                            <h1 class="card-title">personalised policies</h1>
+                            <p class="card-text">
+                                Enjoy a wide range of products which are tailored to your personal preferences.
+                            </p>
                         </div>
-                        <h3>Personalised Policies</h3>
-                        <p class="lead mb-0">Enjoy a wide range of products which are tailored to your personal
-                            preferences.</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="fa fa-eye m-auto fa-4x"></i>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="assets/images/svg/secured.svg" alt="access image">
+                            <h1 class="card-title">secured data</h1>
+                            <p class="card-text">
+                                We have implemented the latest technology in data protection. Your policy for your eyes
+                                only!
+                            </p>
                         </div>
-                        <h3>Secured Data</h3>
-                        <p class="lead mb-0">We have implemented the lates technology in data protection. Your policy
-                            for
-                            your eyes only!</p>
                     </div>
                 </div>
             </div>
@@ -85,37 +51,38 @@
 
     <!-- Image Showcases -->
     <section class="showcase">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-lg-4 text-white showcase-img" style="background-image: url('assets/images/family1.jpg');"></div>
-                <div class="col-lg-8 showcase-text">
-                    <div class="container-fluid">
-                    <h2>Welcome to Isithebe Burial Society</h2>
-                    <p class="lead mb-0">Where excellent and dignified services are guaranteed in the unfortunate, but certain event of death, your family should not have to worry about the money for the funeral.</p>
-                    <p class="lead mb-0">We live in a time of great financial, forcing us to be wise and stay prepared for anything that might happen in our lives whether expected or not.</p>
-                    <p class="lead mb-0">We at Isithebe burial society understand how costly funerals nowadays can be, rest assured with our burial society you do not need to worry about finances and can focus on healing and dealing with the trauma of the death of a loved one.</p>
-                    <p class="lead mb-0"><strong>Isithebe burial society</strong> have designed reasonable funeral policies that are packaged to cover and cater for all your needs during such trying times.</p>
+        <div class="container">
+            <img src="assets/images/svg/family.svg" alt="family image">
+            <div class="panel">
+                <h1 class="panel-header">welcome to isithebe burial society</h1>
+                <p class="panel-text">
+                    Where excellent and dignified services are guaranteed in the unfortunate, but certain event of
+                    death, your family should not have to worry about the money for the funeral. We live in a time of
+                    great financial, forcing us to be wise and stay prepared for anything that might happen in our lives
+                    whether expected or not.
+                </p>
+                <p class="panel-text">
+                    We at Isithebe burial society understand how costly funerals nowadays can be, rest assured with our
+                    burial society you do not need to worry about finances and can focus on healing and dealing with the
+                    trauma of the death of a loved one. Isithebe burial society have designed reasonable funeral
+                    policies that are packaged to cover and cater for all your needs during such trying times.
+                </p>
+                <div class="row policy">
+                    <div class="col-md-4 family-policy">
+                        <img src="assets/images/svg/family-policy.svg" alt="family policy image">
+                    </div>
+                    <div class="col-md-8 policy-data">
+                        <img src="assets/images/svg/policy-badge.svg" alt="badge">
+                        <h1 class="policy-info">policy</h1>
+                        <h1 class="panel-header">isithebe burial society funeral cover</h1>
+                        <ul>
+                            <li>a funeral cover</li>
+                            <li>isithebe burial soceity funeral cover from  R140/pm*</li>
+                            <li>cover yourself and your family residing in south africa</li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
             </div>
-            <!-- <div class="row no-gutters">
-            <div class="overlay"></div>
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/images/family4.jpg');"></div>
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Fully Responsive Design</h2>
-                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look
-                    great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-            </div>
-        </div> -->
-            <!-- <div class="row no-gutters">
-            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/images/family4.jpg');"></div>
-            <div class="col-lg-6 my-auto showcase-text">
-                <h2>Updated For Bootstrap 4</h2>
-                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way
-                    in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap
-                    4!</p>
-            </div>
-        </div> -->
         </div>
     </section>
 </div>
