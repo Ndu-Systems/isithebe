@@ -1,0 +1,32 @@
+<svg id="truck" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81" height="81" viewBox="0 0 81 81">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c4377"/>
+      <stop offset="1" stop-color="#16223c"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6e34d4" stop-opacity="0"/>
+      <stop offset="1" stop-color="#241a6a"/>
+    </radialGradient>
+  </defs>
+  <circle id="Ellipse_14" data-name="Ellipse 14" cx="40.5" cy="40.5" r="40.5" fill="#30336b"/>
+  <g id="truck-2" data-name="truck" transform="translate(18.016 22.519)">
+    <path id="Path_131" data-name="Path 131" d="M334.656,114.073l-6.852-7.537a1.853,1.853,0,0,0-1.37-.606h-8.642v26.808h3.942a4.731,4.731,0,1,1,9.462,0h3.942V115.32a1.852,1.852,0,0,0-.482-1.247" transform="translate(-289.408 -101.199)" fill="#ee705c"/>
+    <path id="Path_132" data-name="Path 132" d="M28.384,75.043H0V55.232a2.266,2.266,0,0,1,2.266-2.266H26.118a2.266,2.266,0,0,1,2.266,2.266V75.043Z" transform="translate(0 -52.966)" fill="#f9ca24"/>
+    <path id="Path_133" data-name="Path 133" d="M362.495,150.7h12.837v-3.226a1.852,1.852,0,0,0-.482-1.246l-4.535-4.989h-7.82a.567.567,0,0,0-.567.567v8.328a.567.567,0,0,0,.567.567" transform="translate(-329.601 -133.357)" fill="#e6e6e6"/>
+    <g id="Group_622" data-name="Group 622" transform="translate(3.942 26.807)">
+      <path id="Path_134" data-name="Path 134" d="M371.392,357.834a4.731,4.731,0,1,1-4.731-4.731,4.731,4.731,0,0,1,4.731,4.731" transform="translate(-333.546 -353.103)" fill="#5b5b5b"/>
+      <path id="Path_135" data-name="Path 135" d="M53.6,357.834a4.731,4.731,0,1,1-4.731-4.731,4.73,4.73,0,0,1,4.731,4.731" transform="translate(-44.137 -353.103)" fill="#5b5b5b"/>
+    </g>
+    <path id="Path_136" data-name="Path 136" d="M0,300.138v7.491a1.971,1.971,0,0,0,1.97,1.97H3.942a4.731,4.731,0,0,1,9.462,0H28.385v-9.462Z" transform="translate(0 -278.061)" fill="url(#linear-gradient)"/>
+    <g id="Group_623" data-name="Group 623" transform="translate(7.096 29.961)">
+      <path id="Path_137" data-name="Path 137" d="M82.6,389.991a1.577,1.577,0,1,1-1.577-1.577,1.577,1.577,0,0,1,1.577,1.577" transform="translate(-79.449 -388.414)" fill="#b2b2b2"/>
+      <path id="Path_138" data-name="Path 138" d="M400.4,389.991a1.577,1.577,0,1,1-1.577-1.577,1.577,1.577,0,0,1,1.577,1.577" transform="translate(-368.858 -388.414)" fill="#b2b2b2"/>
+    </g>
+    <path id="Path_139" data-name="Path 139" d="M455.725,300.138h-4.731a.789.789,0,0,0,0,1.577h4.731Z" transform="translate(-409.995 -278.061)" fill="#f4a29b"/>
+    <g id="Group_624" data-name="Group 624" transform="translate(0 10.25)">
+      <path id="Path_140" data-name="Path 140" d="M11.827,213.438a.788.788,0,0,0,0-1.577H0v1.577H11.827Z" transform="translate(0 -207.919)" fill="url(#radial-gradient)"/>
+      <path id="Path_141" data-name="Path 141" d="M8.673,169.3a.788.788,0,0,0,0-1.577H0V169.3H8.673Z" transform="translate(0 -167.723)" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+</svg>

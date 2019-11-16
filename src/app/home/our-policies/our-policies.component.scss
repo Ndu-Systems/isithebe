@@ -1,59 +1,121 @@
 .card-flip {
     perspective: 1000px;
+
     &:hover .flip,
     &.hover .flip {
-      transform: rotateY(180deg);
+        transform: rotateY(180deg);
     }
-  }
-  
-  .card-flip,
-  .front,
-  .back {
+}
+
+.card-flip,
+.front,
+.back {
     width: 100%;
     height: 480px;
-  }
-  
-  .flip {
+}
+
+.flip {
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative;
-  }
-  
-  .front,
-  .back {
+}
+
+.front,
+.back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .front {
+}
+
+.front {
     z-index: 2;
     transform: rotateY(0deg);
-  }
-  
-  .back {
-    transform: rotateY(180deg);
-    mdb-card-body {
-      height: 660px;
-      background-color: #353B48;       
-    }
-     
-  }
+}
 
-  .btn{
+.back {
+    transform: rotateY(180deg);
+
+    mdb-card-body {
+        height: 660px;
+        background-color: #353B48;
+    }
+
+}
+
+.btn {
     width: 339px;
     border: 0.5rem;
     border-width: 0.5rem;
-  }
-  mdb-card-footer{
+}
+
+mdb-card-footer {
     background-color: #353B48;
-  }
-  mdb-card-text .list-group {
+}
+
+mdb-card-text .list-group {
     color: #353B48;
+}
+
+.policy-container {
+    height: 60rem;
+}
+
+.jumbotron {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-image: url('../../../assets/images/svg/policies-bg.svg');
+    background-repeat: no-repeat;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    margin: 7rem 1px;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-align: left;
+    padding: 4rem 2rem;
+}
+
+.plan {
+    text-align: left;
+
+    .heading {
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: capitalize;
     }
 
-    .jumbotron{
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      color: #ffffff;
+    .text {
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: #636E72;
     }
+
+    .list {
+        color: #BDC3C7;
+
+        .list-header {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .list-point {
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron {
+        background-image: url('../../../assets/images/svg/policy-mb-bg.svg');
+        padding: 1.7rem;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}

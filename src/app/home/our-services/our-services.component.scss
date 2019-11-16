@@ -1,74 +1,89 @@
 .card-flip {
     perspective: 1000px;
+
     &:hover .flip,
     &.hover .flip {
-      transform: rotateY(180deg);
+        transform: rotateY(180deg);
     }
-  }
-  
-  .card-flip,
-  .front,
-  .back {
+}
+
+.card-flip,
+.front,
+.back {
     width: 100%;
     height: 480px;
-  }
-  
-  .flip {
+}
+
+.flip {
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative;
-  }
-  
-  .front,
-  .back {
+}
+
+.front,
+.back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .front {
+}
+
+.front {
     z-index: 2;
     transform: rotateY(0deg);
-  }
-  
-  .back {
-    transform: rotateY(180deg);
-    mdb-card-body {
-      height: 660px;
-      background-color: #353B48;       
-    }
-     
-  }
+}
 
-  .btn{
+.back {
+    transform: rotateY(180deg);
+
+    mdb-card-body {
+        height: 660px;
+        background-color: #353B48;
+    }
+
+}
+
+.btn {
     width: 339px;
     border: 0.5rem;
     border-width: 0.5rem;
-  }
-  mdb-card-footer{
+}
+
+mdb-card-footer {
     background-color: #353B48;
-  }
-  mdb-card-text .list-group {
+}
+
+mdb-card-text .list-group {
     color: #353B48;
-    }
+}
 
-    .jumbotron{
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      color: #ffffff;
-    }
+.jumbotron {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-image: url('../../../assets/images/svg/service-bg.svg');
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    background-repeat: no-repeat;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    margin: 7rem 1px;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-align: left;
+    padding: 4rem 2rem;
+}
 
-   
+
 @mixin background-cover {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  @mixin body-font {
+}
+
+@mixin body-font {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-  
+}
+
 header.masthead {
     position: relative;
     background-color: #f5f6fa;
@@ -76,53 +91,88 @@ header.masthead {
     @include background-cover;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    .overlay {
-      position: absolute;
-      background-color: #f5f6fa;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    @media (min-width: 768px) {
-      padding-top: 12rem;
-      padding-bottom: 12rem;
-      h1 {
-        font-size: 3rem;
-      }
-    }
-  }
 
- .input-group-text {
+    .overlay {
+        position: absolute;
+        background-color: #f5f6fa;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+.input-group-text {
     height: 38px;
 
     .fa {
-        color:#192a56;
-    }
-}
-.features-icons {
-    padding-bottom: 3rem;
-    .fa {
-        color:#192a56;
+        color: #192a56;
     }
 }
 
-.showcase 
-{
+.features {
+    h1 {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .list {
+        color: #222F3E;
+        margin: 2rem 7rem;
+
+        .list-header {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .list-point {
+            font-size: 1rem;
+            text-transform: capitalize;
+            text-align: left;
+            margin: 1.5rem;
+        }
+    }
+}
+
+.features-icon {
+    padding-bottom: 3rem;
+    margin: 1rem auto;
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+.showcase {
     .showcase-img {
         min-height: 30rem;
         background-size: cover;
     }
-    .no-gutters>.col, .no-gutters>[class*=col-] {
+
+    .no-gutters>.col,
+    .no-gutters>[class*=col-] {
         padding-right: 0;
         padding-left: 0;
     }
+
     .text-white {
-        color: #fff!important;
+        color: #fff !important;
     }
 
     h2 {
@@ -130,10 +180,95 @@ header.masthead {
         color: #192a56;
     }
 }
-.showcase[_ngcontent-c3] .no-gutters[_ngcontent-c3] > [class*=col-][_ngcontent-c3] {
+
+.showcase[_ngcontent-c3] .no-gutters[_ngcontent-c3]>[class*=col-][_ngcontent-c3] {
     padding-right: 0px;
     padding-left: 50px;
 }
+
 ul {
-  list-style: none;
+    list-style: none;
+}
+
+.container-fluid {
+    background-color: #FFFFFF;
+    padding: 2rem !important;
+    border-radius: 15px;
+
+    .team-icon {
+        img {
+            width: 50px;
+        }
+    }
+
+    .details {
+
+        h1 {
+            font-size: 25px;
+            font-weight: 700;
+            margin: 1rem 0;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .value {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+
+    .cards {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-fluid {
+        padding: 1rem 0rem !important;
+    }
+
+    .jumbotron {
+        background-image: url('../../../assets/images/svg/service-bg-mobile.svg');
+        padding: 1.7rem;
+        height: 9rem;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 10px;
+        }
+    }
+
+    .offset-2 {
+        margin: 0;
+    }
+
+    .features-icon {
+        padding-bottom: 1rem;
+    }
+
+    .features {
+        .list {
+            margin: 2rem 0rem;
+        }
+    }
+
+    .cards {
+        img {
+            width: 100%;
+        }
+    }
 }
