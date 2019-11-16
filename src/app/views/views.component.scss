@@ -13,7 +13,9 @@
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
+    background: #0E1319;
+    height: 100%;
 }
 .collapsed {
     margin-left: 100px;

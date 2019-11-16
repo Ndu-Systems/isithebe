@@ -1,95 +1,93 @@
 <div [@routerTransition]>
-    <h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>     
+    <h1 class="header-main"><small>dashboard home</small></h1>
     <hr>
     <div class="row" *ngIf="counts$|async as counts">
-            <div class="col-xl-3 col-lg-6 pb-1">
-                    <!-- <app-stat [bgClass]="'success'" [icon]="'fa-users'" [count]="'25'" [label]="'Active Patients'" ></app-stat> -->
-                    <div class="card text-white bg-success">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col col-xs-3">
-                                    <i class="fa fa-users fa-5x"></i>
-                                </div>
-                                <div class="col col-xs-9 text-right">
-                                    <div class="d-block huge">{{counts[0].value}}</div>
-                                    <div class="d-block">Active Clients</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <span class="float-left" >View Details</span>
-                            <a href="javascript:void(0)" routerLink="/clients" class="float-right card-inverse">
-                                <span ><i class="fa fa-arrow-circle-right"></i></span>
-                            </a>
-                        </div>
-                    </div>            
-                </div>
         <div class="col-xl-3 col-lg-6 pb-1">
-            <!-- <app-stat [bgClass]="'primary'" [icon]="'fa-calendar'" [count]="7" [label]="'New Appointments'" ></app-stat> -->
-            <div class="card text-white bg-primary">
+            <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col col-xs-3">
-                            <i class="fa fa-calendar fa-5x"></i>
+                        <div class="col-md-4">
+                            <i class="fa fa-building fa-2x"></i>
                         </div>
-                        <div class="col col-xs-9 text-right">
-                            <div class="d-block huge">{{counts[1].value}}</div>
-                            <div class="d-block">New Policies</div>
+                        <div class="col-md-8 text-right">
+                            <h1 class="header">isithebe burial society</h1>
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <span class="float-left">View Details</span>
-                    <a href="javascript:void(0)" routerLink="/policies" class="float-right card-inverse">
-                        <span ><i class="fa fa-arrow-circle-right"></i></span>
-                    </a>
+                <div class="card-body">
+                    <div class="row">
+                        <h1 class="col-md-4 title">email</h1>
+                        <h1 class="col-md-8 value">admin@isithebe.co.za</h1>
+                    </div>
+                    <div class="row">
+                        <h1 class="col-md-4 title">cellphone</h1>
+                        <h1 class="col-md-8 value">0310110215</h1>
+                    </div>
+                    <div class="row">
+                        <h1 class="col-md-4 title">address</h1>
+                        <h1 class="col-md-8 value">stanger, kwa-zulu natal</h1>
+                    </div>
                 </div>
-            </div>     
+                <div class="card-footer">
+
+                </div>
+            </div>
         </div>
         <div class="col-xl-3 col-lg-6 pb-1">
-           <div class="card text-white bg-warning">
+            <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col col-xs-3">
-                            <i class="fa fa-phone fa-5x"></i>
+                        <div class="col-md-4">
+                            <i class="fa fa-users fa-2x"></i>
                         </div>
-                        <div class="col col-xs-9 text-right">
-                            <div class="d-block huge">{{counts[2].value}}</div>
-                            <div class="d-block">Call Backs</div>
+                        <div class="col-md-8 text-right">
+                            <h1 class="header-stats">active clients</h1>
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <span class="float-left">View Details</span>
-                    <a href="javascript:void(0)" class="float-right card-inverse">
-                        <span ><i class="fa fa-arrow-circle-right"></i></span>
-                    </a>
-                </div>
-            </div>          
-        </div>       
-        <!-- <div class="col-xl-3 col-lg-6">
-            <div class="card text-white bg-danger">
-                <div class="card-header">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col col-xs-3">
-                            <i class="fa fa-upload fa-5x"></i>
-                        </div>
-                        <div class="col col-xs-9 text-right">
-                            <div class="d-block huge">{{counts[3].value}}</div>
-                            <div class="d-block">Archived Appointments</div>
-                        </div>
+                        <h1 class="stat">
+                            {{counts[0].value}}
+                        </h1>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span class="float-left">View Details</span>
-                    <a href="javascript:void(0)" class="float-right card-inverse">
-                        <span ><i class="fa fa-arrow-circle-right"></i></span>
+                    <a href="javascript:void(0)" routerLink="/clients" class="float-right card-inverse">
+                        view more
                     </a>
                 </div>
-            </div>  
-        </div> -->
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 pb-1">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="fa fa-file fa-2x"></i>
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <h1 class="header-stats">all policies</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <h1 class="stat">
+                            {{counts[1].value}}
+                        </h1>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="javascript:void(0)" routerLink="/clients" class="float-right card-inverse">
+                        view more
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <hr />   
+    <hr />
     <div class="card-body table-responsive">
-    </div>  
+    </div>
 </div>

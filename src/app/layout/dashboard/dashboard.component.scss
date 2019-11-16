@@ -1,11 +1,63 @@
-.deskContent {     
+.deskContent {
     width: 100%;
     height: 400px;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
 }
 
 @media all and (min-width: 959px) {
-    .deskContent {display:block;}
-    .phoneContent {display:none;}
+    .deskContent {
+        display: block;
+    }
+
+    .phoneContent {
+        display: none;
+    }
+}
+
+.header-main {
+    font-size: 25px;
+    font-weight: 600;
+    color: #636E72;
+    text-transform: capitalize;
+}
+
+.card {
+    background-color: #181F29;
+    color: #636E72;
+
+    .header {
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+
+    .header-stats {
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .card-body {
+        h1 {
+            font-size: 15px;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .stat {
+            font-size: 30px;
+            padding: 1rem 3rem;
+            color: #BDC3C7;
+        }
+    }
+
+    .card-footer {
+        a {
+            text-decoration: none;
+            color: #BDC3C7;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+    }
 }
