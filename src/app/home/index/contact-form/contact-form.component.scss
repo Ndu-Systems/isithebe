@@ -1,0 +1,36 @@
+.form {
+    padding: 4rem 8rem;
+    border-radius: 15px;
+    background: rgb(44, 67, 119);
+    background: linear-gradient(56deg, rgba(44, 67, 119, 1) 0%, rgba(22, 34, 60, 1) 100%);
+
+    form {
+        label {
+            text-transform: capitalize;
+            color: #F5F5F5;
+        }
+
+        #emailHelp {
+            color: #F9CA24 !important;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: #F9CA24 !important;
+            border-color: #F9CA24 !important;
+            color: #30336B !important;
+            font-weight: bold;
+        }
+
+        .btn-default {
+            background-color: transparent !important;
+            color: #F9CA24 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        padding: 2rem 1rem;
+    }
+}

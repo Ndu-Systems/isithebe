@@ -12,7 +12,7 @@
 }
 .bg-dark {
     background-color: #30336B !important;
-    height: 4rem !important;
+    // height: 4rem !important;
 }
 .container-fluid {
     padding: 0 !important;
@@ -87,4 +87,13 @@ html, body {
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .bg-dark {
+        background-color: #30336B !important;
+        // height: 6rem !important;
+    }
 }

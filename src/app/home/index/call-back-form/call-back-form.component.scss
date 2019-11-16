@@ -1,0 +1,66 @@
+.form {
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    background: #dfe6e952;
+    text-align: left;
+
+    form {
+        .form-heading {
+            padding: 0rem 2rem;
+            text-align: right;
+
+            h1 {
+                font-size: 30px;
+                color: #30336B;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            text-transform: capitalize;
+            color: #30336B;
+        }
+
+        #emailHelp {
+            color: #F9CA24 !important;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: #F9CA24 !important;
+            border-color: #F9CA24 !important;
+            color: #30336B !important;
+            font-weight: bold;
+        }
+
+        .btn-default {
+            background-color: transparent !important;
+            color: #F9CA24 !important;
+            box-shadow: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .form {
+        form {
+            .form-heading {
+                padding: 0rem 2rem;
+                text-align: right;
+
+                h1 {
+                    font-size: 16px;
+                    color: #30336B;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
+                label {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

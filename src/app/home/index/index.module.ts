@@ -9,6 +9,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { PrimeNg, PageHeaderModule } from '../../shared';
 import { NavBarComponent } from '../nav-bar';
 import { IndexRouting } from './index.routing';
+import { ContactFormComponent } from './contact-form';
+import { CallBackFormComponent } from './call-back-form';
 
 
 
@@ -16,7 +18,7 @@ import { IndexRouting } from './index.routing';
 @NgModule({
     imports: [CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
         ReactiveFormsModule, PageHeaderModule, IndexRouting, MDBBootstrapModule.forRoot()],
-    declarations: [IndexComponent],
+    declarations: [IndexComponent, ContactFormComponent, CallBackFormComponent],
     schemas: [NO_ERRORS_SCHEMA],
     exports: [...PrimeNg],
     providers: []

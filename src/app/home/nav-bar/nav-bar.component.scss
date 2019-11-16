@@ -21,3 +21,11 @@ ul {
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+
+    .bg-dark {
+        background-color: #30336B !important;
+        height: 6rem !important;
+    }
+}

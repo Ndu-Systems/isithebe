@@ -1,17 +1,19 @@
 <p-growl [(value)]="msgs"></p-growl>
 
-<!-- <div [@routerTransition]> -->
-<div>
+<div [@routerTransition]>
+
     <!-- Masthead -->
     <div class="masthead text-white text-center">
-
+        <div class="callback-form">
+                <app-call-back-form></app-call-back-form>
+        </div>
     </div>
 
     <!-- Icons Grid -->
     <section class="features-icons text-center">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <img src="assets/images/svg/devices.svg" alt="access image">
@@ -22,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <img src="assets/images/svg/personalised.svg" alt="access image">
@@ -33,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <img src="assets/images/svg/secured.svg" alt="access image">
@@ -77,7 +79,7 @@
                         <h1 class="panel-header">isithebe burial society funeral cover</h1>
                         <ul>
                             <li>a funeral cover</li>
-                            <li>isithebe burial soceity funeral cover from  R140/pm*</li>
+                            <li>isithebe burial soceity funeral cover from R140/pm*</li>
                             <li>cover yourself and your family residing in south africa</li>
                         </ul>
                     </div>
@@ -85,4 +87,15 @@
             </div>
         </div>
     </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <div class="panel">
+                <h1 class="panel-header">have any questions?</h1>
+                <h1 class="panel-subHeader">We would love to here from you, regarding any query or clarifications.</h1>
+            </div>
+            <app-contact-form></app-contact-form>
+        </div>
+    </section>
+
 </div>
