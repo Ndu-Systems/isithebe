@@ -1,0 +1,63 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<div class="register-page" [@routerTransition]>
+    <div class="container">
+        <div class="form">
+            <form>
+                <div class="form-heading">
+                    <h1>
+                        Online Registration
+                    </h1>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="FirstName">first name</label>
+                        <input type="text" [(ngModel)]="FirstName" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="FirstName" aria-describedby="emailHelp"
+                            placeholder="Enter FirstName">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="Surname">Surname</label>
+                        <input type="text" [(ngModel)]="Surname" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="password" placeholder="Enter Surname">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" [(ngModel)]="Email" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="Email" placeholder="Enter Email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="cellphone">cellphone</label>
+                        <input type="text" [(ngModel)]="Cellphone" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="password" placeholder="Enter cellphone">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="IDNumber">ID Number</label>
+                        <input type="text" [(ngModel)]="IDNumber" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="IDNumber" placeholder="Enter IDNumber">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary" (click)="apply()">Apply Now</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="btn btn-default" (click)="cancel()">cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

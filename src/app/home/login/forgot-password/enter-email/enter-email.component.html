@@ -1,0 +1,47 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<div class="login" [@routerTransition]>
+    <!-- <div class="container">
+        <h1 class="center">Forgot Passowrd <small><span class="fas fa-unlock"></span></small></h1>
+        <div class=" w3l-login-form">
+            <form action="#" method="POST">
+                <div class=" w3l-form-group">
+                    <label>Enter Email Address:</label>
+                    <div class="group">
+                        <i class="fas fa-envelope-open"></i>
+                        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Email Address" required="required">
+                    </div>
+                </div>
+                <button type="submit" (click)="requestLink()">Request Link</button>
+            </form>
+            <p class=" w3l-register-p">Go Back - <a routerLink="/home/sign-in" class="register"> Login</a></p>
+        </div>
+    </div> -->
+    <div class="container">
+            <div class="form">
+                <form>
+                    <div class="form-heading">
+                        <h1>
+                            forgot password
+                        </h1>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label for="email">enter email address:</label>
+                            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email addreess">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary" (click)="requestLink()">request link</button>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

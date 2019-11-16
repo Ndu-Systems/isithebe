@@ -24,8 +24,10 @@ if (isset($data->Email)) {
     $Benefactor     = 'na';
     $IDNumber       =  $data->IDNumber;
     $JoiningDate    =  $data->JoiningDate;
-    
-    
+
+    if ($JoiningDate = 0) {
+        $JoiningDate = date("Y/m/d");
+    }
     // $check = $conn->prepare("SELECT * FROM users WHERE Email = ?");
     // $check->execute(array(
     //     $Email
@@ -33,8 +35,8 @@ if (isset($data->Email)) {
     // if ($check->rowCount() > 0) {
     //     die(json_encode('USER_EXIST'));
     // }
-    
-    $result = $conn->prepare("INSERT INTO users( FirstName, Surname,UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,JoiningDate,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId ) 
+
+    $result = $conn->prepare("INSERT INTO users( FirstName, Surname,UserId,Email,Password,ContactNumbers,AddressLine1,AddressLine2,AddressLine3,City,PostCode,IDNumber,JoiningDate,Role,Benefactor,CreateUserId,CreateDate,ModifyUserId,ModifyDate,StatusId )
                                                 VALUES (?,?,UUID(),?, ?,?,?,?,?,?,?,?,?,?,?,?,now(),?,now(),?)");
     if ($result->execute(array(
         $FirstName,
@@ -59,10 +61,7 @@ if (isset($data->Email)) {
     } else {
         echo json_encode("error while trying create client, please try again");
     }
-    
-    
 } else {
-    
+
     echo json_encode("500");
 }
-?>

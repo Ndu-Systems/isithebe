@@ -56,10 +56,10 @@ var GrowlNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵccf"]("p-grow
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/enter-email/enter-email.component.ngfactory.js":
-/*!**************************************************************************************!*\
-  !*** ./src/app/login/forgot-password/enter-email/enter-email.component.ngfactory.js ***!
-  \**************************************************************************************/
+/***/ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ngfactory.js":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/enter-email/enter-email.component.ngfactory.js ***!
+  \*******************************************************************************************/
 /*! exports provided: RenderType_EnterEmailComponent, View_EnterEmailComponent_0, View_EnterEmailComponent_Host_0, EnterEmailComponentNgFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69,9 +69,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_EnterEmailComponent_0", function() { return View_EnterEmailComponent_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_EnterEmailComponent_Host_0", function() { return View_EnterEmailComponent_Host_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnterEmailComponentNgFactory", function() { return EnterEmailComponentNgFactory; });
-/* harmony import */ var _enter_email_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enter-email.component.scss.shim.ngstyle */ "./src/app/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js");
+/* harmony import */ var _enter_email_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enter-email.component.scss.shim.ngstyle */ "./src/app/home/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
+/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/components/dom/domhandler */ "./node_modules/primeng/components/dom/domhandler.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var primeng_components_growl_growl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/components/growl/growl */ "./node_modules/primeng/components/growl/growl.js");
@@ -81,10 +81,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _enter_email_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./enter-email.component */ "./src/app/login/forgot-password/enter-email/enter-email.component.ts");
-/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../services/account/account.service */ "./src/app/services/account/account.service.ts");
-/* harmony import */ var _shared_services_Email_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/services/Email.service */ "./src/app/shared/services/Email.service.ts");
-/* harmony import */ var _shared_services_select_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/services/select.service */ "./src/app/shared/services/select.service.ts");
+/* harmony import */ var _enter_email_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./enter-email.component */ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ts");
+/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../services/account/account.service */ "./src/app/services/account/account.service.ts");
+/* harmony import */ var _shared_services_Email_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../shared/services/Email.service */ "./src/app/shared/services/Email.service.ts");
+/* harmony import */ var _shared_services_select_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../shared/services/select.service */ "./src/app/shared/services/select.service.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -145,10 +145,10 @@ var EnterEmailComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["�
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js":
-/*!**********************************************************************************************!*\
-  !*** ./src/app/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js ***!
-  \**********************************************************************************************/
+/***/ "./src/app/home/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/enter-email/enter-email.component.scss.shim.ngstyle.js ***!
+  \***************************************************************************************************/
 /*! exports provided: styles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -161,16 +161,16 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;background:url('family4.jpg') center center no-repeat;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:700px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
+var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:700px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
 
 
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/enter-email/enter-email.component.ts":
-/*!****************************************************************************!*\
-  !*** ./src/app/login/forgot-password/enter-email/enter-email.component.ts ***!
-  \****************************************************************************/
+/***/ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/enter-email/enter-email.component.ts ***!
+  \*********************************************************************************/
 /*! exports provided: EnterEmailComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -179,9 +179,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnterEmailComponent", function() { return EnterEmailComponent; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_account__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/account */ "./src/app/services/account/index.ts");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared */ "./src/app/shared/index.ts");
-/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/config */ "./src/app/shared/config.ts");
+/* harmony import */ var _services_account__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/account */ "./src/app/services/account/index.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../shared/config */ "./src/app/shared/config.ts");
 
 
 
@@ -222,7 +222,7 @@ var EnterEmailComponent = /** @class */ (function () {
                         var email = {
                             email: _this.email,
                             subject: 'Forgot Password - Reset',
-                            message: "Hi " + _this.fullName + " ! <br/>\n                                 <h2>Please Note! to reset your password</h2> <br/>                             \n                                 Please click link below to reset password<br/>\n                                 <table>\n                                 <tr>\n                                 <td><a href=" + _shared_config__WEBPACK_IMPORTED_MODULE_4__["WEB_HOST"] + "/#/login/forgot-password?tokken=" + _this.token + ">Reset Password</a> </td>                    \n                                 <td> </td>\n                                 </tr>                                                  \n                                 </table><br/>\n                                 We hope you find this a Good Read... \n                                 "
+                            message: "Hi " + _this.fullName + " ! <br/>\n                                 <h2>Please Note! to reset your password</h2> <br/>\n                                 Please click link below to reset password<br/>\n                                 <table>\n                                 <tr>\n                                 <td><a href=" + _shared_config__WEBPACK_IMPORTED_MODULE_4__["WEB_HOST"] + "/#/login/forgot-password?tokken=" + _this.token + ">Reset Password</a> </td>\n                                 <td> </td>\n                                 </tr>\n                                 </table><br/>\n                                 We hope you find this a Good Read...\n                                 "
                         };
                         _this.emailService.sendEmail(email).subscribe(function (response) {
                             if (response == 1) {
@@ -247,10 +247,10 @@ var EnterEmailComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/forgot-password.component.ngfactory.js":
-/*!******************************************************************************!*\
-  !*** ./src/app/login/forgot-password/forgot-password.component.ngfactory.js ***!
-  \******************************************************************************/
+/***/ "./src/app/home/login/forgot-password/forgot-password.component.ngfactory.js":
+/*!***********************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/forgot-password.component.ngfactory.js ***!
+  \***********************************************************************************/
 /*! exports provided: RenderType_ForgotPasswordComponent, View_ForgotPasswordComponent_0, View_ForgotPasswordComponent_Host_0, ForgotPasswordComponentNgFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -260,9 +260,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_ForgotPasswordComponent_0", function() { return View_ForgotPasswordComponent_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_ForgotPasswordComponent_Host_0", function() { return View_ForgotPasswordComponent_Host_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponentNgFactory", function() { return ForgotPasswordComponentNgFactory; });
-/* harmony import */ var _forgot_password_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forgot-password.component.scss.shim.ngstyle */ "./src/app/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js");
+/* harmony import */ var _forgot_password_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forgot-password.component.scss.shim.ngstyle */ "./src/app/home/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
+/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/components/dom/domhandler */ "./node_modules/primeng/components/dom/domhandler.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var primeng_components_growl_growl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/components/growl/growl */ "./node_modules/primeng/components/growl/growl.js");
@@ -272,9 +272,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _forgot_password_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./forgot-password.component */ "./src/app/login/forgot-password/forgot-password.component.ts");
-/* harmony import */ var _shared_services_select_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../shared/services/select.service */ "./src/app/shared/services/select.service.ts");
-/* harmony import */ var _services_client_client_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../services/client/client.service */ "./src/app/services/client/client.service.ts");
+/* harmony import */ var _forgot_password_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./forgot-password.component */ "./src/app/home/login/forgot-password/forgot-password.component.ts");
+/* harmony import */ var _shared_services_select_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/services/select.service */ "./src/app/shared/services/select.service.ts");
+/* harmony import */ var _services_client_client_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../services/client/client.service */ "./src/app/services/client/client.service.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -349,10 +349,10 @@ var ForgotPasswordComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1_
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js":
-/*!**************************************************************************************!*\
-  !*** ./src/app/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js ***!
-  \**************************************************************************************/
+/***/ "./src/app/home/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/forgot-password.component.scss.shim.ngstyle.js ***!
+  \*******************************************************************************************/
 /*! exports provided: styles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -365,16 +365,16 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;background:url('family4.jpg') center center no-repeat;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:500px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
+var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:500px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
 
 
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/forgot-password.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/login/forgot-password/forgot-password.component.ts ***!
-  \********************************************************************/
+/***/ "./src/app/home/login/forgot-password/forgot-password.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/home/login/forgot-password/forgot-password.component.ts ***!
+  \*************************************************************************/
 /*! exports provided: ForgotPasswordComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -383,10 +383,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function() { return ForgotPasswordComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared */ "./src/app/shared/index.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_client_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/client/client.service */ "./src/app/services/client/client.service.ts");
-/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/config */ "./src/app/shared/config.ts");
+/* harmony import */ var _services_client_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/client/client.service */ "./src/app/services/client/client.service.ts");
+/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/config */ "./src/app/shared/config.ts");
 
 
 
@@ -493,19 +493,19 @@ var ForgotPasswordComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/forgot-password/index.ts":
-/*!************************************************!*\
-  !*** ./src/app/login/forgot-password/index.ts ***!
-  \************************************************/
+/***/ "./src/app/home/login/forgot-password/index.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/home/login/forgot-password/index.ts ***!
+  \*****************************************************/
 /*! exports provided: ForgotPasswordComponent, EnterEmailComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _forgot_password_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forgot-password.component */ "./src/app/login/forgot-password/forgot-password.component.ts");
+/* harmony import */ var _forgot_password_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forgot-password.component */ "./src/app/home/login/forgot-password/forgot-password.component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function() { return _forgot_password_component__WEBPACK_IMPORTED_MODULE_0__["ForgotPasswordComponent"]; });
 
-/* harmony import */ var _enter_email_enter_email_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enter-email/enter-email.component */ "./src/app/login/forgot-password/enter-email/enter-email.component.ts");
+/* harmony import */ var _enter_email_enter_email_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enter-email/enter-email.component */ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EnterEmailComponent", function() { return _enter_email_enter_email_component__WEBPACK_IMPORTED_MODULE_1__["EnterEmailComponent"]; });
 
 
@@ -514,10 +514,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/login/login-routing.module.ts":
-/*!***********************************************!*\
-  !*** ./src/app/login/login-routing.module.ts ***!
-  \***********************************************/
+/***/ "./src/app/home/login/login-routing.module.ts":
+/*!****************************************************!*\
+  !*** ./src/app/home/login/login-routing.module.ts ***!
+  \****************************************************/
 /*! exports provided: declarations, LoginRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -526,8 +526,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "declarations", function() { return declarations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginRoutingModule", function() { return LoginRoutingModule; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _forgot_password__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./forgot-password */ "./src/app/login/forgot-password/index.ts");
+/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.component */ "./src/app/home/login/login.component.ts");
+/* harmony import */ var _forgot_password__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./forgot-password */ "./src/app/home/login/forgot-password/index.ts");
 
 
 
@@ -556,10 +556,10 @@ var LoginRoutingModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/login.component.ngfactory.js":
-/*!****************************************************!*\
-  !*** ./src/app/login/login.component.ngfactory.js ***!
-  \****************************************************/
+/***/ "./src/app/home/login/login.component.ngfactory.js":
+/*!*********************************************************!*\
+  !*** ./src/app/home/login/login.component.ngfactory.js ***!
+  \*********************************************************/
 /*! exports provided: RenderType_LoginComponent, View_LoginComponent_0, View_LoginComponent_Host_0, LoginComponentNgFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -569,9 +569,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_LoginComponent_0", function() { return View_LoginComponent_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_LoginComponent_Host_0", function() { return View_LoginComponent_Host_0; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponentNgFactory", function() { return LoginComponentNgFactory; });
-/* harmony import */ var _login_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.component.scss.shim.ngstyle */ "./src/app/login/login.component.scss.shim.ngstyle.js");
+/* harmony import */ var _login_component_scss_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.component.scss.shim.ngstyle */ "./src/app/home/login/login.component.scss.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
+/* harmony import */ var _node_modules_primeng_components_growl_growl_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/primeng/components/growl/growl.ngfactory */ "./node_modules/primeng/components/growl/growl.ngfactory.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/components/dom/domhandler */ "./node_modules/primeng/components/dom/domhandler.js");
 /* harmony import */ var primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primeng_components_dom_domhandler__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var primeng_components_growl_growl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/components/growl/growl */ "./node_modules/primeng/components/growl/growl.js");
@@ -581,8 +581,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/account/account.service */ "./src/app/services/account/account.service.ts");
+/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login.component */ "./src/app/home/login/login.component.ts");
+/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../services/account/account.service */ "./src/app/services/account/account.service.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -659,10 +659,10 @@ var LoginComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"
 
 /***/ }),
 
-/***/ "./src/app/login/login.component.scss.shim.ngstyle.js":
-/*!************************************************************!*\
-  !*** ./src/app/login/login.component.scss.shim.ngstyle.js ***!
-  \************************************************************/
+/***/ "./src/app/home/login/login.component.scss.shim.ngstyle.js":
+/*!*****************************************************************!*\
+  !*** ./src/app/home/login/login.component.scss.shim.ngstyle.js ***!
+  \*****************************************************************/
 /*! exports provided: styles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -675,16 +675,16 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;background:url('family4.jpg') center center no-repeat;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:500px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
+var styles = ["[_nghost-%COMP%]{display:block}.login-page[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0;overflow:auto;background:#222;text-align:center;color:#fff;padding:3em}.login-page[_ngcontent-%COMP%]   .col-lg-4[_ngcontent-%COMP%]{padding:0}.login-page[_ngcontent-%COMP%]   .input-lg[_ngcontent-%COMP%]{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]{background:0 0;border:none;box-shadow:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;border-radius:0}.login-page[_ngcontent-%COMP%]   .input-underline[_ngcontent-%COMP%]:focus{border-bottom:2px solid #fff;box-shadow:none}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]{border-radius:50px;color:rgba(255,255,255,0.8);background:#222;border:2px solid rgba(255,255,255,0.8);font-size:18px;line-height:40px;padding:0 25px}.login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:hover, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:focus, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:active, .login-page[_ngcontent-%COMP%]   .rounded-btn[_ngcontent-%COMP%]:visited{color:#fff;border:2px solid #fff;outline:none}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{font-weight:300;margin-top:20px;margin-bottom:10px;font-size:36px}.login-page[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{color:rgba(255,255,255,0.7)}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]{padding:8px 0}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,0.6) !important}.login-page[_ngcontent-%COMP%]   .form-content[_ngcontent-%COMP%]{padding:40px 0}.login-page[_ngcontent-%COMP%]   .user-avatar[_ngcontent-%COMP%]{border-radius:50%;border:2px solid #fff}.login[_ngcontent-%COMP%]{position:relative;width:100%;height:100%;min-height:100vh;background-size:cover}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{margin:0;color:#ffffff;text-align:center;font-size:50px;font-weight:500;letter-spacing:2px;padding:50px 0}.login[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{font-size:50px}.login[_ngcontent-%COMP%]   .container[_ngcontent-%COMP%]{z-index:2}.login[_ngcontent-%COMP%]   .fa[_ngcontent-%COMP%]{color:#192a56;font-weight:900;font-size:20px;padding:0 10px;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]{background:rgba(0,0,0,0.411765);max-width:500px;margin:0 auto;padding:3em;border-radius:10px;box-sizing:border-box}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .w3l-form-group[_ngcontent-%COMP%]{margin:20px 0}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{display:block;text-transform:uppercase;font-size:13px;color:#d2d2d2;letter-spacing:2px;margin-bottom:10px;font-style:italic}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   .group[_ngcontent-%COMP%]{display:-webkit-box;display:flex;padding:15px 5px;background-color:#ffffff}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"text\"][_ngcontent-%COMP%], .login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   input[type=\"password\"][_ngcontent-%COMP%]{width:100%;border:none;box-sizing:border-box;background:transparent;color:#000}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background:#192a56;color:#ffffff;font-size:13px;text-transform:uppercase;letter-spacing:1px;border:none;padding:12px 60px;cursor:pointer;width:100%;border-radius:6px}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   p.w3l-register-p[_ngcontent-%COMP%]{color:#eee;font-size:13px;text-align:center;margin-top:2em}.login[_ngcontent-%COMP%]   .w3l-login-form[_ngcontent-%COMP%]   #forgotPassword[_ngcontent-%COMP%]{width:210px}"];
 
 
 
 /***/ }),
 
-/***/ "./src/app/login/login.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/login/login.component.ts ***!
-  \******************************************/
+/***/ "./src/app/home/login/login.component.ts":
+/*!***********************************************!*\
+  !*** ./src/app/home/login/login.component.ts ***!
+  \***********************************************/
 /*! exports provided: LoginComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -693,8 +693,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services */ "./src/app/services/index.ts");
-/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/config */ "./src/app/shared/config.ts");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services */ "./src/app/services/index.ts");
+/* harmony import */ var _shared_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/config */ "./src/app/shared/config.ts");
 
 
 
@@ -731,12 +731,12 @@ var LoginComponent = /** @class */ (function () {
                 }, 2000);
             }
             else {
-                _this.showError("Email/Password is not verified");
+                _this.showError('Email/Password is not verified');
             }
         });
     };
     LoginComponent.prototype.onForgotPassoword = function () {
-        localStorage.setItem("forgotEmail", this.Email);
+        localStorage.setItem('forgotEmail', this.Email);
         this.router.navigate(['login/enter-email']);
     };
     return LoginComponent;
@@ -746,10 +746,10 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/login.module.ngfactory.js":
-/*!*************************************************!*\
-  !*** ./src/app/login/login.module.ngfactory.js ***!
-  \*************************************************/
+/***/ "./src/app/home/login/login.module.ngfactory.js":
+/*!******************************************************!*\
+  !*** ./src/app/home/login/login.module.ngfactory.js ***!
+  \******************************************************/
 /*! exports provided: LoginModuleNgFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -757,14 +757,14 @@ var LoginComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginModuleNgFactory", function() { return LoginModuleNgFactory; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _login_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.module */ "./src/app/login/login.module.ts");
-/* harmony import */ var _node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/@angular/router/router.ngfactory */ "./node_modules/@angular/router/router.ngfactory.js");
-/* harmony import */ var _login_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.component.ngfactory */ "./src/app/login/login.component.ngfactory.js");
-/* harmony import */ var _forgot_password_forgot_password_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./forgot-password/forgot-password.component.ngfactory */ "./src/app/login/forgot-password/forgot-password.component.ngfactory.js");
-/* harmony import */ var _forgot_password_enter_email_enter_email_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./forgot-password/enter-email/enter-email.component.ngfactory */ "./src/app/login/forgot-password/enter-email/enter-email.component.ngfactory.js");
+/* harmony import */ var _login_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.module */ "./src/app/home/login/login.module.ts");
+/* harmony import */ var _node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@angular/router/router.ngfactory */ "./node_modules/@angular/router/router.ngfactory.js");
+/* harmony import */ var _login_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.component.ngfactory */ "./src/app/home/login/login.component.ngfactory.js");
+/* harmony import */ var _forgot_password_forgot_password_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./forgot-password/forgot-password.component.ngfactory */ "./src/app/home/login/forgot-password/forgot-password.component.ngfactory.js");
+/* harmony import */ var _forgot_password_enter_email_enter_email_component_ngfactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./forgot-password/enter-email/enter-email.component.ngfactory */ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ngfactory.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/account/account.service */ "./src/app/services/account/account.service.ts");
+/* harmony import */ var _services_account_account_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../services/account/account.service */ "./src/app/services/account/account.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var primeng_components_chart_chart__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/components/chart/chart */ "./node_modules/primeng/components/chart/chart.js");
 /* harmony import */ var primeng_components_chart_chart__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(primeng_components_chart_chart__WEBPACK_IMPORTED_MODULE_10__);
@@ -781,10 +781,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primeng_components_blockui_blockui__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! primeng/components/blockui/blockui */ "./node_modules/primeng/components/blockui/blockui.js");
 /* harmony import */ var primeng_components_blockui_blockui__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(primeng_components_blockui_blockui__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _login_routing_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./login-routing.module */ "./src/app/login/login-routing.module.ts");
-/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./forgot-password/forgot-password.component */ "./src/app/login/forgot-password/forgot-password.component.ts");
-/* harmony import */ var _forgot_password_enter_email_enter_email_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./forgot-password/enter-email/enter-email.component */ "./src/app/login/forgot-password/enter-email/enter-email.component.ts");
+/* harmony import */ var _login_routing_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./login-routing.module */ "./src/app/home/login/login-routing.module.ts");
+/* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./login.component */ "./src/app/home/login/login.component.ts");
+/* harmony import */ var _forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./forgot-password/forgot-password.component */ "./src/app/home/login/forgot-password/forgot-password.component.ts");
+/* harmony import */ var _forgot_password_enter_email_enter_email_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./forgot-password/enter-email/enter-email.component */ "./src/app/home/login/forgot-password/enter-email/enter-email.component.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -819,10 +819,10 @@ var LoginModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_
 
 /***/ }),
 
-/***/ "./src/app/login/login.module.ts":
-/*!***************************************!*\
-  !*** ./src/app/login/login.module.ts ***!
-  \***************************************/
+/***/ "./src/app/home/login/login.module.ts":
+/*!********************************************!*\
+  !*** ./src/app/home/login/login.module.ts ***!
+  \********************************************/
 /*! exports provided: LoginModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

@@ -1,0 +1,38 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<div class="login" [@routerTransition]>
+    <div class="container">
+        <div class="form">
+            <form>
+                <div class="form-heading">
+                    <h1>
+                        sign in to the system
+                    </h1>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="email" [(ngModel)]="Email" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="password">password</label>
+                        <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="password" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary" (click)="onLoggedin()">Submit Now</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="btn btn-default" (click)="onForgotPassoword()">forgot
+                            password</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
