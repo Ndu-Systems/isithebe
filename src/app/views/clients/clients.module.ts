@@ -17,42 +17,52 @@ import { BeneficiariesComponent } from './client-beneficiaries-list/beneficiarie
 import { ClientPrintDetailsComponent } from './client-print-details';
 import { EditClientBeneficiaryComponent } from './edit-client-beneficiary/edit-client-beneficiary.component';
 const routes: Routes = [
-  {
-      path: '',
-      component: ViewClientsComponent,
-  },
-  {
-    path: 'add', component:AddClientComponent
-  },{
-    path: 'view', component:ViewClientComponent
-  },
-  {
-    path: 'add-policyholder', component:AddPolicyholderComponent
-  },
-  {
-    path: 'add-client-beneficiary', component:AddClientBenefitiaryComponent
-  },
-  {
-    path: 'edit-client-beneficiary', component:EditClientBeneficiaryComponent
-  },
-  {
-    path: 'edit/:id', component:EditClientComponent
-  },
-  {
-    path:'print-details', component:ClientPrintDetailsComponent
-  }
+    {
+        path: '',
+        component: ViewClientsComponent,
+    },
+    {
+        path: 'add', component: AddClientComponent
+    }, {
+        path: 'view', component: ViewClientComponent
+    },
+    {
+        path: 'add-policyholder', component: AddPolicyholderComponent
+    },
+    {
+        path: 'add-client-beneficiary', component: AddClientBenefitiaryComponent
+    },
+    {
+        path: 'edit-client-beneficiary', component: EditClientBeneficiaryComponent
+    },
+    {
+        path: 'edit/:id', component: EditClientComponent
+    },
+    {
+        path: 'print-details', component: ClientPrintDetailsComponent
+    }
 ];
 @NgModule({
-  imports: [
-    CommonModule,
-    SpinnerModule,
-    RouterModule.forChild(routes),
-    PageHeaderModule,
-    CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
+    imports: [
+        CommonModule,
+        SpinnerModule,
+        RouterModule.forChild(routes),
+        PageHeaderModule,
+        CommonModule, FormsModule, Ng2SearchPipeModule, ...PrimeNg, NgxPaginationModule,
         ReactiveFormsModule
-  ],
-  exports: [RouterModule,...PrimeNg],
-  declarations: [EditClientBeneficiaryComponent,ViewClientsComponent,BeneficiariesComponent,AddClientBenefitiaryComponent,PolicyBenefisListComponent, AddClientComponent,ViewClientComponent,EditClientComponent,AddPolicyholderComponent,ClientPrintDetailsComponent],
-  providers:[ConfirmationService]
+    ],
+    exports: [RouterModule, ...PrimeNg],
+    declarations: [
+        EditClientBeneficiaryComponent,
+        ViewClientsComponent,
+        BeneficiariesComponent,
+        AddClientBenefitiaryComponent,
+        PolicyBenefisListComponent,
+        AddClientComponent,
+        ViewClientComponent,
+        EditClientComponent,
+        AddPolicyholderComponent,
+        ClientPrintDetailsComponent],
+    providers: [ConfirmationService]
 })
 export class ClientsModule { }

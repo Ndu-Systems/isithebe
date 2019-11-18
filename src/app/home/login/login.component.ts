@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Message } from 'primeng/api';
@@ -14,8 +15,8 @@ import { loadScreen, stopLoadingScreen, CURRENT_LOGGED_IN_USER } from '../../sha
 export class LoginComponent implements OnInit {
     // Email : any = "admin@isithebe.co.za"
     // Password : any ="pass"
-    Email: any;
-    Password: any;
+    Email = environment.ACCOUNT_TEST_EMAIL;
+    Password = environment.ACCOUNT_TEST_PASSWORD;
     msgs: Message[] = [];
 
     constructor(

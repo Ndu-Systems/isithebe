@@ -1,0 +1,19 @@
+.page-header {
+    font-size: 25px;
+    font-weight: 500;
+    color: #636E72;
+    text-transform: capitalize;
+}
+
+.breadcrumb {
+    background: transparent;
+
+    a {
+        color: #BDC3C7;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

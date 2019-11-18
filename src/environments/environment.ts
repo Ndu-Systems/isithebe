@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ACCOUNT_TEST_EMAIL: 'admin@isithebe.co.za',
+  ACCOUNT_TEST_PASSWORD: 'Harder01!'
 };

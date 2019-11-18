@@ -5,19 +5,10 @@
     background-size: contain;
 }
 
-@media all and (min-width: 959px) {
-    .deskContent {
-        display: block;
-    }
-
-    .phoneContent {
-        display: none;
-    }
-}
 
 .header-main {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     color: #636E72;
     text-transform: capitalize;
 }
@@ -25,6 +16,7 @@
 .card {
     background-color: #181F29;
     color: #636E72;
+    min-height: 25vh;
 
     .header {
         font-weight: 700;
@@ -59,5 +51,23 @@
             font-weight: bold;
             text-transform: capitalize;
         }
+    }
+}
+
+
+@media all and (max-width: 959px) {
+    .header-main {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media all and (min-width: 959px) {
+    .deskContent {
+        display: block;
+    }
+
+    .phoneContent {
+        display: none;
     }
 }

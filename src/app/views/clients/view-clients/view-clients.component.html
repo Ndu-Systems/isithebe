@@ -1,28 +1,83 @@
 <div [@routerTransition]>
-  <app-page-header [heading]="'Clients'" [icon]="'fa-users'" [menus]="menus"></app-page-header>
-  <div class="row">
-    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-      <div class="card mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-md-6">
-              <a class="btn rounded-btn" [routerLink]="['/clients/add']">Add Client </a>
-            </div>
-            <div class="input-group mb-3 col-md-6">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <li class="fa fa-search"></li>
-                </span>
-              </div>
-              <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
-                aria-label="Search" aria-describedby="basic-addon1">
-            </div>
-          </div>
-        </div>
-        <div class="card-body table-responsive">
+    <app-page-header [heading]="'Clients'" [icon]="'fa-users'" [menus]="menus"></app-page-header>
+
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="container-fluid mb-3">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group search">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <li class="fa fa-search"></li>
+                                    </span>
+                                </div>
+                                <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                                    class="form-control" placeholder="Search..." aria-label="Search"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn rounded-btn" [routerLink]="['/clients/add']">Add Client </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3" *ngIf="patients$ | async as patients; else loading">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-12">
+                                full name
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                email
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                cellphone
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                city
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                joining date
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                actions
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3"
+                        *ngFor="let item of patients | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-12">{{item.FirstName}} {{item.Surname}}</div>
+                            <div class="col-md-2 col-sm-12">{{item.Email}}</div>
+                            <div class="col-md-2 col-sm-12">{{item.ContactNumbers}}</div>
+                            <div class="col-md-2 col-sm-12">{{item.City}}</div>
+                            <div class="col-md-2 col-sm-12">{{item.JoiningDate}}</div>
+                            <div class="col-md-2 col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a class="btn rounded-btn" (click)="view(item)">View</a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a class="btn rounded-btn" (click)="edit(item)">Edit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #loading>
+                        <app-spinner></app-spinner>
+                    </ng-template>
+                    <div class="justify-content-center pager">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+                <!-- <div class="card-body table-responsive">
           <table class="table table-bordered" *ngIf="patients$ | async as patients; else loading">
             <thead>
-              <tr>                
+              <tr>
                 <th>First Name</th>
                 <th>Surname</th>
                 <th>Email</th>
@@ -53,10 +108,10 @@
           <div class="justify-content-center">
             <pagination-controls (pageChange)="p = $event"></pagination-controls>
           </div>
+        </div> -->
+            </div>
+
         </div>
-      </div>
 
     </div>
-
-  </div>
 </div>
