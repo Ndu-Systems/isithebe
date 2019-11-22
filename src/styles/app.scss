@@ -4,6 +4,8 @@
 @import "utils";
 @import "rtl";
 @import "responsive";
+@import "form";
+
 
 @media print {
     .breadcrumb {
@@ -94,7 +96,12 @@ html, body {
     height: 60vh;
     overflow-y: scroll;
 }
-
+.pager {
+    background: #fff;
+}
+hr {
+    border: solid 0.5px #bdc3c721;
+}
 @media only screen and (max-width: 600px) {
 
     .bg-dark {

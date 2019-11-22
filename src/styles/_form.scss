@@ -1,0 +1,35 @@
+form {
+    .form-group {
+        margin-bottom: 0rem;
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            &.form-control {
+                background: transparent;
+                border: 0;
+                border-bottom: solid 1px gray;
+                color: #BDC3C7;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .btn {
+        background: transparent !important;
+        border: 0;
+        box-shadow: none;
+        color: #636E72 !important;
+
+        &.btn-primary {
+            background: #0E1319 !important;
+        }
+
+        &.btn-secondary {
+            font-weight: 600;
+        }
+    }
+
+}
