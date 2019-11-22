@@ -1,6 +1,5 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Clients'" [icon]="'fa-users'" [menus]="menus"></app-page-header>
-
     <div class="row">
         <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="container-fluid mb-3">
@@ -46,27 +45,39 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="card mb-3"
-                        *ngFor="let item of patients | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-12">{{item.FirstName}} {{item.Surname}}</div>
-                            <div class="col-md-2 col-sm-12">{{item.Email}}</div>
-                            <div class="col-md-2 col-sm-12">{{item.ContactNumbers}}</div>
-                            <div class="col-md-2 col-sm-12">{{item.City}}</div>
-                            <div class="col-md-2 col-sm-12">{{item.JoiningDate}}</div>
-                            <div class="col-md-2 col-sm-12">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <a class="btn rounded-btn" (click)="view(item)">View</a>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <a class="btn rounded-btn" (click)="edit(item)">Edit</a>
+                    <div class="card-data">
+                        <div class="card mb-1"
+                            *ngFor="let item of patients | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.FirstName}} {{item.Surname}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.Email}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.ContactNumbers}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.City}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.JoiningDate}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <a class="btn rounded-btn" (click)="view(item)">View</a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <a class="btn rounded-btn" (click)="edit(item)">Edit</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <ng-template #loading>
                         <app-spinner></app-spinner>
                     </ng-template>
@@ -74,44 +85,7 @@
                         <pagination-controls (pageChange)="p = $event"></pagination-controls>
                     </div>
                 </div>
-                <!-- <div class="card-body table-responsive">
-          <table class="table table-bordered" *ngIf="patients$ | async as patients; else loading">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Surname</th>
-                <th>Email</th>
-                <th>Cellphone</th>
-                <th>City</th>
-                <th>Joining Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of patients | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                <td>{{item.FirstName}}</td>
-                <td>{{item.Surname}}</td>
-                <td>{{item.Email}}</td>
-                <td>{{item.ContactNumbers}}</td>
-                <td>{{item.City}}</td>
-                <td>{{item.JoiningDate}}</td>
-                <td><a class="btn rounded-btn" (click)="view(item)" >View</a>
-                    &nbsp;<a class="btn rounded-btn" (click)="edit(item)" >Edit</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <ng-template #loading>
-            <app-spinner></app-spinner>
-          </ng-template>
-          <div class="justify-content-center">
-            <pagination-controls (pageChange)="p = $event"></pagination-controls>
-          </div>
-        </div> -->
             </div>
-
         </div>
-
     </div>
 </div>

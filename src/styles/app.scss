@@ -90,6 +90,10 @@ html, body {
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
+.card-data {
+    height: 60vh;
+    overflow-y: scroll;
+}
 
 @media only screen and (max-width: 600px) {
 

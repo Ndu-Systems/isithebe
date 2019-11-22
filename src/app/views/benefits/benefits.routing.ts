@@ -6,15 +6,15 @@ import { AddBenefitComponent } from './add-benefit/add-benefit.component';
 import { EditBenefitComponent } from './edit-benefit';
 
 const routes: Routes = [
-  { path:'', component:BenefitsListComponent },
-  { path:'add', component:AddBenefitComponent },
-  { path:'edit/:id', component:EditBenefitComponent },
+    { path: '', component: BenefitsListComponent },
+    { path: 'add', component: AddBenefitComponent },
+    { path: 'edit/:id', component: EditBenefitComponent },
 ];
 
-export const declarations =[BenefitsComponent,EditBenefitComponent,BenefitsListComponent,AddBenefitComponent];
+export const declarations = [BenefitsComponent, EditBenefitComponent, BenefitsListComponent, AddBenefitComponent];
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 
 

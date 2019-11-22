@@ -14,3 +14,40 @@ margin-top: 20px;
 }
 
 }
+
+
+.card-header {
+
+    .btn {
+        float: right;
+    }
+
+    .search {
+        span {
+            background: transparent;
+            border: 0;
+            border-bottom: solid 2px #BDC3C7;
+
+            li {
+                color: #BDC3C7;
+            }
+        }
+
+        input {
+            border: 0;
+            background: transparent;
+            border-bottom: solid 2px #BDC3C7;
+        }
+    }
+}
+
+.pager {
+    color: white;
+}
+
+.card {
+    p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
