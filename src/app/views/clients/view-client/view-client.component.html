@@ -1,86 +1,191 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="client.FirstName" [icon]="'fa-user'" [menus]="menus"></app-page-header>
+    <app-page-header [heading]="'view client'" [icon]="'fa-user'" [menus]="menus"></app-page-header>
     <div class="row">
         <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12" *ngIf="clientObject$ | async as clientObject">
-            <div class="card mb-3">
-                <div class="card-header">
-                    {{client.FirstName}}'s personal details
+            <hr />
+            <span *ngIf="client">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h1 class="heading">
+                            {{client.FirstName}} {{client.Surname}}
+                        </h1>
+                        <h1>
+                            <span class="details">
+                                {{client.ContactNumbers}}
+                            </span>
+                            <span class="details">
+                                {{client.Email}}
+                            </span>
+                        </h1>
+                    </div>
                 </div>
-                <div class="card-body table-responsive">
-                    <table class="table table-bordered" *ngIf="client">
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <b>Name</b>
-                                </td>
-                                <td class="bold">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card information mb-3">
+                            <h1 class="card-title">
+                                general information
+                            </h1>
+                            <hr />
+                            <h1>
+                                <span class="label">
+                                    first name
+                                </span>
+                                <span class="value">
                                     {{client.FirstName}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Surname</b>
-                                </td>
-                                <td class="bold">
+                                </span>
+                            </h1>
+                            <h1>
+                                <span class="label">
+                                    surname
+                                </span>
+                                <span class="value">
                                     {{client.Surname}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>ContactNumbers</b>
-                                </td>
-                                <td class="bold">
-                                    {{client.ContactNumbers}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Email</b>
-                                </td>
-                                <td class="bold">
+                                </span>
+                            </h1>
+                            <h1>
+                                <span class="label">
+                                    email
+                                </span>
+                                <span class="value">
                                     {{client.Email}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Joining Date</td>
-                                <td class="bold">{{client.JoiningDate}}</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Address</b>
-                                </td>
-                                <td class="bold">
-                                    {{client.AddressLine1}} <br>
-                                    {{client.AddressLine2}} <br>
-                                    {{client.City}} <br>
-                                    {{client.PostCode}} <br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>CreateDate</b>
-                                </td>
-                                <td class="bold">
-                                    {{client.CreateDate}}
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>ID Number</b>
-                                </td>
-                                <td class="bold">
-                                    {{client.IDNumber}}
-
-                                </td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-
+                                </span>
+                            </h1>
+                            <h1>
+                                <span class="label">
+                                    cellphone
+                                </span>
+                                <span class="value">
+                                    {{client.ContactNumbers}}
+                                </span>
+                            </h1>
+                            <h1>
+                                <span class="label">
+                                    joining date
+                                </span>
+                                <span class="value">
+                                    {{client.JoiningDate}}
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="card information mb-3">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12">
+                                    <h1>
+                                        <span class="label">
+                                            address line 1
+                                        </span>
+                                        <span class="value">
+                                            {{client.AddressLine1}}
+                                        </span>
+                                    </h1>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <h1>
+                                        <span class="label">
+                                            address line 2
+                                        </span>
+                                        <span class="value">
+                                            {{client.AddressLine2}}
+                                        </span>
+                                    </h1>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <h1>
+                                        <span class="label">
+                                            city
+                                        </span>
+                                        <span class="value">
+                                            {{client.City}}
+                                        </span>
+                                    </h1>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <h1>
+                                        <span class="label">
+                                            postal code
+                                        </span>
+                                        <span class="value">
+                                            {{client.PostCode}}
+                                        </span>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card information mb-3">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12">
+                                    <h1 class="card-title">
+                                        {{client.FirstName}} {{client.Surname}}'s policies
+                                    </h1>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
+                                </div>
+                            </div>
+                            <hr />
+                            <span *ngIf="clientObject[0].Policies?.length; else nobenefits">
+                                <div class="row" *ngFor="let item of clientObject[0].Policies">
+                                    <div class="col-md-4 col-sm-12">
+                                        <h1>
+                                            <span class="label">
+                                                policy name
+                                            </span>
+                                            <span class="value">
+                                                {{item.PolicyName}}
+                                            </span>
+                                        </h1>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <h1>
+                                            <span class="label">
+                                                amount
+                                            </span>
+                                            <span class="value">
+                                                {{item.PremiumAmount |currency:'R':true}}
+                                            </span>
+                                        </h1>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <h1>
+                                            <span class="label">
+                                                sold date
+                                            </span>
+                                            <span class="value">
+                                                {{item.CreateDate| date:'mediumDate'}}
+                                            </span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </span>
+                            <ng-template #nobenefits>
+                                <div class="alert alert-warning">
+                                    No Policy found for {{client.FirstName}}
+                                </div>
+                            </ng-template>
+                        </div>
+                        <div class="card information mb-3">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12">
+                                    <h1 class="card-title">
+                                        {{client.FirstName}} {{client.Surname}}'s beneficiaries
+                                    </h1>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a> <br>
+                                </div>
+                                <hr />
+                            </div>
+                            <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
+                                <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client">
+                                </app-beneficiaries>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </span>
+            <!-- <div class="card mb-3">
                 <h2>
                     {{client.FirstName}} policies
                 </h2>
@@ -116,7 +221,6 @@
                                 <td>{{item.PremiumAmount |currency:'R':true}}</td>
                                 <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
                                 <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                                <!-- <td><button class="btn rounded-btn" (click)="viewBenefit(item)">View</button></td> -->
                             </tr>
                         </tbody>
                     </table>
@@ -137,16 +241,16 @@
                     <h1>
                         Beneficiaries
                     </h1>
-                            <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a> <br> 
+                            <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a> <br>
                 </div>
-                
-               
+
+
                 <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
                     <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
                 </div>
 
-            </div>
-
+            </div> -->
+            <!--
             <div class="row" id="print">
                 <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="card mb-3">
@@ -174,14 +278,10 @@
                             <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
                         </div>
                     </ng-template>
-
-                    <!-- <button class="btn btn-lg btn-outline-primary" >Launch demo modal</button> -->
-
                     <hr>
-
                     <pre>{{closeResult}}</pre>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>

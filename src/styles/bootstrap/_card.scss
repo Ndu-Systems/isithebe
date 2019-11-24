@@ -51,6 +51,30 @@
 
 .card-title {
     margin-bottom: $card-spacer-y;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.information {
+    h1 {
+        font-size: 14px;
+        margin-bottom: $card-spacer-y;
+        .label {
+            color: #636E72;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .value {
+            font-weight: 700;
+            color: #BDC3C7;
+        }
+    }
 }
 
 .card-subtitle {

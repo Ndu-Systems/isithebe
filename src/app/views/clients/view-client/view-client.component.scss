@@ -1,9 +1,21 @@
 .bold{
     font-weight: bold;
 }
- 
+
 @media screen and (max-width: 480px) {
     #print{
         display: none;
-    }  
+    }
+}
+
+.heading {
+    font-size: 25px;
+    font-weight: 600;
+    color: #BDC3C7;
+}
+.details {
+    font-size: 15px;
+    display: block;
+    color: #636E72;
+    margin-bottom: 0.5rem;
 }
