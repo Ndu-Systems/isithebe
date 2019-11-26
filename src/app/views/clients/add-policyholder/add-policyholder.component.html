@@ -3,80 +3,88 @@
 
 <div class="row" [@routerTransition]>
     <app-page-header [heading]="'Add Policy holder'" [icon]="'fa-plus'" [menus]="menus"></app-page-header>
-
     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-      <div class="card mb-3">
-        
-        <div class="card-header">
-            <div class="row">
-              <div class="col-md-6">
-                  Select Policy for {{client.FirstName}}
-              </div>
-              <div class="input-group mb-3 col-md-6">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
-                    <li class="fa fa-search"></li>
-                  </span>
-                </div>
-                <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
-                  aria-label="Search" aria-describedby="basic-addon1">
-              </div>
-            </div>
-          </div>
-        <div class="card-body table-responsive">
-          <div class="col-lg-10 offset-1">
-           
-            <div class="card-body table-responsive" *ngIf="policies$ | async as policies; else loadingBenefits">
-               
-                
-                <table class="table table-bordered" *ngIf="policies?.length; else nobefits">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Base Amount </th>
-                            <th>Benefits</th>
-                            <th>Total Amount </th>
-                            <th>CreateDate</th>
-                            <th>Action</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                            <td class="fo-{{item.StatusId}}"> <span class="total"> {{item.Description}}</span></td>
-                            <td>{{item.Amount |currency:'R':true}}</td>
-
-                            <td>
-                              <app-policy-benefis-list *ngIf="item.benefits"  [benefits]="item.benefits"></app-policy-benefis-list>
-                              <app-policy-benefis-list *ngIf="!item.benefits" [benefits]="[]"></app-policy-benefis-list>
-                              </td>
-                              <td>
-                                  &nbsp; &nbsp; {{item.Amount |currency:'R':true}} <br>
-                                <b>+</b> &nbsp; {{item.benefitTotal |currency:'R':true}} <br>
-                                <hr>
-                               <span class="total"> =  &nbsp; {{item.totalAmpount |currency:'R':true}} </span>
-                              </td>
-
-                            <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                           
-                            <td><button class="btn rounded-btn" (click)="add(item)">Add</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ng-template #nobefits>
-                  <div>
-                  
-                    <div class="alert alert-warning">
-                     No Policy found for {{client.FirstName}}
+        <div class="card mb-3">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        Select Policy for {{client.FirstName}}
                     </div>
-                  </div>
-                </ng-template>
+                    <div class="input-group mb-3 col-md-6">
+                        <div class="input-group search">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                                class="form-control" placeholder="Search..." aria-label="Search"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-          </div>
+            <span *ngIf="policies$ | async as policies; else loadingBenefits">
+                <span *ngIf="policies?.length; else nobenefits">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12">
+                                description
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                base amount
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                benefits
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                total amount
+                            </div>
+                            <div class="col-md-2 col-sm-12">
+                                actions
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-data">
+                        <div class="card mb-1"
+                            *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12">
+                                    <p>{{item.Description}}</p>
+                                    <p>{{item.CreateDate| date:'mediumDate'}}</p>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <p>{{item.Amount |currency:'R':true}}</p>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <app-policy-benefis-list *ngIf="item.benefits" [benefits]="item.benefits">
+                                    </app-policy-benefis-list>
+                                    <app-policy-benefis-list *ngIf="!item.benefits" [benefits]="[]">
+                                    </app-policy-benefis-list>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    &nbsp; &nbsp; {{item.Amount |currency:'R':true}} <br>
+                                    <b>+</b> &nbsp; {{item.benefitTotal |currency:'R':true}} <br>
+                                    <hr>
+                                    <span class="total"> = &nbsp; {{item.totalAmpount |currency:'R':true}} </span>
+                                </div>
+                                <div class="col-md-2 col-sm-12">
+                                    <button class="btn rounded-btn" (click)="add(item)">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <ng-template #nobenefits>
+                    <div>
+                        <div class="alert alert-warning">
+                            No Policy found for {{client.FirstName}}
+                        </div>
+                    </div>
+                </ng-template>
+            </span>
         </div>
-      </div>
 
     </div>
 
-  </div>
+</div>

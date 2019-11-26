@@ -227,6 +227,26 @@ $topnav-background-color: #222;
             text-transform: capitalize;
             color: #30336B;
         }
+        .form-group {
+            margin-bottom: 0rem;
+
+            label {
+                font-weight: bold;
+            }
+
+            input {
+                &.form-control {
+                    background: #FFFFFF;
+                    border: 1px #BDC3C7;
+                    color: #0E1319;
+                    font-weight: 400;
+                }
+            }
+
+            select {
+                background: transparent;
+            }
+        }
 
         #emailHelp {
             color: #F9CA24 !important;

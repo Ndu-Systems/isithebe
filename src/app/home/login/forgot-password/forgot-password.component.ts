@@ -53,8 +53,7 @@ export class ForgotPasswordComponent implements OnInit {
     }
     this.selectService.select(`users WHERE Token  = '${this.token}'`)
         .subscribe(response => {
-          debugger
-          let check: any[] = response;
+           let check: any[] = response;
           if(check.length == 0){
               this.showError("The link has either been used or invalid");
               setTimeout(() => {

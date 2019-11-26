@@ -1,64 +1,102 @@
 <div [@routerTransition]>
-   <app-page-header [heading]="policy.Description" [icon]="'fa'" [menus]="menus"></app-page-header>
+    <app-page-header [heading]="policy.Description" [icon]="'fa'" [menus]="menus"></app-page-header>
 
     <div class="row">
         <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <div class="card mb-3">
-                <div class="card-header">
-                        {{policy.Description}} Details
+            <hr />
+            <span *ngIf="policy">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h1 class="heading">
+                            {{policy.Description}}
+                        </h1>
+                        <h1>
+                            <span class="details">
+                                {{policy.Amount|currency:'R':true}}
+                            </span>
+                            <span class="details">
+                                {{policy.CreateDate | date:'mediumDate'}}
+                            </span>
+                        </h1>
+                    </div>
                 </div>
-                <div class="card-body table-responsive">
-                    <table class="table table-bordered" *ngIf="policy">
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <b>Description</b>
-                                </td>
-                                <td class="bold">
-                                    {{policy.Description}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Amount</b>
-                                </td>
-                                <td class="bold">
-                                    {{policy.Amount|currency:'R':true}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Status</b>
-                                </td>
-                                <td class="bold">
-                                    {{policy.StatusId}}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-             
-                <div class="card-header">
+            </span>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card information mb-3">
                         <div class="row">
-                          <div class="col-md-6">
-                            <a class="btn rounded-btn" (click)="addBefefits()">Add benefit </a>
-                          </div>
-                          <div class="input-group mb-3 col-md-6">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon1">
-                                <li class="fa fa-search"></li>
-                              </span>
+                            <div class="col-md-8 col-sm-12">
+                                <h1 class="card-title">
+                                    policy benefits
+                                </h1>
                             </div>
-                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Search..."
-                              aria-label="Search" aria-describedby="basic-addon1">
-                          </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a class="btn rounded-btn" (click)="addBefefits()">Add benefit </a>
+                            </div>
                         </div>
-                      </div>
-                <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else loading">
-                 
-                    
+                        <hr />
+                        <span *ngIf="benefits$ | async as benefits;else nobenefits;">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-12">
+                                            description
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            amount
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            create date
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-beta">
+                                    <div class="card mb-1">
+                                        <div class="row"
+                                            *ngFor="let item of benefits | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                                            <div class="col-md-3 col-sm-12">
+                                                <p>{{item.Description}}</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12">
+                                                <p>{{item.Amount | currency:'R':true}}</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12">
+                                                <p>{{item.CreateDate | date:'mediumDate'}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </span>
+                        <ng-template #nobenefits>
+                            <div>
+                                <div class="alert alert-warning">
+                                    No Benefits for this plan
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn rounded-btn" (click)="addBefefits()">Add benefit </a>
+                        </div>
+                        <div class="input-group mb-3 col-md-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <li class="fa fa-search"></li>
+                                </span>
+                            </div>
+                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                                class="form-control" placeholder="Search..." aria-label="Search"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div> -->
+            <!-- <div class="card-body table-responsive" *ngIf="benefits$ | async as benefits; else loading">
+
+
                     <table class="table table-bordered" *ngIf="benefits?.length; else nobefits">
                         <thead>
                             <tr>
@@ -69,7 +107,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of benefits | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
+                            <tr
+                                *ngFor="let item of benefits | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
                                 <td>{{item.Amount |currency:'R':true}}</td>
                                 <td class="fo-{{item.StatusId}}">{{item.Description}}</td>
                                 <td>{{item.CreateDate| date:'mediumDate'}}</td>
@@ -79,18 +118,18 @@
                     </table>
                     <ng-template #nobefits>
                         <div>
-                        
-                          <div class="alert alert-warning">
-                           No Benefits for this plan
-                          </div>
+
+                            <div class="alert alert-warning">
+                                No Benefits for this plan
+                            </div>
                         </div>
-                      </ng-template>
-                </div>
-               
-                <ng-template #loading>
+                    </ng-template>
+                </div> -->
+
+            <!-- <ng-template #loading>
                     <app-spinner></app-spinner>
-                  </ng-template>
-            </div>
+                </ng-template> -->
+
 
         </div>
 

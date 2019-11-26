@@ -16,10 +16,10 @@ import { MenuItem } from "../../../models/header/MenuItem";
 export class ViewPolicyComponent implements OnInit {
     policy: Policy;
     benefits$: Observable<any>;
-    menus:Array<MenuItem>;
+    menus: Array<MenuItem>;
     nobefits: any;
     searchText: string;
-    p:any;
+    p: any;
     constructor(private router: Router, private selectService: SelectService) {
         let policy = localStorage.getItem(SELECTED_POLICY);
 
@@ -31,19 +31,19 @@ export class ViewPolicyComponent implements OnInit {
     ngOnInit() {
         this.benefits$ = this.selectService.select(
             `policybenefits right join  benefits on policybenefits.BenefitId = benefits.BenefitId where PolicyId = '${
-                this.policy.PolicyId
+            this.policy.PolicyId
             }'`
         );
 
         this.menus = [
-            {name:'Dashboard',url:'/dashboard'},
-            {name:'Policies',url:'/policies',icon:'file'},
-          ];
+            { name: 'Dashboard', url: '/dashboard' },
+            { name: 'Policies', url: '/policies' },
+        ];
     }
-    viewBenefit(item){
-      alert('Benefit details under contruction');
+    viewBenefit(item) {
+        alert('Benefit details under contruction');
     }
-    addBefefits(){
+    addBefefits() {
         this.router.navigate(['policies/add-benefits'])
     }
 }

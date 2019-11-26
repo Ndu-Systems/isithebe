@@ -85,14 +85,13 @@ export class AddClientBenefitiaryComponent implements OnInit {
                         if (response === 1) {
                             this.showSuccess();
                             setTimeout(() => {
-                                this.router.navigate(["/clients/view"]);
+                                this.router.navigate(['/clients/view']);
                             }, 2000);
                         }
                         if (response === POLICY_HOLDER_EXIST) {
-                            this.showError("beneficiary holder alreay exists");
+                            this.showError('beneficiary holder alreay exists');
                         }
-                    })
-
+                    });
             }
         });
     }
@@ -100,16 +99,16 @@ export class AddClientBenefitiaryComponent implements OnInit {
     showSuccess() {
         this.msgs = [];
         this.msgs.push({
-            severity: "success",
-            summary: "Success Message",
-            detail: "beneficiary Added Successfully"
+            severity: 'success',
+            summary: 'Success Message',
+            detail: 'beneficiary Added Successfully'
         });
     }
     showError(msg) {
         this.msgs = [];
         this.msgs.push({
-            severity: "warn",
-            summary: "Validation Message",
+            severity: 'warn',
+            summary: 'Validation Message',
             detail: `${msg}`
         });
     }

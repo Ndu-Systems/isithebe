@@ -63,7 +63,7 @@
                                     joining date
                                 </span>
                                 <span class="value">
-                                    {{client.JoiningDate}}
+                                    {{client.JoiningDate | date:'mediumDate'}}
                                 </span>
                             </h1>
                         </div>
@@ -185,103 +185,6 @@
                     </div>
                 </div>
             </span>
-            <!-- <div class="card mb-3">
-                <h2>
-                    {{client.FirstName}} policies
-                </h2>
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="btn rounded-btn" (click)="addPolicyHolder()">Add Policy </a>
-                        </div>
-                        <div class="input-group mb-3 col-md-6">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <li class="fa fa-search"></li>
-                                </span>
-                            </div>
-                            <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" class="form-control"
-                                placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body table-responsive">
-
-                    <table class="table table-bordered" *ngIf="clientObject[0].Policies?.length; else nobefits">
-                        <thead>
-                            <tr>
-                                <th>Amount </th>
-                                <th>Policy Name</th>
-                                <th>CreateDate</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let item of clientObject[0].Policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
-                                <td>{{item.PremiumAmount |currency:'R':true}}</td>
-                                <td class="fo-{{item.StatusId}}">{{item.PolicyName}}</td>
-                                <td>{{item.CreateDate| date:'mediumDate'}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <ng-template #nobefits>
-                        <div>
-
-                            <div class="alert alert-warning">
-                                No Policy found for {{client.FirstName}}
-                            </div>
-                        </div>
-                    </ng-template>
-                </div>
-                <ng-template #loadingBenefits>
-                    <app-spinner></app-spinner>
-                </ng-template>
-                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-
-                    <h1>
-                        Beneficiaries
-                    </h1>
-                            <a class="btn rounded-btn" (click)="addBeneficiary()">Add Beneficiary </a> <br>
-                </div>
-
-
-                <div *ngIf="clientObject[0].Beneficiaries as beneficiaries">
-                    <app-beneficiaries [beneficiaries]="beneficiaries" [client]="client"></app-beneficiaries>
-                </div>
-
-            </div> -->
-            <!--
-            <div class="row" id="print">
-                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a class="btn rounded-btn" (click)="open(content)">Print Details </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ng-template #content let-c="close" let-d="dismiss">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Print Client Details</h4>
-                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <app-client-print-details [beneficiaries]="clientObject[0].Beneficiaries" [client]="client"
-                                [policies]="clientObject[0].Policies"></app-client-print-details>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-                        </div>
-                    </ng-template>
-                    <hr>
-                    <pre>{{closeResult}}</pre>
-                </div>
-            </div> -->
         </div>
 
     </div>

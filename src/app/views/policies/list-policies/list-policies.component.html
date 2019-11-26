@@ -44,7 +44,7 @@
                             *ngFor="let item of policies | filter: searchText | paginate: { itemsPerPage: 10, currentPage: p }">
                             <div class="row">
                                 <div class="col-md-3 col-sm-12">
-                                    <p>{{item.Amount}}</p>
+                                    <p>{{item.Amount | currency:'R':true}}</p>
                                 </div>
                                 <div class="col-md-3 col-sm-12">
                                     <p class="fo-{{item.StatusId}}">{{item.Description}}</p>
