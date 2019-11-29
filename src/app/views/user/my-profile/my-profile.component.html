@@ -1,3 +1,174 @@
-<p>
-  my-profile works!
-</p>
+<p-growl [(value)]="msgs"></p-growl>
+
+<div [@routerTransition]>
+    <app-page-header [heading]="'My Profile'" [menus]="menus"></app-page-header>
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12" *ngIf="user$ | async as user">
+            <hr />
+            <span *ngIf="user">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card profile mb-3">
+                            <div class="card-body">
+                                <h1 class="heading">
+                                    {{user[0].FirstName}} {{user[0].Surname}}
+                                </h1>
+                                <h1 class="details">
+                                    {{user[0].IDNumber}}
+                                </h1>
+                                <h1 class="details">
+                                    {{user[0].ContactNumbers}}
+                                </h1>
+                                <h1 class="details">
+                                    {{user[0].Email}}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="card information mb-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1 class="card-title">
+                                        general information
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">first name:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].FirstName"
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="FirstName"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">surname:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].Surname"
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="Surname"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">id number:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].IDNumber"
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="IDNumber"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">cellphone number:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].ContactNumbers"
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="CreateDate"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">Email Address:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].Email" disabled
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="FirstName"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">role name:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="user[0].Role" disabled
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="CreateDate"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">company name:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" [(ngModel)]="companyName" disabled
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="FirstName"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-md-12">registered date:</label>
+                                                    <div class="input-group mb-3 col-md-12 ">
+                                                        <input type="text" disabled [(ngModel)]="user[0].CreateDate"
+                                                            [ngModelOptions]="{standalone: true}" class="form-control"
+                                                            placeholder="" aria-label="CreateDate"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="justify-content-center">
+                                        <a class="btn rounded-btn btn-primary" (click)="update(user[0])">Save
+                                            Changes</a>
+                                        &nbsp;
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card information mb-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1 class="card-title">
+                                        change password
+                                    </h1>
+                                    <app-change-password></app-change-password>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>

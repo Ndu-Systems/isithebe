@@ -1,0 +1,43 @@
+.profile {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.heading {
+    font-size: 25px;
+    font-weight: 600;
+    color: #BDC3C7;
+}
+
+.details {
+    font-size: 15px;
+    display: block;
+    color: #636E72;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    .form-group {
+        margin-bottom: 0rem;
+
+        label {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        input {
+            &.form-control {
+                background: transparent;
+                border: 0;
+                border-bottom: solid 1px gray;
+                color: #BDC3C7;
+                font-weight: 400;
+            }
+        }
+
+        select {
+            background: transparent;
+        }
+    }
+}

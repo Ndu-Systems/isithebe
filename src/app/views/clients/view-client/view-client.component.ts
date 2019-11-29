@@ -25,9 +25,7 @@ export class ViewClientComponent implements OnInit {
         private clientService: ClientService,
         private modalService: NgbModal) {
         let client = localStorage.getItem(SELECTED_CLIENT);
-
         if (!client) this.router.navigate(['clients']);
-
         this.client = JSON.parse(client);
     }
 

@@ -62,7 +62,7 @@ export class ChangePasswordComponent implements OnInit {
         const data = {
             Password: this.NewPassword,
             Email: user.Email,
-            UserId: 1
+            UserId: user.UserId
         };
 
         this.accountService.changePassword(data)
@@ -76,5 +76,11 @@ export class ChangePasswordComponent implements OnInit {
                     this.showError(response);
                 }
             });
+    }
+
+    clearForm(){
+        this.NewPassword = null;
+        this.OldPassword = null;
+        this.ConfirmPassword = null;
     }
 }
