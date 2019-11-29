@@ -19,5 +19,5 @@ export interface User {
     ModifyUserId: string;
     ModifyDate: string;
     StatusId: string;
-    JoiningDate:string;
+    JoiningDate: string;
 }

@@ -11,11 +11,11 @@ import { SelectService } from '../../../shared';
 })
 export class HeaderComponent implements OnInit {
     pushRightClass: string = 'push-right';
-    user : any
- 
+    user: any
+
     constructor(private translate: TranslateService, public router: Router
-       
-        ) {
+
+    ) {
 
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         this.translate.setDefaultLang('en');
@@ -35,13 +35,13 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.user = JSON.parse(localStorage.getItem('currentUser'))
-        if(!this.user.username)
-            this.user.username = "doctor" 
-         
+        if (!this.user.username)
+            this.user.username = 'doctor';
+
     }
 
-    changePassword(){
-        this.router.navigate(['/user/change-password', this.user.userid])
+    changePassword() {
+        this.router.navigate(['/user/profile', this.user.userid]);
     }
 
     isToggled(): boolean {
