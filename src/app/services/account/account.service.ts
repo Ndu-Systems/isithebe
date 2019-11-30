@@ -6,17 +6,17 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AccountService {
 
-  url = API_URL
-  constructor(private httpClient: HttpClient) { }
+    url = API_URL
+    constructor(private httpClient: HttpClient) { }
 
-  public loginUser(Email: String, Password: String): Observable<any> {
-    return this.httpClient.get<any>(`${this.url}/account/SignIn.php?Email=${Email}&Password=${Password}`);
-  }
-  public changePassword(data): Observable<any> {
-    return this.httpClient.post<any>(`${this.url}/account/PasswordReset.php`, data);
-  }
+    public loginUser(Email: String, Password: String): Observable<any> {
+        return this.httpClient.get<any>(`${this.url}/account/SignIn.php?Email=${Email}&Password=${Password}`);
+    }
+    public changePassword(data): Observable<any> {
+        return this.httpClient.post<any>(`${this.url}/account/PasswordReset.php`, data);
+    }
 
-  forgotPassword(email:string):Observable<any>{
-    return this.httpClient.get<any>(`${this.url}/account/ForgotEmail.php?Email=${email}`);
-}
+    forgotPassword(email: string): Observable<any> {
+        return this.httpClient.get<any>(`${this.url}/account/ForgotEmail.php?Email=${email}`);
+    }
 }

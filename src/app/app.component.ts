@@ -8,20 +8,21 @@ import { IS_LOCAL } from './shared/config';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    constructor(private location : LocationStrategy) {
+    constructor(private location: LocationStrategy) {
     }
 
     ngOnInit() {
         this.checkURL();
     }
     checkURL() {
-        if (!IS_LOCAL) {
-          let baseUrlMain = (<any>this.location)._platformLocation.location.href;
-          const BASE_URLMAIN_SECURE = "https://www.isithebe.co.za";
-          var res = baseUrlMain.substring(0, 26);
-          if (res != BASE_URLMAIN_SECURE) {
-            window.location.href = BASE_URLMAIN_SECURE;
-          }
-        }
-      }
+        // if (!IS_LOCAL) {
+        //     let baseUrlMain = (<any>this.location)._platformLocation.location.href;
+        //     //   const BASE_URLMAIN_SECURE = "https://www.isithebe.co.za";
+        //       const BASE_URLMAIN_SECURE = "https://www.isithebe.ndu-systems.net";
+        //      var res = baseUrlMain.substring(0, 26);
+        //     if (res != BASE_URLMAIN_SECURE) {
+        //         window.location.href = BASE_URLMAIN_SECURE;
+        //     }
+        // }
+    }
 }

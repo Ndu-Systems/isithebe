@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  ACCOUNT_TEST_EMAIL: 'admin@isithebe.co.za',
-  ACCOUNT_TEST_PASSWORD: 'Harder01!'
+  ACCOUNT_TEST_EMAIL: null,
+  ACCOUNT_TEST_PASSWORD: null
 };

@@ -58,6 +58,10 @@ export class ChangePasswordComponent implements OnInit {
             this.showError('Passwords do not match');
             return false;
         }
+        if (this.NewPassword === this.OldPassword) {
+            this.showError('New password cannot be an existing password');
+            return false;
+        }
 
         const data = {
             Password: this.NewPassword,
@@ -70,7 +74,7 @@ export class ChangePasswordComponent implements OnInit {
                 if (response === 1) {
                     this.showSuccess();
                     setTimeout(() => {
-                        this.router.navigate(['/login']);
+                        this.router.navigate(['/home/sign-in']);
                     }, 2000);
                 } else {
                     this.showError(response);
@@ -78,7 +82,7 @@ export class ChangePasswordComponent implements OnInit {
             });
     }
 
-    clearForm(){
+    clearForm() {
         this.NewPassword = null;
         this.OldPassword = null;
         this.ConfirmPassword = null;
