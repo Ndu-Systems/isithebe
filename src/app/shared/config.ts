@@ -1,10 +1,10 @@
 import * as $ from 'jquery';
 
 export const IS_LOCAL = false;
-// let api = 'https://www.isithebe.co.za/api';
-// let web = 'https://www.isithebe.co.za';
-let api = 'https://www.isithebe.ndu-systems.net/api';
-let web = 'https://www.isithebe.ndu-systems.net';
+let api = 'https://www.isithebe.co.za/api';
+let web = 'https://www.isithebe.co.za';
+// let api = 'https://www.isithebe.ndu-systems.net/api';
+// let web = 'https://www.isithebe.ndu-systems.net';
 if (IS_LOCAL) {
     api = 'http://localhost:8200/isithebe/api';
     web = 'http://localhost:4200';

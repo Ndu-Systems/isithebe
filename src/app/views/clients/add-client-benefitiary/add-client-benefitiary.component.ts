@@ -49,7 +49,7 @@ export class AddClientBenefitiaryComponent implements OnInit {
         this.loggedinUser = JSON.parse(currentUser);
     }
     getTypes() {
-        this.typesLS = ['Spouse', 'Child', 'Grand-Child', 'Other'];
+        this.typesLS = ['Child', 'Grand-Child', 'Spouse', 'Sister', 'Brother', 'Mother', 'Father', 'Grand-Parent', 'Other'];
     }
     ngOnInit() {
         this.policies$ = this.clientService.getPolicies();
