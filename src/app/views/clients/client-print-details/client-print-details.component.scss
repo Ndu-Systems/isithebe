@@ -1,10 +1,17 @@
 .card {
-    background: none;
+    background: white;
     box-shadow: none;
     border: 0;
 }
-
-// .card {
-//     background-color: #181F29;
-//     background: #181F29;
-// }
+.link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+.policy-details {
+    padding: 1em;
+    border: solid 0.5px #8e86861a;
+}
+.bg-dark {
+    background: #182C61 !important;
+}

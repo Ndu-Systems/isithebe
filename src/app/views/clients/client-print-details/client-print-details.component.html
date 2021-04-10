@@ -37,8 +37,11 @@
 
                           <div class="col-md-6 text-right">
                               <p class="font-weight-bold mb-4">Policy Details</p>
-                              <p class="mb-1"><b>Description </b>: Isithebe Funeral Cover</p>
-                              <p class="mb-1"><b>Premium </b>:140 p/m</p>
+                              <div class="policy-details" *ngFor="let item of policies">
+                                <p class="mb-1"><b>Description </b>: {{item.PolicyName}}</p>
+                                <p class="mb-1"><b>Premium</b>:{{item.PremiumAmount }} p/m</p>
+                              </div>
+
 
                           </div>
                       </div>
@@ -81,7 +84,7 @@
                       <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                           <div class="py-3 px-5 text-right">
                               <div class="mb-2">Underwritten by</div>
-                              <div class="h4 font-weight-light"><a href="" target="_blank"> Isithebe burial society</a></div>
+                              <div class="h4 font-weight-light"><a href="https://isithebe.co.za" class="link" target="_blank"> Isithebe burial society</a></div>
                           </div>
 
                       </div>

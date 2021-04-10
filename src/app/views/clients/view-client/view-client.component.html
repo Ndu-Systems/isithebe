@@ -29,8 +29,9 @@
                                     </h1>
                                 </div>
                                 <div class="col-md-4">
-                                    <a class="btn rounded-btn" (click)="open(content)">Print Details
-                                    </a>
+                                    <!-- <a class="btn rounded-btn" (click)="open(content)">Print Details
+                                    </a> -->
+                                    <a class="btn rounded-btn" [routerLink]="['/clients/print']">Print Client Details</a>
                                 </div>
                             </div>
 
@@ -194,28 +195,7 @@
                     </div>
                 </div>
             </span>
-            <div class="row" id="print">
-                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
-                    <ng-template #content let-c="close" let-d="dismiss">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Print Client Details</h4>
-                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <app-client-print-details [beneficiaries]="clientObject[0].Beneficiaries" [client]="client"
-                                [policies]="clientObject[0].Policies"></app-client-print-details>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-                        </div>
-                    </ng-template>
-                    <hr>
-                    <pre>{{closeResult}}</pre>
-                </div>
-            </div>
         </div>
 
     </div>

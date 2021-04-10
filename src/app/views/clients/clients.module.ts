@@ -39,7 +39,7 @@ const routes: Routes = [
         path: 'edit/:id', component: EditClientComponent
     },
     {
-        path: 'print-details', component: ClientPrintDetailsComponent
+        path: 'print', component: ClientPrintDetailsComponent
     }
 ];
 @NgModule({

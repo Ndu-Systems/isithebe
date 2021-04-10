@@ -30,8 +30,10 @@ export class ViewClientComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.client);
         this.clientObject$ = this.clientService.getPoliciesAndBens(this.client.UserId);
+        this.clientObject$.subscribe(data => {
+
+        });
         this.menus = [
             { name: 'Dashboard', url: '/dashboard' },
             { name: 'Clients', url: '/clients' }
